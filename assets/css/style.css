@@ -144,3 +144,13 @@ footer{
   max-width: 650px;
   margin-top: 20px;
 }
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 25px;
+}
+
+.hero-actions .btn {
+  margin: 0;
+}
