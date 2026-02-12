@@ -450,3 +450,18 @@ margin-top:40px;
   padding: 12px 10px;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
+/* Checkout Page Section Titles */
+
+.delivery-section h2,
+.delivery-section h3 {
+    font-size: 32px;
+    color: #d4af37;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+/* Extra spacing between major sections */
+
+.delivery-section h3 {
+    margin-top: 50px;
+}
