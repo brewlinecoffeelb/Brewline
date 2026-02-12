@@ -347,3 +347,82 @@ margin-top:40px;
 #order-summary p {
     margin: 5px 0;
 }
+/* Accordion Menu (Select Items) */
+
+.menu-accordion {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  text-align: left;
+}
+
+.acc-btn {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(212,175,55,0.18);
+  color: #d4af37;
+  padding: 16px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.acc-btn::after {
+  content: "+";
+  color: #d4af37;
+  font-size: 18px;
+}
+
+.acc-btn.active::after {
+  content: "–";
+}
+
+.acc-panel {
+  display: none;
+  padding: 10px 8px 20px 8px;
+  margin-top: -6px;
+  margin-bottom: 14px;
+}
+
+.acc-panel.open {
+  display: block;
+}
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.item-name {
+  color: #fff;
+  font-weight: 500;
+}
+
+.item-controls .qty {
+  width: 80px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background-color: #112240;
+  color: white;
+}
+
+.proceed-wrap {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#order-summary {
+  max-width: 700px;
+  margin: 0 auto 18px auto;
+  background-color: rgba(255,255,255,0.05);
+  padding: 18px;
+  border-radius: 12px;
+}
+#order-summary p { margin: 6px 0; color: #ddd; }
