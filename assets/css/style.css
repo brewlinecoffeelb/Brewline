@@ -316,3 +316,34 @@ margin-top:40px;
     resize: none;
     height: 80px;
 }
+
+.menu-category {
+    margin-bottom: 40px;
+}
+
+.menu-category h4 {
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.menu-item input {
+    width: 70px;
+}
+
+#order-summary {
+    background-color: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#order-summary p {
+    margin: 5px 0;
+}
