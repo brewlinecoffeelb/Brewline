@@ -166,6 +166,73 @@ inputs.forEach(input => {
 });
 </script>
 
+
+    
+<script>
+/* Accordion */
+document.querySelectorAll(".acc-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    btn.classList.toggle("active");
+    const panel = btn.nextElementSibling;
+    panel.classList.toggle("open");
+  });
+});
+
+/* Cart + Total */
+const qtyInputs = document.querySelectorAll(".qty");
+const summary = document.getElementById("order-summary");
+const totalDisplay = document.getElementById("total-price");
+
+function buildCart() {
+  const cart = [];
+  let total = 0;
+
+  qtyInputs.forEach(input => {
+    const qty = parseInt(input.value || "0", 10);
+    const price = parseFloat(input.dataset.price);
+    const name = input.dataset.name;
+
+    if (qty > 0) {
+      const lineTotal = qty * price;
+      total += lineTotal;
+      cart.push({ name, qty, price, lineTotal });
+    }
+  });
+
+  // Save to localStorage so checkout page can read it
+  localStorage.setItem("brewline_cart", JSON.stringify(cart));
+  localStorage.setItem("brewline_total", String(total));
+
+  // Render summary
+  summary.innerHTML = "";
+  if (cart.length === 0) {
+    summary.innerHTML = "<p>No items selected.</p>";
+  } else {
+    cart.forEach(item => {
+      const p = document.createElement("p");
+      p.textContent = `${item.name} x${item.qty} = $${item.lineTotal}`;
+      summary.appendChild(p);
+    });
+  }
+  totalDisplay.textContent = total;
+}
+
+qtyInputs.forEach(input => input.addEventListener("input", buildCart));
+
+/* Load previous cart (if user comes back) */
+(function loadCart() {
+  const saved = JSON.parse(localStorage.getItem("brewline_cart") || "[]");
+  if (!saved.length) return;
+
+  saved.forEach(item => {
+    qtyInputs.forEach(input => {
+      if (input.dataset.name === item.name) input.value = item.qty;
+    });
+  });
+  buildCart();
+})();
+</script>
+
     
 </body>
 </html>
