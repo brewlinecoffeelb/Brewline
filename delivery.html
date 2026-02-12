@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delivery - Brewline</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="nav">
+        <img src="assets/images/logo.png" class="logo" alt="Logo">
+        <div>
+            <a href="index.html">Home</a>
+            <a href="menu.html">Menu</a>
+            <a href="reservation.html">Reservations</a>
+            <a href="contact.html">Contact Us</a>
+        </div>
+    </div>
+</header>
+
+<section class="delivery-section">
+    <div class="container">
+        <h2>Order Delivery</h2>
+        <p>Select your items and enter your delivery details.</p>
+<form class="delivery-form">
+
+    <h3>Select Items</h3>
+
+    <label>Spanish Latte ($4)</label>
+    <input type="number" min="0" value="0">
+
+    <label>Salted Caramel Frappe ($5)</label>
+    <input type="number" min="0" value="0">
+
+    <label>Mango Smoothie ($4)</label>
+    <input type="number" min="0" value="0">
+
+    <h3>Delivery Information</h3>
+
+    <input type="text" placeholder="Full Name" required>
+    <input type="tel" placeholder="Phone Number" required>
+    <input type="text" placeholder="Delivery Address" required>
+    <textarea placeholder="Notes (optional)"></textarea>
+
+    <h3>Payment Method</h3>
+
+    <label>
+        <input type="radio" name="payment" value="cash" required>
+        Cash on Delivery
+    </label>
+
+    <label>
+        <input type="radio" name="payment" value="card">
+        Credit Card
+    </label>
+
+    <button type="submit" class="delivery-btn">Place Order</button>
+
+</form>
