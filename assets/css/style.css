@@ -199,20 +199,23 @@ margin-top:40px;
 /* Why Brewline Section */
 
 .why-brewline {
-    background-color: #0f1f33;
-    padding: 100px 20px;
+    background: linear-gradient(to bottom, #0d1b2a, #0f2238);
+    padding: 120px 20px;
     text-align: center;
 }
 
 .why-brewline h2 {
     color: #d4af37;
-    font-size: 32px;
-    margin-bottom: 10px;
+    font-size: 36px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
 .why-brewline .subtitle {
-    color: #ccc;
-    margin-bottom: 60px;
+    color: #aaa;
+    max-width: 600px;
+    margin: 0 auto 80px auto;
+    font-size: 17px;
 }
 
 .features-grid {
