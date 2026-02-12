@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Checkout - Brewline</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<header>
+  <div class="nav">
+    <img src="assets/images/logo.png" class="logo" alt="Logo">
+    <div>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reservation.html">Reservations</a>
+      <a href="contact.html">Contact Us</a>
+    </div>
+  </div>
+</header>
+
+<section class="delivery-section">
+  <div class="container">
+
+    <h2>Checkout</h2>
+    <p>Please confirm your order and enter delivery details.</p>
+
+    <h3>Order Summary</h3>
+    <div id="order-summary"><p>Loading...</p></div>
+    <h3>Total: $<span id="total-price">0</span></h3>
+
+    <form class="delivery-form" id="checkoutForm">
+
+      <h3>Delivery Information</h3>
+      <input type="text" placeholder="Full Name" required>
+      <input type="tel" placeholder="Phone Number" required>
+      <input type="text" placeholder="Delivery Address" required>
+      <textarea placeholder="Notes (optional)"></textarea>
+
+      <h3>Payment Method</h3>
+
+      <label>
+        <input type="radio" name="payment" value="cash" required>
+        Cash on Delivery
+      </label>
+
+      <label>
+        <input type="radio" name="payment" value="card">
+        Credit Card
+      </label>
+
+      <div id="card-fields" style="display:none;">
+        <input type="text" placeholder="Card Number">
+        <input type="text" placeholder="MM/YY">
+        <input type="text" placeholder="CVV">
+      </div>
+
+      <button type="submit" class="delivery-btn">Place Order</button>
+
+      <p id="success-msg" style="display:none; margin-top:18px; color:#d4af37; text-align:center;">
+        Thank you! Your order has been received.
+      </p>
+
+    </form>
+
+  </div>
+</section>
+
+<script>
+const summary = document.getElementById("order-summary");
+const totalDisplay = document.getElementById("total-price");
+const cart = JSON.parse(localStorage.getItem("brewline_cart") || "[]");
+const total = localStorage.getItem("brewline_total") || "0";
+
+// Render summary
+summary.innerHTML = "";
+if (!cart.length) {
+  summary.innerHTML = "<p>No items selected. Please go back to the menu page.</p>";
+} else {
+  cart.forEach(item => {
+    const p = document.createElement("p");
+    p.textContent = `${item.name} x${item.qty} = $${item.lineTotal}`;
+    summary.appendChild(p);
+  });
+}
+totalDisplay.textContent = total;
+
+// Show/hide card fields
+const cardFields = document.getElementById("card-fields");
+document.querySelectorAll('input[name="payment"]').forEach(r => {
+  r.addEventListener("change", () => {
+    cardFields.style.display = (r.value === "card" && r.checked) ? "block" : "none";
+  });
+});
+
+// Fake submit (UI only)
+document.getElementById("checkoutForm").addEventListener("submit", (e) => {
+  e.preventDefault();
+  document.getElementById("success-msg").style.display = "block";
+});
+</script>
+
+</body>
+</html>
