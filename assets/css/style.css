@@ -267,10 +267,11 @@ margin-top:40px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: 600;
-    transition: 0.3s ease;
+    transition: all 0.3s ease;
+    display: inline-block;
 }
 
 .delivery-btn:hover {
     background-color: #c19b2e;
-    transform: translateY(-3px);
+    transform: translateY(-4px);
 }
