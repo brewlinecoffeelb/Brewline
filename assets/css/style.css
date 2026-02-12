@@ -452,15 +452,6 @@ margin-top:40px;
 }
 /* Checkout Page Section Titles */
 
-/* Extra spacing between major sections */
-
-.delivery-section h3 {
-    margin-top: 50px;
-
-    .checkout-total {
-    margin-bottom: 60px;
-}
-
 /* Center and unify main checkout titles only */
 
 .checkout-title,
@@ -472,8 +463,6 @@ margin-top:40px;
     margin-bottom: 30px;
 }
 
-/* Add spacing between sections */
-
-.section-title {
-    margin-top: 60px;
+.checkout-total {
+    margin-bottom: 60px;
 }
