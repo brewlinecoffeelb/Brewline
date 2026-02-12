@@ -452,14 +452,6 @@ margin-top:40px;
 }
 /* Checkout Page Section Titles */
 
-.delivery-section h2,
-.delivery-section h3 {
-    font-size: 32px;
-    color: #d4af37;
-    font-weight: 700;
-    margin-bottom: 20px;
-}
-
 /* Extra spacing between major sections */
 
 .delivery-section h3 {
@@ -468,4 +460,20 @@ margin-top:40px;
     .checkout-total {
     margin-bottom: 60px;
 }
+
+/* Center and unify main checkout titles only */
+
+.checkout-title,
+.section-title {
+    font-size: 32px;
+    color: #d4af37;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Add spacing between sections */
+
+.section-title {
+    margin-top: 60px;
 }
