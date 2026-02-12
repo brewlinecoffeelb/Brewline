@@ -26,83 +26,103 @@
         <p>Select your items and enter your delivery details.</p>
 <form class="delivery-form">
 
-<h3>Select Items</h3>
+<div class="menu-accordion" id="menuAccordion">
 
 <!-- HOT COFFEE -->
-<div class="menu-category">
-  <h4>Hot Coffee</h4>
+<button type="button" class="acc-btn">Hot Coffee</button>
+<div class="acc-panel">
 
-  <div class="menu-item">
-    <span>Espresso ($2)</span>
-    <input type="number" min="0" value="0" data-price="2">
-  </div>
+  <div class="menu-item"><span class="item-name">Espresso</span><input class="qty" type="number" min="0" value="0" data-name="Espresso" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Macchiato</span><input class="qty" type="number" min="0" value="0" data-name="Macchiato" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Americano</span><input class="qty" type="number" min="0" value="0" data-name="Americano" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Filtered Coffee</span><input class="qty" type="number" min="0" value="0" data-name="Filtered Coffee" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">French Press</span><input class="qty" type="number" min="0" value="0" data-name="French Press" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Lebanese Rakwa</span><input class="qty" type="number" min="0" value="0" data-name="Lebanese Rakwa" data-price="2"></div>
 
-  <div class="menu-item">
-    <span>Americano ($2)</span>
-    <input type="number" min="0" value="0" data-price="2">
-  </div>
+</div>
 
-  <div class="menu-item">
-    <span>Cafe Latte ($2)</span>
-    <input type="number" min="0" value="0" data-price="2">
-  </div>
+<!-- LATTE -->
+<button type="button" class="acc-btn">Latte</button>
+<div class="acc-panel">
+
+  <div class="menu-item"><span class="item-name">Flat White</span><input class="qty" type="number" min="0" value="0" data-name="Flat White" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Cappuccino</span><input class="qty" type="number" min="0" value="0" data-name="Cappuccino" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Cafe Latte</span><input class="qty" type="number" min="0" value="0" data-name="Cafe Latte" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Spanish Latte</span><input class="qty" type="number" min="0" value="0" data-name="Spanish Latte" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Matcha Latte</span><input class="qty" type="number" min="0" value="0" data-name="Matcha Latte" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Flavored Latte</span><input class="qty" type="number" min="0" value="0" data-name="Flavored Latte" data-price="2"></div>
+
+</div>
+
+<!-- NON COFFEE -->
+<button type="button" class="acc-btn">Non Coffee</button>
+<div class="acc-panel">
+
+  <div class="menu-item"><span class="item-name">Hot Chocolate</span><input class="qty" type="number" min="0" value="0" data-name="Hot Chocolate" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">White Hot Chocolate</span><input class="qty" type="number" min="0" value="0" data-name="White Hot Chocolate" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Tea</span><input class="qty" type="number" min="0" value="0" data-name="Tea" data-price="2"></div>
 
 </div>
 
 <!-- ICED COFFEE -->
-<div class="menu-category">
-  <h4>Iced Coffee</h4>
+<button type="button" class="acc-btn">Iced Coffee</button>
+<div class="acc-panel">
 
-  <div class="menu-item">
-    <span>Iced Latte ($2)</span>
-    <input type="number" min="0" value="0" data-price="2">
-  </div>
-
-  <div class="menu-item">
-    <span>Iced Spanish Latte ($2)</span>
-    <input type="number" min="0" value="0" data-price="2">
-  </div>
+  <div class="menu-item"><span class="item-name">Iced Americano</span><input class="qty" type="number" min="0" value="0" data-name="Iced Americano" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Iced Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Latte" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Iced Spanish Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Spanish Latte" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Iced Matcha Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Matcha Latte" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Iced Flavored Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Flavored Latte" data-price="2"></div>
 
 </div>
 
 <!-- FRAPPE -->
-<div class="menu-category">
-  <h4>Frappe</h4>
+<button type="button" class="acc-btn">Frappe</button>
+<div class="acc-panel">
 
-  <div class="menu-item">
-    <span>Mocha Frappe ($2)</span>
-    <input type="number" min="0" value="0" data-price="2">
-  </div>
-
-  <div class="menu-item">
-    <span>Caramel Frappe ($2)</span>
-    <input type="number" min="0" value="0" data-price="2">
-  </div>
+  <div class="menu-item"><span class="item-name">Mocha Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Mocha Frappe" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Caramel Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Caramel Frappe" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Salted Caramel Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Salted Caramel Frappe" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Amber Musk Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Amber Musk Frappe" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Lotus Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Lotus Frappe" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Cookies and Creme Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Cookies and Creme Frappe" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Matcha Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Matcha Frappe" data-price="2"></div>
 
 </div>
 
 <!-- SMOOTHIES -->
-<div class="menu-category">
-  <h4>Smoothies</h4>
+<button type="button" class="acc-btn">Smoothies</button>
+<div class="acc-panel">
 
-  <div class="menu-item">
-    <span>Mango Smoothie ($2)</span>
-    <input type="number" min="0" value="0" data-price="2">
-  </div>
-
-  <div class="menu-item">
-    <span>Strawberry Smoothie ($2)</span>
-    <input type="number" min="0" value="0" data-price="2">
-  </div>
+  <div class="menu-item"><span class="item-name">Mango Smoothie</span><input class="qty" type="number" min="0" value="0" data-name="Mango Smoothie" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Strawberry Smoothie</span><input class="qty" type="number" min="0" value="0" data-name="Strawberry Smoothie" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Mix Berries Smoothie</span><input class="qty" type="number" min="0" value="0" data-name="Mix Berries Smoothie" data-price="2"></div>
 
 </div>
 
-    <h3>Delivery Information</h3>
+<!-- MILKSHAKES -->
+<button type="button" class="acc-btn">Milkshakes</button>
+<div class="acc-panel">
 
-    <input type="text" placeholder="Full Name" required>
-    <input type="tel" placeholder="Phone Number" required>
-    <input type="text" placeholder="Delivery Address" required>
-    <textarea placeholder="Notes (optional)"></textarea>
+  <div class="menu-item"><span class="item-name">Lotus Milkshake</span><input class="qty" type="number" min="0" value="0" data-name="Lotus Milkshake" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Chocolate Milkshake</span><input class="qty" type="number" min="0" value="0" data-name="Chocolate Milkshake" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Cookies and Cream Milkshake</span><input class="qty" type="number" min="0" value="0" data-name="Cookies and Cream Milkshake" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Vanilla Strawberry Milkshake</span><input class="qty" type="number" min="0" value="0" data-name="Vanilla Strawberry Milkshake" data-price="2"></div>
+
+</div>
+
+<!-- BREWLINE SPECIALS -->
+<button type="button" class="acc-btn">Brewline Specials</button>
+<div class="acc-panel">
+
+  <div class="menu-item"><span class="item-name">Strawberry Matcha Latte</span><input class="qty" type="number" min="0" value="0" data-name="Strawberry Matcha Latte" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Pumpkin Spice Latte</span><input class="qty" type="number" min="0" value="0" data-name="Pumpkin Spice Latte" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Beauty Glow</span><input class="qty" type="number" min="0" value="0" data-name="Beauty Glow" data-price="2"></div>
+  <div class="menu-item"><span class="item-name">Black Lemonade</span><input class="qty" type="number" min="0" value="0" data-name="Black Lemonade" data-price="2"></div>
+
+</div>
+
+</div>
 
 <h3>Order Summary</h3>
 <div id="order-summary">
