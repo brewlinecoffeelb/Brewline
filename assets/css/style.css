@@ -426,3 +426,27 @@ margin-top:40px;
   border-radius: 12px;
 }
 #order-summary p { margin: 6px 0; color: #ddd; }
+
+.acc-panel { display: none; }
+.acc-panel.open { display: block; }
+
+.acc-btn {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(212,175,55,0.2);
+  background: rgba(255,255,255,0.03);
+  color: #d4af37;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+.acc-btn.active { border-color: #d4af37; }
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
