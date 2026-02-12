@@ -26,16 +26,76 @@
         <p>Select your items and enter your delivery details.</p>
 <form class="delivery-form">
 
-    <h3>Select Items</h3>
+<h3>Select Items</h3>
 
-    <label>Spanish Latte ($4)</label>
-    <input type="number" min="0" value="0">
+<!-- HOT COFFEE -->
+<div class="menu-category">
+  <h4>Hot Coffee</h4>
 
-    <label>Salted Caramel Frappe ($5)</label>
-    <input type="number" min="0" value="0">
+  <div class="menu-item">
+    <span>Espresso ($2)</span>
+    <input type="number" min="0" value="0" data-price="2">
+  </div>
 
-    <label>Mango Smoothie ($4)</label>
-    <input type="number" min="0" value="0">
+  <div class="menu-item">
+    <span>Americano ($2)</span>
+    <input type="number" min="0" value="0" data-price="2">
+  </div>
+
+  <div class="menu-item">
+    <span>Cafe Latte ($2)</span>
+    <input type="number" min="0" value="0" data-price="2">
+  </div>
+
+</div>
+
+<!-- ICED COFFEE -->
+<div class="menu-category">
+  <h4>Iced Coffee</h4>
+
+  <div class="menu-item">
+    <span>Iced Latte ($2)</span>
+    <input type="number" min="0" value="0" data-price="2">
+  </div>
+
+  <div class="menu-item">
+    <span>Iced Spanish Latte ($2)</span>
+    <input type="number" min="0" value="0" data-price="2">
+  </div>
+
+</div>
+
+<!-- FRAPPE -->
+<div class="menu-category">
+  <h4>Frappe</h4>
+
+  <div class="menu-item">
+    <span>Mocha Frappe ($2)</span>
+    <input type="number" min="0" value="0" data-price="2">
+  </div>
+
+  <div class="menu-item">
+    <span>Caramel Frappe ($2)</span>
+    <input type="number" min="0" value="0" data-price="2">
+  </div>
+
+</div>
+
+<!-- SMOOTHIES -->
+<div class="menu-category">
+  <h4>Smoothies</h4>
+
+  <div class="menu-item">
+    <span>Mango Smoothie ($2)</span>
+    <input type="number" min="0" value="0" data-price="2">
+  </div>
+
+  <div class="menu-item">
+    <span>Strawberry Smoothie ($2)</span>
+    <input type="number" min="0" value="0" data-price="2">
+  </div>
+
+</div>
 
     <h3>Delivery Information</h3>
 
@@ -44,6 +104,14 @@
     <input type="text" placeholder="Delivery Address" required>
     <textarea placeholder="Notes (optional)"></textarea>
 
+<h3>Order Summary</h3>
+<div id="order-summary">
+  <p>No items selected.</p>
+</div>
+
+<h3>Total: $<span id="total-price">0</span></h3>
+
+    
     <h3>Payment Method</h3>
 
     <label>
