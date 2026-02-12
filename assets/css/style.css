@@ -255,3 +255,22 @@ margin-top:40px;
     line-height: 1.6;
 }
 
+.delivery-button-container {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.delivery-btn {
+    background-color: #d4af37;
+    color: #0d1b2a;
+    padding: 15px 40px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.delivery-btn:hover {
+    background-color: #c19b2e;
+    transform: translateY(-3px);
+}
