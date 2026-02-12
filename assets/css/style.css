@@ -464,4 +464,8 @@ margin-top:40px;
 
 .delivery-section h3 {
     margin-top: 50px;
+
+    .checkout-total {
+    margin-bottom: 60px;
+}
 }
