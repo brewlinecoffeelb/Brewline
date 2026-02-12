@@ -130,6 +130,43 @@
     </div>
 </section>
 
+<script>
+const inputs = document.querySelectorAll('.menu-item input');
+const summary = document.getElementById('order-summary');
+const totalDisplay = document.getElementById('total-price');
+
+function updateOrder() {
+  let total = 0;
+  summary.innerHTML = '';
+
+  inputs.forEach(input => {
+    const quantity = parseInt(input.value);
+    const price = parseFloat(input.dataset.price);
+    const itemName = input.parentElement.querySelector('span').innerText;
+
+    if (quantity > 0) {
+      const itemTotal = quantity * price;
+      total += itemTotal;
+
+      const itemLine = document.createElement('p');
+      itemLine.textContent = `${itemName} x${quantity} = $${itemTotal}`;
+      summary.appendChild(itemLine);
+    }
+  });
+
+  if (total === 0) {
+    summary.innerHTML = '<p>No items selected.</p>';
+  }
+
+  totalDisplay.textContent = total;
+}
+
+inputs.forEach(input => {
+  input.addEventListener('input', updateOrder);
+});
+</script>
+
+    
 </body>
 </html>
         
