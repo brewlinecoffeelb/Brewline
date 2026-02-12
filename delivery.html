@@ -1,259 +1,135 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Delivery - Brewline</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Select Items - Brewline</title>
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <header>
-    <div class="nav">
-        <img src="assets/images/logo.png" class="logo" alt="Logo">
-        <div>
-            <a href="index.html">Home</a>
-            <a href="menu.html">Menu</a>
-            <a href="reservation.html">Reservations</a>
-            <a href="contact.html">Contact Us</a>
-        </div>
+  <div class="nav">
+    <img src="assets/images/logo.png" class="logo" alt="Logo">
+    <div>
+      <a href="index.html">Home</a>
+      <a href="menu.html">Menu</a>
+      <a href="reservation.html">Reservations</a>
+      <a href="contact.html">Contact Us</a>
     </div>
+  </div>
 </header>
 
 <section class="delivery-section">
-    <div class="container">
-        <h2>Order Delivery</h2>
-        <p>Select your items and enter your delivery details.</p>
-<form class="delivery-form">
+  <div class="container">
 
-<div class="menu-accordion" id="menuAccordion">
+    <h2>Choose Your Items</h2>
+    <p>Select your drinks. Your total updates automatically.</p>
 
-<!-- HOT COFFEE -->
-<button type="button" class="acc-btn">Hot Coffee</button>
-<div class="acc-panel">
+    <div class="menu-accordion">
 
-  <div class="menu-item"><span class="item-name">Espresso</span><input class="qty" type="number" min="0" value="0" data-name="Espresso" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Macchiato</span><input class="qty" type="number" min="0" value="0" data-name="Macchiato" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Americano</span><input class="qty" type="number" min="0" value="0" data-name="Americano" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Filtered Coffee</span><input class="qty" type="number" min="0" value="0" data-name="Filtered Coffee" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">French Press</span><input class="qty" type="number" min="0" value="0" data-name="French Press" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Lebanese Rakwa</span><input class="qty" type="number" min="0" value="0" data-name="Lebanese Rakwa" data-price="2"></div>
+      <!-- HOT COFFEE -->
+      <button type="button" class="acc-btn">Hot Coffee</button>
+      <div class="acc-panel">
+        <div class="menu-item"><span>Espresso</span><input class="qty" type="number" min="0" value="0" data-name="Espresso" data-price="2"></div>
+        <div class="menu-item"><span>Macchiato</span><input class="qty" type="number" min="0" value="0" data-name="Macchiato" data-price="2"></div>
+        <div class="menu-item"><span>Americano</span><input class="qty" type="number" min="0" value="0" data-name="Americano" data-price="2"></div>
+        <div class="menu-item"><span>Filtered Coffee</span><input class="qty" type="number" min="0" value="0" data-name="Filtered Coffee" data-price="2"></div>
+        <div class="menu-item"><span>French Press</span><input class="qty" type="number" min="0" value="0" data-name="French Press" data-price="2"></div>
+        <div class="menu-item"><span>Lebanese Rakwa</span><input class="qty" type="number" min="0" value="0" data-name="Lebanese Rakwa" data-price="2"></div>
+      </div>
 
-</div>
+      <!-- LATTE -->
+      <button type="button" class="acc-btn">Latte</button>
+      <div class="acc-panel">
+        <div class="menu-item"><span>Flat White</span><input class="qty" type="number" min="0" value="0" data-name="Flat White" data-price="2"></div>
+        <div class="menu-item"><span>Cappuccino</span><input class="qty" type="number" min="0" value="0" data-name="Cappuccino" data-price="2"></div>
+        <div class="menu-item"><span>Cafe Latte</span><input class="qty" type="number" min="0" value="0" data-name="Cafe Latte" data-price="2"></div>
+        <div class="menu-item"><span>Spanish Latte</span><input class="qty" type="number" min="0" value="0" data-name="Spanish Latte" data-price="2"></div>
+        <div class="menu-item"><span>Matcha Latte</span><input class="qty" type="number" min="0" value="0" data-name="Matcha Latte" data-price="2"></div>
+        <div class="menu-item"><span>Flavored Latte</span><input class="qty" type="number" min="0" value="0" data-name="Flavored Latte" data-price="2"></div>
+      </div>
 
-<!-- LATTE -->
-<button type="button" class="acc-btn">Latte</button>
-<div class="acc-panel">
+      <!-- ICED COFFEE -->
+      <button type="button" class="acc-btn">Iced Coffee</button>
+      <div class="acc-panel">
+        <div class="menu-item"><span>Iced Americano</span><input class="qty" type="number" min="0" value="0" data-name="Iced Americano" data-price="2"></div>
+        <div class="menu-item"><span>Iced Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Latte" data-price="2"></div>
+        <div class="menu-item"><span>Iced Spanish Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Spanish Latte" data-price="2"></div>
+        <div class="menu-item"><span>Iced Matcha Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Matcha Latte" data-price="2"></div>
+        <div class="menu-item"><span>Iced Flavored Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Flavored Latte" data-price="2"></div>
+      </div>
 
-  <div class="menu-item"><span class="item-name">Flat White</span><input class="qty" type="number" min="0" value="0" data-name="Flat White" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Cappuccino</span><input class="qty" type="number" min="0" value="0" data-name="Cappuccino" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Cafe Latte</span><input class="qty" type="number" min="0" value="0" data-name="Cafe Latte" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Spanish Latte</span><input class="qty" type="number" min="0" value="0" data-name="Spanish Latte" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Matcha Latte</span><input class="qty" type="number" min="0" value="0" data-name="Matcha Latte" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Flavored Latte</span><input class="qty" type="number" min="0" value="0" data-name="Flavored Latte" data-price="2"></div>
+      <!-- FRAPPE -->
+      <button type="button" class="acc-btn">Frappe</button>
+      <div class="acc-panel">
+        <div class="menu-item"><span>Mocha Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Mocha Frappe" data-price="2"></div>
+        <div class="menu-item"><span>Caramel Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Caramel Frappe" data-price="2"></div>
+        <div class="menu-item"><span>Salted Caramel Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Salted Caramel Frappe" data-price="2"></div>
+        <div class="menu-item"><span>Amber Musk Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Amber Musk Frappe" data-price="2"></div>
+        <div class="menu-item"><span>Lotus Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Lotus Frappe" data-price="2"></div>
+        <div class="menu-item"><span>Cookies & Creme Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Cookies & Creme Frappe" data-price="2"></div>
+        <div class="menu-item"><span>Matcha Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Matcha Frappe" data-price="2"></div>
+      </div>
 
-</div>
-
-<!-- NON COFFEE -->
-<button type="button" class="acc-btn">Non Coffee</button>
-<div class="acc-panel">
-
-  <div class="menu-item"><span class="item-name">Hot Chocolate</span><input class="qty" type="number" min="0" value="0" data-name="Hot Chocolate" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">White Hot Chocolate</span><input class="qty" type="number" min="0" value="0" data-name="White Hot Chocolate" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Tea</span><input class="qty" type="number" min="0" value="0" data-name="Tea" data-price="2"></div>
-
-</div>
-
-<!-- ICED COFFEE -->
-<button type="button" class="acc-btn">Iced Coffee</button>
-<div class="acc-panel">
-
-  <div class="menu-item"><span class="item-name">Iced Americano</span><input class="qty" type="number" min="0" value="0" data-name="Iced Americano" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Iced Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Latte" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Iced Spanish Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Spanish Latte" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Iced Matcha Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Matcha Latte" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Iced Flavored Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Flavored Latte" data-price="2"></div>
-
-</div>
-
-<!-- FRAPPE -->
-<button type="button" class="acc-btn">Frappe</button>
-<div class="acc-panel">
-
-  <div class="menu-item"><span class="item-name">Mocha Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Mocha Frappe" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Caramel Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Caramel Frappe" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Salted Caramel Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Salted Caramel Frappe" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Amber Musk Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Amber Musk Frappe" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Lotus Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Lotus Frappe" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Cookies and Creme Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Cookies and Creme Frappe" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Matcha Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Matcha Frappe" data-price="2"></div>
-
-</div>
-
-<!-- SMOOTHIES -->
-<button type="button" class="acc-btn">Smoothies</button>
-<div class="acc-panel">
-
-  <div class="menu-item"><span class="item-name">Mango Smoothie</span><input class="qty" type="number" min="0" value="0" data-name="Mango Smoothie" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Strawberry Smoothie</span><input class="qty" type="number" min="0" value="0" data-name="Strawberry Smoothie" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Mix Berries Smoothie</span><input class="qty" type="number" min="0" value="0" data-name="Mix Berries Smoothie" data-price="2"></div>
-
-</div>
-
-<!-- MILKSHAKES -->
-<button type="button" class="acc-btn">Milkshakes</button>
-<div class="acc-panel">
-
-  <div class="menu-item"><span class="item-name">Lotus Milkshake</span><input class="qty" type="number" min="0" value="0" data-name="Lotus Milkshake" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Chocolate Milkshake</span><input class="qty" type="number" min="0" value="0" data-name="Chocolate Milkshake" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Cookies and Cream Milkshake</span><input class="qty" type="number" min="0" value="0" data-name="Cookies and Cream Milkshake" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Vanilla Strawberry Milkshake</span><input class="qty" type="number" min="0" value="0" data-name="Vanilla Strawberry Milkshake" data-price="2"></div>
-
-</div>
-
-<!-- BREWLINE SPECIALS -->
-<button type="button" class="acc-btn">Brewline Specials</button>
-<div class="acc-panel">
-
-  <div class="menu-item"><span class="item-name">Strawberry Matcha Latte</span><input class="qty" type="number" min="0" value="0" data-name="Strawberry Matcha Latte" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Pumpkin Spice Latte</span><input class="qty" type="number" min="0" value="0" data-name="Pumpkin Spice Latte" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Beauty Glow</span><input class="qty" type="number" min="0" value="0" data-name="Beauty Glow" data-price="2"></div>
-  <div class="menu-item"><span class="item-name">Black Lemonade</span><input class="qty" type="number" min="0" value="0" data-name="Black Lemonade" data-price="2"></div>
-
-</div>
-
-</div>
-
-<h3>Order Summary</h3>
-<div id="order-summary">
-  <p>No items selected.</p>
-</div>
-
-<h3>Total: $<span id="total-price">0</span></h3>
-
-    
-    <h3>Payment Method</h3>
-
-    <label>
-        <input type="radio" name="payment" value="cash" required>
-        Cash on Delivery
-    </label>
-
-    <label>
-        <input type="radio" name="payment" value="card">
-        Credit Card
-    </label>
-
-    <button type="submit" class="delivery-btn">Place Order</button>
-
-</form>
     </div>
+
+    <h3>Order Summary</h3>
+    <div id="order-summary"><p>No items selected.</p></div>
+    <h3>Total: $<span id="total-price">0</span></h3>
+
+    <div class="proceed-wrap">
+      <a href="checkout.html" class="delivery-btn">Proceed to Checkout</a>
+    </div>
+
+  </div>
 </section>
 
 <script>
-const inputs = document.querySelectorAll('.menu-item input');
-const summary = document.getElementById('order-summary');
-const totalDisplay = document.getElementById('total-price');
-
-function updateOrder() {
-  let total = 0;
-  summary.innerHTML = '';
-
-  inputs.forEach(input => {
-    const quantity = parseInt(input.value);
-    const price = parseFloat(input.dataset.price);
-    const itemName = input.parentElement.querySelector('span').innerText;
-
-    if (quantity > 0) {
-      const itemTotal = quantity * price;
-      total += itemTotal;
-
-      const itemLine = document.createElement('p');
-      itemLine.textContent = `${itemName} x${quantity} = $${itemTotal}`;
-      summary.appendChild(itemLine);
-    }
-  });
-
-  if (total === 0) {
-    summary.innerHTML = '<p>No items selected.</p>';
-  }
-
-  totalDisplay.textContent = total;
-}
-
-inputs.forEach(input => {
-  input.addEventListener('input', updateOrder);
-});
-</script>
-
-
-    
-<script>
-/* Accordion */
 document.querySelectorAll(".acc-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     btn.classList.toggle("active");
-    const panel = btn.nextElementSibling;
-    panel.classList.toggle("open");
+    btn.nextElementSibling.classList.toggle("open");
   });
 });
 
-/* Cart + Total */
 const qtyInputs = document.querySelectorAll(".qty");
 const summary = document.getElementById("order-summary");
 const totalDisplay = document.getElementById("total-price");
 
-function buildCart() {
-  const cart = [];
+function updateCart() {
   let total = 0;
+  let cart = [];
+  summary.innerHTML = "";
 
   qtyInputs.forEach(input => {
-    const qty = parseInt(input.value || "0", 10);
-    const price = parseFloat(input.dataset.price);
-    const name = input.dataset.name;
+    let qty = parseInt(input.value);
+    let price = parseFloat(input.dataset.price);
+    let name = input.dataset.name;
 
     if (qty > 0) {
-      const lineTotal = qty * price;
+      let lineTotal = qty * price;
       total += lineTotal;
-      cart.push({ name, qty, price, lineTotal });
+      cart.push({name, qty, lineTotal});
+
+      let p = document.createElement("p");
+      p.textContent = `${name} x${qty} = $${lineTotal}`;
+      summary.appendChild(p);
     }
   });
 
-  // Save to localStorage so checkout page can read it
-  localStorage.setItem("brewline_cart", JSON.stringify(cart));
-  localStorage.setItem("brewline_total", String(total));
-
-  // Render summary
-  summary.innerHTML = "";
   if (cart.length === 0) {
     summary.innerHTML = "<p>No items selected.</p>";
-  } else {
-    cart.forEach(item => {
-      const p = document.createElement("p");
-      p.textContent = `${item.name} x${item.qty} = $${item.lineTotal}`;
-      summary.appendChild(p);
-    });
   }
+
+  localStorage.setItem("brewline_cart", JSON.stringify(cart));
+  localStorage.setItem("brewline_total", total);
+
   totalDisplay.textContent = total;
 }
 
-qtyInputs.forEach(input => input.addEventListener("input", buildCart));
-
-/* Load previous cart (if user comes back) */
-(function loadCart() {
-  const saved = JSON.parse(localStorage.getItem("brewline_cart") || "[]");
-  if (!saved.length) return;
-
-  saved.forEach(item => {
-    qtyInputs.forEach(input => {
-      if (input.dataset.name === item.name) input.value = item.qty;
-    });
-  });
-  buildCart();
-})();
+qtyInputs.forEach(input => input.addEventListener("input", updateCart));
 </script>
 
-    
 </body>
 </html>
-        
