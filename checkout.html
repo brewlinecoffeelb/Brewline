@@ -63,6 +63,12 @@ if (cart.length === 0) {
 }
 
 totalDisplay.textContent = total;
+
+  window.addEventListener("beforeunload", function() {
+  localStorage.removeItem("brewline_cart");
+  localStorage.removeItem("brewline_total");
+});
+  
 </script>
 
 </body>
