@@ -569,3 +569,10 @@ margin-top:40px;
   color: #888;
 }
 
+.cart-error {
+  color: #ff4d4d;
+  text-align: center;
+  font-weight: 600;
+  margin-top: 20px;
+  line-height: 1.6;
+}
