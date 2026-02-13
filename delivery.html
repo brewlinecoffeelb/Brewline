@@ -80,7 +80,7 @@
 
     <p id="cart-error" class="cart-error"></p>
     <div class="proceed-wrap">
-      <a href="checkout.html" class="delivery-btn">Proceed to Checkout</a>
+      <a href="#" id="proceedBtn" class="delivery-btn">Proceed to Checkout</a>
     </div>
 
   </div>
@@ -130,6 +130,26 @@ function updateCart() {
 }
 
 qtyInputs.forEach(input => input.addEventListener("input", updateCart));
+
+  const proceedBtn = document.getElementById("proceedBtn");
+const cartError = document.getElementById("cart-error");
+
+proceedBtn.addEventListener("click", function(e) {
+  e.preventDefault();
+
+  const cart = JSON.parse(localStorage.getItem("brewline_cart")) || [];
+
+  if (cart.length === 0) {
+    cartError.innerHTML = `
+      Your cart is currently empty.<br>
+      Please select at least one item to continue.
+    `;
+    return;
+  }
+
+  window.location.href = "checkout.html";
+});
+  
 </script>
 
 </body>
