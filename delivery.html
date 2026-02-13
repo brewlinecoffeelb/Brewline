@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -29,166 +28,146 @@
 
 <div class="menu-accordion">
 
+<!-- FUNCTION TO GENERATE ITEM -->
+<script>
+function createItem(name){
+return `
+<div class="menu-item">
+  <div class="item-top">
+    <span class="item-name">${name}</span>
+    <div class="qty-box">
+      <button class="qty-btn minus">-</button>
+      <input class="qty" type="number" min="0" value="0" data-name="${name}" data-price="2">
+      <button class="qty-btn plus">+</button>
+    </div>
+  </div>
+  <textarea class="item-note" placeholder="Special instructions..."></textarea>
+</div>`;
+}
+</script>
+
 <!-- CATEGORY TEMPLATE -->
-<!-- HOT COFFEE -->
-<button type="button" class="acc-btn category-title">Hot Coffee</button>
+
+<button class="acc-btn category-title">Hot Coffee</button>
 <div class="acc-panel">
-
-<div class="menu-item">
-<span>Espresso</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="Espresso" data-price="2">
-<button class="plus">+</button>
-</div>
-</div>
-
-<div class="menu-item">
-<span>Macchiato</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="Macchiato" data-price="2">
-<button class="plus">+</button>
-</div>
+<script>
+document.write(
+createItem("Espresso") +
+createItem("Macchiato") +
+createItem("Americano") +
+createItem("Filtered Coffee") +
+createItem("French Press") +
+createItem("Lebanese Rakwa")
+);
+</script>
 </div>
 
-<div class="menu-item">
-<span>Americano</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="Americano" data-price="2">
-<button class="plus">+</button>
-</div>
-</div>
-
-<div class="menu-item">
-<span>Filtered Coffee</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="Filtered Coffee" data-price="2">
-<button class="plus">+</button>
-</div>
-</div>
-
-<div class="menu-item">
-<span>French Press</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="French Press" data-price="2">
-<button class="plus">+</button>
-</div>
-</div>
-
-<div class="menu-item">
-<span>Lebanese Rakwa</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="Lebanese Rakwa" data-price="2">
-<button class="plus">+</button>
-</div>
-</div>
-
-</div>
-
-<!-- LATTE -->
-<button type="button" class="acc-btn category-title">Latte</button>
+<button class="acc-btn category-title">Latte</button>
 <div class="acc-panel">
-
-<div class="menu-item">
-<span>Flat White</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="Flat White" data-price="2">
-<button class="plus">+</button>
-</div>
-</div>
-
-<div class="menu-item">
-<span>Cappuccino</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="Cappuccino" data-price="2">
-<button class="plus">+</button>
-</div>
+<script>
+document.write(
+createItem("Flat White") +
+createItem("Cappuccino") +
+createItem("Cafe Latte") +
+createItem("Spanish Latte") +
+createItem("Matcha Latte") +
+createItem("Flavored Latte")
+);
+</script>
 </div>
 
-<div class="menu-item">
-<span>Cafe Latte</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="Cafe Latte" data-price="2">
-<button class="plus">+</button>
-</div>
-</div>
-
-<div class="menu-item">
-<span>Spanish Latte</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="Spanish Latte" data-price="2">
-<button class="plus">+</button>
-</div>
-</div>
-
-<div class="menu-item">
-<span>Matcha Latte</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="Matcha Latte" data-price="2">
-<button class="plus">+</button>
-</div>
-</div>
-
-<div class="menu-item">
-<span>Flavored Latte</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="Flavored Latte" data-price="2">
-<button class="plus">+</button>
-</div>
-</div>
-
-</div>
-
-<!-- SMOOTHIES -->
-<button type="button" class="acc-btn category-title">Smoothies</button>
+<button class="acc-btn category-title">Iced Coffee</button>
 <div class="acc-panel">
-
-<div class="menu-item">
-<span>Mango Smoothie</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="Mango Smoothie" data-price="3">
-<button class="plus">+</button>
-</div>
-</div>
-
-<div class="menu-item">
-<span>Strawberry Smoothie</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="Strawberry Smoothie" data-price="3">
-<button class="plus">+</button>
-</div>
+<script>
+document.write(
+createItem("Iced Americano") +
+createItem("Iced Latte") +
+createItem("Iced Spanish Latte") +
+createItem("Iced Matcha Latte") +
+createItem("Iced Flavored Latte")
+);
+</script>
 </div>
 
-<div class="menu-item">
-<span>Mix Berries Smoothie</span>
-<div class="qty-box">
-<button class="minus">-</button>
-<input class="qty" type="number" min="0" value="0" data-name="Mix Berries Smoothie" data-price="3">
-<button class="plus">+</button>
-</div>
+<button class="acc-btn category-title">Frappe</button>
+<div class="acc-panel">
+<script>
+document.write(
+createItem("Mocha Frappe") +
+createItem("Caramel Frappe") +
+createItem("Salted Caramel Frappe") +
+createItem("Amber Musk Frappe") +
+createItem("Lotus Frappe") +
+createItem("Cookies & Creme Frappe") +
+createItem("Matcha Frappe")
+);
+</script>
 </div>
 
+<button class="acc-btn category-title">Smoothies</button>
+<div class="acc-panel">
+<script>
+document.write(
+createItem("Mango Smoothie") +
+createItem("Strawberry Smoothie") +
+createItem("Mix Berries Smoothie")
+);
+</script>
 </div>
 
+<button class="acc-btn category-title">Milkshakes</button>
+<div class="acc-panel">
+<script>
+document.write(
+createItem("Lotus Milkshake") +
+createItem("Chocolate Milkshake") +
+createItem("Cookies & Cream Milkshake") +
+createItem("Vanilla Strawberry Milkshake")
+);
+</script>
 </div>
 
-<!-- GLOBAL SPECIAL INSTRUCTIONS -->
-<div style="margin-top:40px;">
-<h3>Special Instructions</h3>
-<textarea id="global-notes" placeholder="Special instructions..."></textarea>
+<button class="acc-btn category-title">Brewline Specials</button>
+<div class="acc-panel">
+<script>
+document.write(
+createItem("Strawberry Matcha Latte") +
+createItem("Pumpkin Spice Latte") +
+createItem("Beauty Glow") +
+createItem("Black Lemonade")
+);
+</script>
+</div>
+
+<button class="acc-btn category-title">Non-Coffee</button>
+<div class="acc-panel">
+<script>
+document.write(
+createItem("Hot Chocolate") +
+createItem("White Hot Chocolate") +
+createItem("Green Tea") +
+createItem("Ginger Tea") +
+createItem("Lemon Tea") +
+createItem("Jasmine Tea")
+);
+</script>
+</div>
+
+<button class="acc-btn category-title">Add-Ons</button>
+<div class="acc-panel">
+<script>
+document.write(
+createItem("Extra Shot") +
+createItem("Extra Syrup") +
+createItem("Add Cream") +
+createItem("Almond Milk") +
+createItem("Oat Milk") +
+createItem("Soya Milk") +
+createItem("Coconut Milk")
+);
+</script>
+</div>
+
 </div>
 
 <h3>Order Summary</h3>
@@ -208,53 +187,49 @@ Proceed to Checkout
 
 <script>
 
-document.querySelectorAll(".acc-btn").forEach(btn => {
-btn.addEventListener("click", () => {
+/* Accordion */
+document.querySelectorAll(".acc-btn").forEach(btn=>{
+btn.addEventListener("click",()=>{
 btn.classList.toggle("active");
 btn.nextElementSibling.classList.toggle("open");
 });
 });
 
-/* PLUS & MINUS BUTTONS */
-document.querySelectorAll(".plus").forEach(btn => {
-btn.addEventListener("click", function() {
-let input = this.parentElement.querySelector(".qty");
+/* Quantity buttons */
+document.addEventListener("click", function(e){
+if(e.target.classList.contains("plus")){
+let input = e.target.parentElement.querySelector(".qty");
 input.value = parseInt(input.value) + 1;
 updateCart();
-});
-});
-
-document.querySelectorAll(".minus").forEach(btn => {
-btn.addEventListener("click", function() {
-let input = this.parentElement.querySelector(".qty");
+}
+if(e.target.classList.contains("minus")){
+let input = e.target.parentElement.querySelector(".qty");
 if(parseInt(input.value) > 0){
 input.value = parseInt(input.value) - 1;
 updateCart();
 }
-});
+}
 });
 
-const qtyInputs = document.querySelectorAll(".qty");
 const summary = document.getElementById("order-summary");
 const totalDisplay = document.getElementById("total-price");
 const errorMsg = document.getElementById("cart-error");
 
-function updateCart() {
-
+function updateCart(){
 let total = 0;
 let cart = [];
 summary.innerHTML = "";
 
-qtyInputs.forEach(input => {
-
+document.querySelectorAll(".qty").forEach(input=>{
 let qty = parseInt(input.value);
-let price = parseFloat(input.dataset.price);
 let name = input.dataset.name;
+let price = 2;
+let note = input.closest(".menu-item").querySelector(".item-note").value;
 
-if (qty > 0) {
+if(qty > 0){
 let lineTotal = qty * price;
 total += lineTotal;
-cart.push({name, qty, lineTotal});
+cart.push({name, qty, note, lineTotal});
 
 let p = document.createElement("p");
 p.textContent = `${name} x${qty} = $${lineTotal}`;
@@ -262,35 +237,27 @@ summary.appendChild(p);
 }
 });
 
-if (cart.length === 0) {
+if(cart.length === 0){
 summary.innerHTML = "<p>No items selected.</p>";
-localStorage.removeItem("brewline_cart");
-localStorage.removeItem("brewline_total");
-} else {
-localStorage.setItem("brewline_cart", JSON.stringify(cart));
-localStorage.setItem("brewline_total", total);
 }
 
+localStorage.setItem("brewline_cart", JSON.stringify(cart));
+localStorage.setItem("brewline_total", total);
 totalDisplay.textContent = total;
 }
 
-qtyInputs.forEach(input => input.addEventListener("input", updateCart));
+document.addEventListener("input", function(e){
+if(e.target.classList.contains("qty")){
+updateCart();
+}
+});
 
-document.getElementById("proceedBtn").addEventListener("click", function () {
-
-const cart = JSON.parse(localStorage.getItem("brewline_cart")) || [];
-
-if (cart.length === 0) {
-errorMsg.innerHTML = `
-Your cart is currently empty.<br>
-Please select at least one item to continue.
-`;
+document.getElementById("proceedBtn").addEventListener("click", function(){
+let cart = JSON.parse(localStorage.getItem("brewline_cart")) || [];
+if(cart.length === 0){
+errorMsg.innerHTML = "Your cart is currently empty.<br>Please select at least one item to continue.";
 return;
 }
-
-localStorage.setItem("brewline_notes", document.getElementById("global-notes").value);
-
-errorMsg.innerHTML = "";
 window.location.href = "checkout.html";
 });
 
