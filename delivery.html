@@ -90,6 +90,12 @@
 </section>
 
 <script>
+
+/* ✅ Always reset cart when page loads */
+localStorage.removeItem("brewline_cart");
+localStorage.removeItem("brewline_total");
+
+/* Accordion */
 document.querySelectorAll(".acc-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     btn.classList.toggle("active");
@@ -100,6 +106,7 @@ document.querySelectorAll(".acc-btn").forEach(btn => {
 const qtyInputs = document.querySelectorAll(".qty");
 const summary = document.getElementById("order-summary");
 const totalDisplay = document.getElementById("total-price");
+const errorMsg = document.getElementById("cart-error");
 
 function updateCart() {
   let total = 0;
@@ -107,7 +114,7 @@ function updateCart() {
   summary.innerHTML = "";
 
   qtyInputs.forEach(input => {
-    let qty = parseInt(input.value);
+    let qty = parseInt(input.value) || 0;
     let price = parseFloat(input.dataset.price);
     let name = input.dataset.name;
 
@@ -124,6 +131,8 @@ function updateCart() {
 
   if (cart.length === 0) {
     summary.innerHTML = "<p>No items selected.</p>";
+  } else {
+    errorMsg.textContent = "";
   }
 
   localStorage.setItem("brewline_cart", JSON.stringify(cart));
@@ -137,16 +146,16 @@ qtyInputs.forEach(input => input.addEventListener("input", updateCart));
 document.getElementById("proceedBtn").addEventListener("click", function () {
 
   const cart = JSON.parse(localStorage.getItem("brewline_cart")) || [];
-  const errorMsg = document.getElementById("cart-error");
 
   if (cart.length === 0) {
-    errorMsg.textContent = "Please select at least one item before proceeding to checkout.";
+    errorMsg.textContent = "Your cart is currently empty. Please select at least one item to continue.";
     return;
   }
 
   errorMsg.textContent = "";
   window.location.href = "checkout.html";
 });
+
 </script>
 
 </body>
