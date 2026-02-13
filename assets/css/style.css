@@ -377,12 +377,11 @@ margin-top:40px;
 
 .acc-btn::after {
   content: "+";
-  color: #d4af37;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .acc-btn.active::after {
-  content: "â";
+  content: "-";
 }
 
 .acc-panel {
