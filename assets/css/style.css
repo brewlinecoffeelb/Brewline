@@ -261,20 +261,25 @@ margin-top:40px;
 }
 
 .delivery-btn {
-    background-color: #d4af37;
+    background: #d4af37;
     color: #0d1b2a;
-    padding: 15px 40px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    padding: 18px 60px;          /* bigger horizontal padding */
+    border-radius: 50px;         /* more rounded */
+    font-weight: 700;            /* slightly bolder */
+    font-size: 18px;
+    border: none;
+    cursor: pointer;
     display: inline-block;
+    box-shadow: 0 6px 18px rgba(212,175,55,0.35);
+    transition: all 0.3s ease;
 }
 
 .delivery-btn:hover {
-    background-color: #c19b2e;
-    transform: translateY(-4px);
+    background: #c19b2e;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(212,175,55,0.45);
 }
+
 /* Delivery Page */
 
 .delivery-section {
