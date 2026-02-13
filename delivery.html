@@ -1,135 +1,223 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Select Items - Brewline</title>
-  <link rel="stylesheet" href="assets/css/style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Select Items - Brewline</title>
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
 
 <header>
-  <div class="nav">
-    <img src="assets/images/logo.png" class="logo" alt="Logo">
-    <div>
-      <a href="index.html">Home</a>
-      <a href="menu.html">Menu</a>
-      <a href="reservation.html">Reservations</a>
-      <a href="contact.html">Contact Us</a>
-    </div>
-  </div>
+<div class="nav">
+<img src="assets/images/logo.png" class="logo" alt="Logo">
+<div>
+<a href="index.html">Home</a>
+<a href="menu.html">Menu</a>
+<a href="reservation.html">Reservations</a>
+<a href="contact.html">Contact Us</a>
+</div>
+</div>
 </header>
 
 <section class="delivery-section">
-  <div class="container">
+<div class="container">
 
-    <h2>Choose Your Items</h2>
-    <p>Select your drinks. Your total updates automatically.</p>
+<h2>Choose Your Items</h2>
+<p>Select your drinks. Your total updates automatically.</p>
 
-    <div class="menu-accordion">
+<div class="menu-accordion">
 
-      <!-- HOT COFFEE -->
-      <button type="button" class="acc-btn">Hot Coffee</button>
-      <div class="acc-panel">
-        <div class="menu-item"><span>Espresso</span><input class="qty" type="number" min="0" value="0" data-name="Espresso" data-price="2"></div>
-        <div class="menu-item"><span>Macchiato</span><input class="qty" type="number" min="0" value="0" data-name="Macchiato" data-price="2"></div>
-        <div class="menu-item"><span>Americano</span><input class="qty" type="number" min="0" value="0" data-name="Americano" data-price="2"></div>
-        <div class="menu-item"><span>Filtered Coffee</span><input class="qty" type="number" min="0" value="0" data-name="Filtered Coffee" data-price="2"></div>
-        <div class="menu-item"><span>French Press</span><input class="qty" type="number" min="0" value="0" data-name="French Press" data-price="2"></div>
-        <div class="menu-item"><span>Lebanese Rakwa</span><input class="qty" type="number" min="0" value="0" data-name="Lebanese Rakwa" data-price="2"></div>
-      </div>
-
-      <!-- LATTE -->
-      <button type="button" class="acc-btn">Latte</button>
-      <div class="acc-panel">
-        <div class="menu-item"><span>Flat White</span><input class="qty" type="number" min="0" value="0" data-name="Flat White" data-price="2"></div>
-        <div class="menu-item"><span>Cappuccino</span><input class="qty" type="number" min="0" value="0" data-name="Cappuccino" data-price="2"></div>
-        <div class="menu-item"><span>Cafe Latte</span><input class="qty" type="number" min="0" value="0" data-name="Cafe Latte" data-price="2"></div>
-        <div class="menu-item"><span>Spanish Latte</span><input class="qty" type="number" min="0" value="0" data-name="Spanish Latte" data-price="2"></div>
-        <div class="menu-item"><span>Matcha Latte</span><input class="qty" type="number" min="0" value="0" data-name="Matcha Latte" data-price="2"></div>
-        <div class="menu-item"><span>Flavored Latte</span><input class="qty" type="number" min="0" value="0" data-name="Flavored Latte" data-price="2"></div>
-      </div>
-
-      <!-- ICED COFFEE -->
-      <button type="button" class="acc-btn">Iced Coffee</button>
-      <div class="acc-panel">
-        <div class="menu-item"><span>Iced Americano</span><input class="qty" type="number" min="0" value="0" data-name="Iced Americano" data-price="2"></div>
-        <div class="menu-item"><span>Iced Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Latte" data-price="2"></div>
-        <div class="menu-item"><span>Iced Spanish Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Spanish Latte" data-price="2"></div>
-        <div class="menu-item"><span>Iced Matcha Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Matcha Latte" data-price="2"></div>
-        <div class="menu-item"><span>Iced Flavored Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Flavored Latte" data-price="2"></div>
-      </div>
-
-      <!-- FRAPPE -->
-      <button type="button" class="acc-btn">Frappe</button>
-      <div class="acc-panel">
-        <div class="menu-item"><span>Mocha Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Mocha Frappe" data-price="2"></div>
-        <div class="menu-item"><span>Caramel Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Caramel Frappe" data-price="2"></div>
-        <div class="menu-item"><span>Salted Caramel Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Salted Caramel Frappe" data-price="2"></div>
-        <div class="menu-item"><span>Amber Musk Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Amber Musk Frappe" data-price="2"></div>
-        <div class="menu-item"><span>Lotus Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Lotus Frappe" data-price="2"></div>
-        <div class="menu-item"><span>Cookies & Creme Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Cookies & Creme Frappe" data-price="2"></div>
-        <div class="menu-item"><span>Matcha Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Matcha Frappe" data-price="2"></div>
-      </div>
-
+<!-- HOT COFFEE -->
+<button class="acc-btn">Hot Coffee</button>
+<div class="acc-panel">
+  <!-- Items -->
+  <!-- Espresso -->
+  <div class="menu-item">
+    <div class="item-left">
+      <span class="item-name">Espresso</span>
+      <textarea class="item-note" placeholder="Special instructions..."></textarea>
     </div>
-
-    <h3>Order Summary</h3>
-    <div id="order-summary"><p>No items selected.</p></div>
-    <h3>Total: $<span id="total-price">0</span></h3>
-
-    <p id="cart-error" class="cart-error"></p>
-    <div class="proceed-wrap">
-      <a href="checkout.html" class="delivery-btn">Proceed to Checkout</a>
+    <div class="item-controls">
+      <button class="minus">-</button>
+      <input class="qty" type="number" min="0" value="0" data-name="Espresso" data-price="2">
+      <button class="plus">+</button>
     </div>
-
   </div>
+
+  <div class="menu-item"><div class="item-left"><span class="item-name">Macchiato</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Macchiato" data-price="2"><button class="plus">+</button></div></div>
+
+  <div class="menu-item"><div class="item-left"><span class="item-name">Americano</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Americano" data-price="2"><button class="plus">+</button></div></div>
+
+  <div class="menu-item"><div class="item-left"><span class="item-name">Filtered Coffee</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Filtered Coffee" data-price="2"><button class="plus">+</button></div></div>
+
+  <div class="menu-item"><div class="item-left"><span class="item-name">French Press</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="French Press" data-price="2"><button class="plus">+</button></div></div>
+
+  <div class="menu-item"><div class="item-left"><span class="item-name">Lebanese Rakwa</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Lebanese Rakwa" data-price="2"><button class="plus">+</button></div></div>
+</div>
+
+<!-- LATTE -->
+<button class="acc-btn">Latte</button>
+<div class="acc-panel">
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Flat White</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Flat White" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Cappuccino</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Cappuccino" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Cafe Latte</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Cafe Latte" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Spanish Latte</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Spanish Latte" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Matcha Latte</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Matcha Latte" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Flavored Latte</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Flavored Latte" data-price="2"><button class="plus">+</button></div></div>
+
+</div>
+
+<!-- NON-COFFEE -->
+<button class="acc-btn">Non-Coffee</button>
+<div class="acc-panel">
+<div class="menu-item"><div class="item-left"><span class="item-name">Hot Chocolate</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Hot Chocolate" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">White Hot Chocolate</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="White Hot Chocolate" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Tea</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Tea" data-price="2"><button class="plus">+</button></div></div>
+</div>
+
+<!-- ICED COFFEE -->
+<button class="acc-btn">Iced Coffee</button>
+<div class="acc-panel">
+<div class="menu-item"><div class="item-left"><span class="item-name">Iced Americano</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Iced Americano" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Iced Latte</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Iced Latte" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Iced Spanish Latte</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Iced Spanish Latte" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Iced Matcha Latte</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Iced Matcha Latte" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Iced Flavored Latte</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Iced Flavored Latte" data-price="2"><button class="plus">+</button></div></div>
+</div>
+
+<!-- FRAPPE -->
+<button class="acc-btn">Frappe</button>
+<div class="acc-panel">
+<div class="menu-item"><div class="item-left"><span class="item-name">Mocha Frappe</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Mocha Frappe" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Caramel Frappe</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Caramel Frappe" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Salted Caramel Frappe</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Salted Caramel Frappe" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Amber Musk Frappe</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Amber Musk Frappe" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Lotus Frappe</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Lotus Frappe" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Cookies & Creme Frappe</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Cookies & Creme Frappe" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Matcha Frappe</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Matcha Frappe" data-price="2"><button class="plus">+</button></div></div>
+</div>
+
+<!-- SMOOTHIES -->
+<button class="acc-btn">Smoothies</button>
+<div class="acc-panel">
+<div class="menu-item"><div class="item-left"><span class="item-name">Mango Smoothie</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Mango Smoothie" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Strawberry Smoothie</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Strawberry Smoothie" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Mix Berries Smoothie</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Mix Berries Smoothie" data-price="2"><button class="plus">+</button></div></div>
+</div>
+
+<!-- MILKSHAKES -->
+<button class="acc-btn">Milkshakes</button>
+<div class="acc-panel">
+<div class="menu-item"><div class="item-left"><span class="item-name">Lotus</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Milkshake Lotus" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Chocolate</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Milkshake Chocolate" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Cookies & Cream</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Milkshake Cookies & Cream" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Vanilla Strawberry</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Milkshake Vanilla Strawberry" data-price="2"><button class="plus">+</button></div></div>
+</div>
+
+<!-- SPECIALS -->
+<button class="acc-btn">Brewline Specials</button>
+<div class="acc-panel">
+<div class="menu-item"><div class="item-left"><span class="item-name">Strawberry Matcha Latte</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Strawberry Matcha Latte" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Pumpkin Spice Latte</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Pumpkin Spice Latte" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Beauty Glow</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Beauty Glow" data-price="2"><button class="plus">+</button></div></div>
+
+<div class="menu-item"><div class="item-left"><span class="item-name">Black Lemonade</span><textarea class="item-note" placeholder="Special instructions..."></textarea></div><div class="item-controls"><button class="minus">-</button><input class="qty" type="number" min="0" value="0" data-name="Black Lemonade" data-price="2"><button class="plus">+</button></div></div>
+</div>
+
+</div>
+
+<h3>Order Summary</h3>
+<div id="order-summary"><p>No items selected.</p></div>
+<h3>Total: $<span id="total-price">0</span></h3>
+
+<div class="proceed-wrap">
+<a href="checkout.html" class="delivery-btn">Proceed to Checkout</a>
+</div>
+
+</div>
 </section>
 
 <script>
-document.querySelectorAll(".acc-btn").forEach(btn => {
-  btn.addEventListener("click", () => {
-    btn.classList.toggle("active");
-    btn.nextElementSibling.classList.toggle("open");
-  });
+document.querySelectorAll(".acc-btn").forEach(btn=>{
+btn.addEventListener("click",()=>{
+btn.classList.toggle("active");
+btn.nextElementSibling.classList.toggle("open");
+});
 });
 
-const qtyInputs = document.querySelectorAll(".qty");
-const summary = document.getElementById("order-summary");
-const totalDisplay = document.getElementById("total-price");
+document.querySelectorAll(".plus").forEach(btn=>{
+btn.onclick=()=>{
+let input=btn.parentElement.querySelector(".qty");
+input.value=parseInt(input.value)+1;
+updateCart();
+};
+});
 
-function updateCart() {
-  let total = 0;
-  let cart = [];
-  summary.innerHTML = "";
-
-  qtyInputs.forEach(input => {
-    let qty = parseInt(input.value);
-    let price = parseFloat(input.dataset.price);
-    let name = input.dataset.name;
-
-    if (qty > 0) {
-      let lineTotal = qty * price;
-      total += lineTotal;
-      cart.push({name, qty, lineTotal});
-
-      let p = document.createElement("p");
-      p.textContent = `${name} x${qty} = $${lineTotal}`;
-      summary.appendChild(p);
-    }
-  });
-
-  if (cart.length === 0) {
-    summary.innerHTML = "<p>No items selected.</p>";
-  }
-
-  localStorage.setItem("brewline_cart", JSON.stringify(cart));
-  localStorage.setItem("brewline_total", total);
-
-  totalDisplay.textContent = total;
+document.querySelectorAll(".minus").forEach(btn=>{
+btn.onclick=()=>{
+let input=btn.parentElement.querySelector(".qty");
+if(parseInt(input.value)>0){
+input.value=parseInt(input.value)-1;
+updateCart();
 }
+};
+});
 
-qtyInputs.forEach(input => input.addEventListener("input", updateCart));
+const qtyInputs=document.querySelectorAll(".qty");
+const summary=document.getElementById("order-summary");
+const totalDisplay=document.getElementById("total-price");
+
+function updateCart(){
+let total=0;
+let cart=[];
+summary.innerHTML="";
+qtyInputs.forEach(input=>{
+let qty=parseInt(input.value);
+let price=parseFloat(input.dataset.price);
+let name=input.dataset.name;
+if(qty>0){
+let lineTotal=qty*price;
+total+=lineTotal;
+cart.push({name,qty,lineTotal});
+let p=document.createElement("p");
+p.textContent=`${name} x${qty} = $${lineTotal}`;
+summary.appendChild(p);
+}
+});
+if(cart.length===0){
+summary.innerHTML="<p>No items selected.</p>";
+}
+localStorage.setItem("brewline_cart",JSON.stringify(cart));
+localStorage.setItem("brewline_total",total);
+totalDisplay.textContent=total;
+}
+qtyInputs.forEach(input=>input.addEventListener("input",updateCart));
 </script>
 
 </body>
