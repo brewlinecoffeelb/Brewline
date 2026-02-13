@@ -484,3 +484,87 @@ margin-top:40px;
   margin-top: 15px;
   text-align: center;
 }
+
+/* ================= DELIVERY ITEM UPGRADE ================= */
+
+/* Make category titles slightly bigger (luxury look) */
+.acc-btn {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+/* Wrapper for each item + textarea */
+.menu-item-wrapper {
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 15px;
+}
+
+/* Quantity controls container */
+.qty-control {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Gold round buttons */
+.qty-btn {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: none;
+  background: #d4af37;
+  color: #0d1b2a;
+  font-size: 20px;
+  font-weight: 700;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+}
+
+.qty-btn:hover {
+  transform: scale(1.08);
+  background: #c19b2e;
+}
+
+/* Quantity input smaller & centered */
+.qty {
+  width: 60px !important;
+  height: 38px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(212,175,55,0.4);
+  background-color: #112240;
+  color: white;
+  font-size: 16px;
+}
+
+/* Remove arrows inside number input */
+.qty::-webkit-inner-spin-button,
+.qty::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.qty {
+  -moz-appearance: textfield;
+}
+
+/* Special instructions under each item */
+.item-note {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(212,175,55,0.2);
+  background-color: #112240;
+  color: white;
+  resize: none;
+  height: 60px;
+  font-size: 14px;
+}
+
+.item-note::placeholder {
+  color: #888;
+}
