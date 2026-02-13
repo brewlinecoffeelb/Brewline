@@ -79,8 +79,11 @@
     <h3>Total: $<span id="total-price">0</span></h3>
 
     <p id="cart-error" class="cart-error"></p>
+
     <div class="proceed-wrap">
-      <a href="checkout.html" class="delivery-btn">Proceed to Checkout</a>
+      <button id="proceedBtn" class="delivery-btn">
+        Proceed to Checkout
+      </button>
     </div>
 
   </div>
@@ -125,11 +128,25 @@ function updateCart() {
 
   localStorage.setItem("brewline_cart", JSON.stringify(cart));
   localStorage.setItem("brewline_total", total);
-
   totalDisplay.textContent = total;
 }
 
 qtyInputs.forEach(input => input.addEventListener("input", updateCart));
+
+/* 🚫 Prevent empty checkout */
+document.getElementById("proceedBtn").addEventListener("click", function () {
+
+  const cart = JSON.parse(localStorage.getItem("brewline_cart")) || [];
+  const errorMsg = document.getElementById("cart-error");
+
+  if (cart.length === 0) {
+    errorMsg.textContent = "Please select at least one item before proceeding to checkout.";
+    return;
+  }
+
+  errorMsg.textContent = "";
+  window.location.href = "checkout.html";
+});
 </script>
 
 </body>
