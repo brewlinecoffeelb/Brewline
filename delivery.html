@@ -79,16 +79,23 @@
     <h3>Total: $<span id="total-price">0</span></h3>
 
     <p id="cart-error" class="cart-error"></p>
+
     <div class="proceed-wrap">
       <button id="proceedBtn" class="delivery-btn">
-  Proceed to Checkout
-</button>
+        Proceed to Checkout
+      </button>
     </div>
 
   </div>
 </section>
 
 <script>
+
+/* CLEAR OLD CART WHEN PAGE LOADS */
+localStorage.removeItem("brewline_cart");
+localStorage.removeItem("brewline_total");
+
+/* Accordion */
 document.querySelectorAll(".acc-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     btn.classList.toggle("active");
@@ -99,6 +106,8 @@ document.querySelectorAll(".acc-btn").forEach(btn => {
 const qtyInputs = document.querySelectorAll(".qty");
 const summary = document.getElementById("order-summary");
 const totalDisplay = document.getElementById("total-price");
+const proceedBtn = document.getElementById("proceedBtn");
+const cartError = document.getElementById("cart-error");
 
 function updateCart() {
   let total = 0;
@@ -106,14 +115,14 @@ function updateCart() {
   summary.innerHTML = "";
 
   qtyInputs.forEach(input => {
-    let qty = parseInt(input.value);
+    let qty = parseInt(input.value) || 0;
     let price = parseFloat(input.dataset.price);
     let name = input.dataset.name;
 
     if (qty > 0) {
       let lineTotal = qty * price;
       total += lineTotal;
-      cart.push({name, qty, lineTotal});
+      cart.push({ name, qty, lineTotal });
 
       let p = document.createElement("p");
       p.textContent = `${name} x${qty} = $${lineTotal}`;
@@ -127,14 +136,10 @@ function updateCart() {
 
   localStorage.setItem("brewline_cart", JSON.stringify(cart));
   localStorage.setItem("brewline_total", total);
-
   totalDisplay.textContent = total;
 }
 
 qtyInputs.forEach(input => input.addEventListener("input", updateCart));
-
-  const proceedBtn = document.getElementById("proceedBtn");
-const cartError = document.getElementById("cart-error");
 
 proceedBtn.addEventListener("click", function(e) {
   e.preventDefault();
@@ -152,7 +157,7 @@ proceedBtn.addEventListener("click", function(e) {
   cartError.innerHTML = "";
   window.location.href = "checkout.html";
 });
-  
+
 </script>
 
 </body>
