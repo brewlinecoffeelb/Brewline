@@ -1,6 +1,3 @@
-body{
-  background:red;
-}
 *{
   margin:0;
   padding:0;
@@ -165,6 +162,30 @@ header{
   margin-bottom:50px;
 }
 
+/* ================= FORM ================= */
+
+.delivery-form{
+  max-width:600px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.delivery-form input,
+.delivery-form textarea{
+  padding:12px;
+  border-radius:8px;
+  border:1px solid #333;
+  background-color:#112240;
+  color:white;
+}
+
+.delivery-form textarea{
+  resize:none;
+  height:80px;
+}
+
 /* ================= ACCORDION ================= */
 
 .menu-accordion{
@@ -173,19 +194,16 @@ header{
   text-align:left;
 }
 
-/* CATEGORY TITLES - LUXURY STYLE */
 .acc-btn{
   width:100%;
-  padding:18px 18px;
-  margin-bottom:14px;
-  border-radius:14px;
-  border:1px solid rgba(212,175,55,0.3);
-  background:rgba(255,255,255,0.04);
+  padding:16px;
+  margin-bottom:12px;
+  border-radius:12px;
+  border:1px solid rgba(212,175,55,0.2);
+  background:rgba(255,255,255,0.03);
   color:#d4af37;
-  font-weight:700;
-  font-size:20px;   /* bigger but elegant */
-  letter-spacing:1px;
-  text-transform:uppercase;
+  font-weight:600;
+  text-align:left;
   cursor:pointer;
   display:flex;
   justify-content:space-between;
@@ -194,7 +212,7 @@ header{
 
 .acc-btn::after{
   content:"+";
-  font-size:20px;
+  font-size:18px;
 }
 
 .acc-btn.active{
@@ -204,8 +222,6 @@ header{
 .acc-btn.active::after{
   content:"–";
 }
-
-/* ================= ITEMS ================= */
 
 .acc-panel{
   display:none;
@@ -219,76 +235,19 @@ header{
 
 .menu-item{
   display:flex;
-  flex-direction:column;
+  justify-content:space-between;
+  align-items:center;
   padding:14px 10px;
   border-bottom:1px solid rgba(255,255,255,0.08);
 }
 
-/* First row: name + qty */
-.menu-item > div:first-child{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-}
-
-.menu-item span{
-  font-size:17px;
-}
-
-/* ================= QUANTITY BOX ================= */
-
-.qty-box{
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
-.qty-box button{
-  width:32px;
-  height:32px;
-  border-radius:8px;
-  border:1px solid rgba(212,175,55,0.4);
-  background:transparent;
-  color:#d4af37;
-  font-size:18px;
-  cursor:pointer;
-}
-
-.qty-box button:hover{
-  background:#d4af37;
-  color:#081c3a;
-}
-
-.qty{
-  width:50px;      /* smaller box */
-  height:32px;
-  text-align:center;
-  border-radius:8px;
+.menu-item input{
+  width:80px;
+  padding:10px;
+  border-radius:10px;
   border:1px solid #333;
   background-color:#112240;
   color:white;
-}
-
-/* ================= SPECIAL INSTRUCTIONS PER ITEM ================= */
-
-.item-notes{
-  margin-top:8px;
-}
-
-.item-notes textarea{
-  width:100%;
-  padding:8px 10px;
-  border-radius:8px;
-  border:1px solid #333;
-  background-color:#112240;
-  color:white;
-  font-size:14px;
-  resize:none;
-  height:40px;
-}
-
-.item-notes textarea::placeholder{
-  color:#888;
 }
 
 /* ================= ORDER SUMMARY ================= */
@@ -309,6 +268,25 @@ header{
 .proceed-wrap{
   text-align:center;
   margin-top:30px;
+}
+
+/* ================= CHECKOUT TITLES ================= */
+
+.checkout-title,
+.section-title{
+  font-size:32px;
+  color:#d4af37;
+  font-weight:700;
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.checkout-total{
+  margin-bottom:60px;
+}
+
+.section-title{
+  margin-top:60px;
 }
 
 /* ================= CART ERROR ================= */
