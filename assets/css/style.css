@@ -470,3 +470,11 @@ margin-top:40px;
 .section-title {
     margin-top: 60px;
 }
+
+.cart-error {
+    color: #ff4d4d;
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 15px;
+    min-height: 20px;
+}
