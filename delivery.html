@@ -80,7 +80,9 @@
 
     <p id="cart-error" class="cart-error"></p>
     <div class="proceed-wrap">
-      <a href="#" id="proceedBtn" class="delivery-btn">Proceed to Checkout</a>
+      <button id="proceedBtn" class="delivery-btn">
+  Proceed to Checkout
+</button>
     </div>
 
   </div>
@@ -147,6 +149,7 @@ proceedBtn.addEventListener("click", function(e) {
     return;
   }
 
+  cartError.innerHTML = "";
   window.location.href = "checkout.html";
 });
   
