@@ -484,3 +484,10 @@ margin-top:40px;
   margin-top: 15px;
   text-align: center;
 }
+.cart-error {
+  color: #e14c4c;          /* red */
+  text-align: center;      /* center text */
+  font-weight: 500;
+  margin: 20px 0 10px 0;
+  line-height: 1.6;
+}
