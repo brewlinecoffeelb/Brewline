@@ -28,130 +28,317 @@
 
     <div class="menu-accordion">
 
-      <!-- HOT COFFEE -->
-      <button type="button" class="acc-btn">Hot Coffee</button>
-      <div class="acc-panel">
-        <div class="menu-item"><span>Espresso</span><input class="qty" type="number" min="0" value="0" data-name="Espresso" data-price="2"></div>
-        <div class="menu-item"><span>Macchiato</span><input class="qty" type="number" min="0" value="0" data-name="Macchiato" data-price="2"></div>
-        <div class="menu-item"><span>Americano</span><input class="qty" type="number" min="0" value="0" data-name="Americano" data-price="2"></div>
-        <div class="menu-item"><span>Filtered Coffee</span><input class="qty" type="number" min="0" value="0" data-name="Filtered Coffee" data-price="2"></div>
-        <div class="menu-item"><span>French Press</span><input class="qty" type="number" min="0" value="0" data-name="French Press" data-price="2"></div>
-        <div class="menu-item"><span>Lebanese Rakwa</span><input class="qty" type="number" min="0" value="0" data-name="Lebanese Rakwa" data-price="2"></div>
-      </div>
-
-      <!-- LATTE -->
-      <button type="button" class="acc-btn">Latte</button>
-      <div class="acc-panel">
-        <div class="menu-item"><span>Flat White</span><input class="qty" type="number" min="0" value="0" data-name="Flat White" data-price="2"></div>
-        <div class="menu-item"><span>Cappuccino</span><input class="qty" type="number" min="0" value="0" data-name="Cappuccino" data-price="2"></div>
-        <div class="menu-item"><span>Cafe Latte</span><input class="qty" type="number" min="0" value="0" data-name="Cafe Latte" data-price="2"></div>
-        <div class="menu-item"><span>Spanish Latte</span><input class="qty" type="number" min="0" value="0" data-name="Spanish Latte" data-price="2"></div>
-        <div class="menu-item"><span>Matcha Latte</span><input class="qty" type="number" min="0" value="0" data-name="Matcha Latte" data-price="2"></div>
-        <div class="menu-item"><span>Flavored Latte</span><input class="qty" type="number" min="0" value="0" data-name="Flavored Latte" data-price="2"></div>
-      </div>
-
-      <!-- ICED COFFEE -->
-      <button type="button" class="acc-btn">Iced Coffee</button>
-      <div class="acc-panel">
-        <div class="menu-item"><span>Iced Americano</span><input class="qty" type="number" min="0" value="0" data-name="Iced Americano" data-price="2"></div>
-        <div class="menu-item"><span>Iced Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Latte" data-price="2"></div>
-        <div class="menu-item"><span>Iced Spanish Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Spanish Latte" data-price="2"></div>
-        <div class="menu-item"><span>Iced Matcha Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Matcha Latte" data-price="2"></div>
-        <div class="menu-item"><span>Iced Flavored Latte</span><input class="qty" type="number" min="0" value="0" data-name="Iced Flavored Latte" data-price="2"></div>
-      </div>
-
-      <!-- FRAPPE -->
-      <button type="button" class="acc-btn">Frappe</button>
-      <div class="acc-panel">
-        <div class="menu-item"><span>Mocha Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Mocha Frappe" data-price="2"></div>
-        <div class="menu-item"><span>Caramel Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Caramel Frappe" data-price="2"></div>
-        <div class="menu-item"><span>Salted Caramel Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Salted Caramel Frappe" data-price="2"></div>
-        <div class="menu-item"><span>Amber Musk Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Amber Musk Frappe" data-price="2"></div>
-        <div class="menu-item"><span>Lotus Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Lotus Frappe" data-price="2"></div>
-        <div class="menu-item"><span>Cookies & Creme Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Cookies & Creme Frappe" data-price="2"></div>
-        <div class="menu-item"><span>Matcha Frappe</span><input class="qty" type="number" min="0" value="0" data-name="Matcha Frappe" data-price="2"></div>
-      </div>
-
-     <!-- SMOOTHIES -->
-<button type="button" class="acc-btn">Smoothies</button>
+<!-- HOT COFFEE -->
+<button type="button" class="acc-btn">Hot Coffee</button>
 <div class="acc-panel">
-  <div class="menu-item">
-    <span>Mango Smoothie</span>
-    <input class="qty" type="number" min="0" value="0"
-      data-name="Mango Smoothie" data-price="4">
-  </div>
 
-  <div class="menu-item">
-    <span>Strawberry Smoothie</span>
-    <input class="qty" type="number" min="0" value="0"
-      data-name="Strawberry Smoothie" data-price="4">
+<div class="item" data-name="Espresso" data-price="2">
+  <div class="item-top">
+    <span>Espresso</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
   </div>
-
-  <div class="menu-item">
-    <span>Mix Berries Smoothie</span>
-    <input class="qty" type="number" min="0" value="0"
-      data-name="Mix Berries Smoothie" data-price="4">
-  </div>
+  <textarea placeholder="Special instructions..."></textarea>
 </div>
 
-
-<!-- MILKSHAKES -->
-<button type="button" class="acc-btn">Milkshakes</button>
-<div class="acc-panel">
-  <div class="menu-item">
-    <span>Lotus Milkshake</span>
-    <input class="qty" type="number" min="0" value="0"
-      data-name="Lotus Milkshake" data-price="5">
+<div class="item" data-name="Macchiato" data-price="2">
+  <div class="item-top">
+    <span>Macchiato</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
   </div>
-
-  <div class="menu-item">
-    <span>Chocolate Milkshake</span>
-    <input class="qty" type="number" min="0" value="0"
-      data-name="Chocolate Milkshake" data-price="5">
-  </div>
-
-  <div class="menu-item">
-    <span>Cookies & Cream Milkshake</span>
-    <input class="qty" type="number" min="0" value="0"
-      data-name="Cookies & Cream Milkshake" data-price="5">
-  </div>
-
-  <div class="menu-item">
-    <span>Vanilla Strawberry Milkshake</span>
-    <input class="qty" type="number" min="0" value="0"
-      data-name="Vanilla Strawberry Milkshake" data-price="5">
-  </div>
+  <textarea placeholder="Special instructions..."></textarea>
 </div>
 
-
-<!-- BREWLINE SPECIALS -->
-<button type="button" class="acc-btn">Brewline's Specials</button>
-<div class="acc-panel">
-  <div class="menu-item">
-    <span>Strawberry Matcha Latte</span>
-    <input class="qty" type="number" min="0" value="0"
-      data-name="Strawberry Matcha Latte" data-price="5">
+<div class="item" data-name="Americano" data-price="2">
+  <div class="item-top">
+    <span>Americano</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
   </div>
-
-  <div class="menu-item">
-    <span>Pumpkin Spice Latte</span>
-    <input class="qty" type="number" min="0" value="0"
-      data-name="Pumpkin Spice Latte" data-price="5">
-  </div>
-
-  <div class="menu-item">
-    <span>Beauty Glow</span>
-    <input class="qty" type="number" min="0" value="0"
-      data-name="Beauty Glow" data-price="5">
-  </div>
-
-  <div class="menu-item">
-    <span>Black Lemonade</span>
-    <input class="qty" type="number" min="0" value="0"
-      data-name="Black Lemonade" data-price="4">
-  </div>
+  <textarea placeholder="Special instructions..."></textarea>
 </div>
- 
+
+<div class="item" data-name="Filtered Coffee" data-price="2">
+  <div class="item-top">
+    <span>Filtered Coffee</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="French Press" data-price="2">
+  <div class="item-top">
+    <span>French Press</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Lebanese Rakwa" data-price="2">
+  <div class="item-top">
+    <span>Lebanese Rakwa</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+</div>
+
+<!-- LATTE -->
+<button type="button" class="acc-btn">Latte</button>
+<div class="acc-panel">
+
+<div class="item" data-name="Flat White" data-price="2">
+  <div class="item-top">
+    <span>Flat White</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Cappuccino" data-price="2">
+  <div class="item-top">
+    <span>Cappuccino</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Cafe Latte" data-price="2">
+  <div class="item-top">
+    <span>Cafe Latte</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Spanish Latte" data-price="2">
+  <div class="item-top">
+    <span>Spanish Latte</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Matcha Latte" data-price="2">
+  <div class="item-top">
+    <span>Matcha Latte</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Flavored Latte" data-price="2">
+  <div class="item-top">
+    <span>Flavored Latte</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+</div>
+
+<!-- ICED COFFEE -->
+<button type="button" class="acc-btn">Iced Coffee</button>
+<div class="acc-panel">
+
+<div class="item" data-name="Iced Americano" data-price="2">
+  <div class="item-top">
+    <span>Iced Americano</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Iced Latte" data-price="2">
+  <div class="item-top">
+    <span>Iced Latte</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Iced Spanish Latte" data-price="2">
+  <div class="item-top">
+    <span>Iced Spanish Latte</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Iced Matcha Latte" data-price="2">
+  <div class="item-top">
+    <span>Iced Matcha Latte</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Iced Flavored Latte" data-price="2">
+  <div class="item-top">
+    <span>Iced Flavored Latte</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+</div>
+
+<!-- FRAPPE -->
+<button type="button" class="acc-btn">Frappe</button>
+<div class="acc-panel">
+
+<div class="item" data-name="Mocha Frappe" data-price="2">
+  <div class="item-top">
+    <span>Mocha Frappe</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Caramel Frappe" data-price="2">
+  <div class="item-top">
+    <span>Caramel Frappe</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Salted Caramel Frappe" data-price="2">
+  <div class="item-top">
+    <span>Salted Caramel Frappe</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Amber Musk Frappe" data-price="2">
+  <div class="item-top">
+    <span>Amber Musk Frappe</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Lotus Frappe" data-price="2">
+  <div class="item-top">
+    <span>Lotus Frappe</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Cookies & Creme Frappe" data-price="2">
+  <div class="item-top">
+    <span>Cookies & Creme Frappe</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+<div class="item" data-name="Matcha Frappe" data-price="2">
+  <div class="item-top">
+    <span>Matcha Frappe</span>
+    <div class="qty-box">
+      <button type="button" class="minus">−</button>
+      <div class="count">0</div>
+      <button type="button" class="plus">+</button>
+    </div>
+  </div>
+  <textarea placeholder="Special instructions..."></textarea>
+</div>
+
+</div>
 
     </div>
 
@@ -172,11 +359,9 @@
 
 <script>
 
-/* CLEAR OLD CART WHEN PAGE LOADS */
 localStorage.removeItem("brewline_cart");
 localStorage.removeItem("brewline_total");
 
-/* Accordion */
 document.querySelectorAll(".acc-btn").forEach(btn => {
   btn.addEventListener("click", () => {
     btn.classList.toggle("active");
@@ -184,7 +369,7 @@ document.querySelectorAll(".acc-btn").forEach(btn => {
   });
 });
 
-const qtyInputs = document.querySelectorAll(".qty");
+const items = document.querySelectorAll(".item");
 const summary = document.getElementById("order-summary");
 const totalDisplay = document.getElementById("total-price");
 const proceedBtn = document.getElementById("proceedBtn");
@@ -195,10 +380,10 @@ function updateCart() {
   let cart = [];
   summary.innerHTML = "";
 
-  qtyInputs.forEach(input => {
-    let qty = parseInt(input.value) || 0;
-    let price = parseFloat(input.dataset.price);
-    let name = input.dataset.name;
+  items.forEach(item => {
+    const qty = parseInt(item.querySelector(".count").textContent);
+    const name = item.dataset.name;
+    const price = parseFloat(item.dataset.price);
 
     if (qty > 0) {
       let lineTotal = qty * price;
@@ -220,7 +405,24 @@ function updateCart() {
   totalDisplay.textContent = total;
 }
 
-qtyInputs.forEach(input => input.addEventListener("input", updateCart));
+document.querySelectorAll(".plus").forEach(btn => {
+  btn.addEventListener("click", () => {
+    let count = btn.parentElement.querySelector(".count");
+    count.textContent = parseInt(count.textContent) + 1;
+    updateCart();
+  });
+});
+
+document.querySelectorAll(".minus").forEach(btn => {
+  btn.addEventListener("click", () => {
+    let count = btn.parentElement.querySelector(".count");
+    let value = parseInt(count.textContent);
+    if (value > 0) {
+      count.textContent = value - 1;
+      updateCart();
+    }
+  });
+});
 
 proceedBtn.addEventListener("click", function(e) {
   e.preventDefault();
@@ -243,3 +445,4 @@ proceedBtn.addEventListener("click", function(e) {
 
 </body>
 </html>
+
