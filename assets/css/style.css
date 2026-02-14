@@ -570,72 +570,187 @@ margin-top:40px;
   transform:translateY(-3px);
 }
 
-}/* =============================
-   FINAL CLEAN ITEM LAYOUT
-============================= */
+/* ===== PREMIUM QUANTITY DESIGN ===== */
 
-.item{
-  display: flex;
-  gap: 14px;
-  align-items: flex-start;
-  padding: 14px 0;
+.item {
+  padding: 22px 0;
   border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-/* coffee image */
-.item-img{
-  width: 70px;
-  height: 70px;
-  object-fit: cover;
-  border-radius: 14px;
-  border: 1px solid rgba(212,175,55,0.25);
-  box-shadow: 0 6px 14px rgba(0,0,0,0.3);
-  flex-shrink: 0;
-}
-
-/* right side container */
-.item-top{
+.item-top {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.item-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Quantity container */
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Gold round buttons */
+.qty-box button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #d4af37;
+  color: #0d1b2a;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.qty-box button:hover {
+  transform: scale(1.08);
+  background: #c19b2e;
+}
+
+/* Number box */
+.qty-box .count {
+  width: 44px;
+  height: 34px;
+  border-radius: 12px;
+  border: 1px solid rgba(212,175,55,0.4);
+  background: #112240;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Special instructions textarea */
+.item textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 14px;
+  border: 1px solid rgba(212,175,55,0.25);
+  background-color: #112240;
+  color: white;
+  resize: none;
+  height: 40px;
+  font-size: 14px;
+}
+
+.item textarea::placeholder {
+  color: #8892b0;
+}
+/* Make item horizontal */
+.item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+/* Coffee image */
+.item-img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(212,175,55,0.4);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Make right side full width */
+.item-top,
+.item textarea {
   width: 100%;
 }
 
-/* item name */
+.item {
+  flex-wrap: wrap;
+}
+
+.item-img {
+  flex-shrink: 0;
+}
+/* =============================
+   COMPACT + LUXURY ITEM LAYOUT
+   (no structure changes)
+============================= */
+
+/* each item block */
+.item{
+  padding: 14px 0;              /* less vertical space */
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* item top row (name + qty controls) */
+.item-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+/* item name smaller */
 .item-name{
   font-size: 16px;
   font-weight: 500;
 }
 
-/* quantity container */
-.qty-box{
-  display: flex;
-  align-items: center;
-  gap: 10px;
+/* item image smaller + aligned nicely */
+.item-img{
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(212,175,55,0.25);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  margin-bottom: 10px;          /* small gap before name row */
 }
 
-/* qty buttons */
+/* qty buttons smaller */
 .qty-box button{
-  width: 30px;
-  height: 30px;
-  font-size: 15px;
+  width: 34px;
+  height: 34px;
+  font-size: 16px;
 }
 
-/* number box */
+/* number box smaller */
 .qty-box .count{
-  width: 46px;
-  height: 30px;
-  font-size: 14px;
+  width: 52px;
+  height: 34px;
+  border-radius: 12px;
+  font-size: 16px;
 }
 
-/* special instructions */
+/* textarea: look like 1-line input */
 .item textarea{
   width: 100%;
-  margin-top: 8px;
-  padding: 8px 12px;
-  height: 38px;        /* one-line look */
-  font-size: 14px;
-  border-radius: 12px;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(212,175,55,0.18);
+  background: #112240;
+  color: #fff;
+
+  height: 42px;                 /* ✅ one-line height */
+  line-height: 20px;
   resize: none;
   overflow: hidden;
+  font-size: 14px;
+}
+
+/* placeholder lighter */
+.item textarea::placeholder{
+  color: rgba(255,255,255,0.35);
+}
+
+/* reduce spacing between items */
+.item + .item{
+  margin-top: 10px;
 }
