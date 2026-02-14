@@ -585,7 +585,7 @@ margin-top:40px;
 }
 
 .item-name {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 500;
   color: #ffffff;
 }
@@ -599,13 +599,13 @@ margin-top:40px;
 
 /* Gold round buttons */
 .qty-box button {
-  width: 44px;
-  height: 44px;
+  width: 32px;
+  height: 32px;
   border-radius: 50%;
   border: none;
   background: #d4af37;
   color: #0d1b2a;
-  font-size: 22px;
+  font-size: 16px;
   font-weight: 700;
   cursor: pointer;
   transition: all 0.2s ease;
@@ -618,13 +618,13 @@ margin-top:40px;
 
 /* Number box */
 .qty-box .count {
-  width: 60px;
-  height: 44px;
-  border-radius: 14px;
+  width: 44px;
+  height: 34px;
+  border-radius: 12px;
   border: 1px solid rgba(212,175,55,0.4);
   background: #112240;
   color: white;
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 600;
   display: flex;
   align-items: center;
@@ -635,7 +635,7 @@ margin-top:40px;
 .item textarea {
   width: 100%;
   margin-top: 14px;
-  padding: 14px;
+  padding: 12px;
   border-radius: 16px;
   border: 1px solid rgba(212,175,55,0.25);
   background-color: #112240;
