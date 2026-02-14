@@ -678,3 +678,80 @@ margin-top:40px;
 .item-img {
   flex-shrink: 0;
 }
+/* =============================
+   COMPACT + LUXURY ITEM LAYOUT
+   (no structure changes)
+============================= */
+
+/* each item block */
+.item{
+  padding: 14px 0;              /* less vertical space */
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* item top row (name + qty controls) */
+.item-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+/* item name smaller */
+.item-name{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* item image smaller + aligned nicely */
+.item-img{
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(212,175,55,0.25);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  margin-bottom: 10px;          /* small gap before name row */
+}
+
+/* qty buttons smaller */
+.qty-box button{
+  width: 34px;
+  height: 34px;
+  font-size: 16px;
+}
+
+/* number box smaller */
+.qty-box .count{
+  width: 52px;
+  height: 34px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+/* textarea: look like 1-line input */
+.item textarea{
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(212,175,55,0.18);
+  background: #112240;
+  color: #fff;
+
+  height: 42px;                 /* ✅ one-line height */
+  line-height: 20px;
+  resize: none;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+/* placeholder lighter */
+.item textarea::placeholder{
+  color: rgba(255,255,255,0.35);
+}
+
+/* reduce spacing between items */
+.item + .item{
+  margin-top: 10px;
+}
