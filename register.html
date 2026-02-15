@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Create Account - Brewline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+<section class="delivery-section">
+  <div class="container" style="max-width:480px;">
+
+    <h2 style="margin-bottom:25px;">Create Account</h2>
+
+    <input type="text" id="fullname" placeholder="Full Name" class="item-note">
+    <br><br>
+
+    <input type="email" id="email" placeholder="Email" class="item-note">
+    <br><br>
+
+    <input type="password" id="password" placeholder="Password (min 6 characters)" class="item-note">
+    <br><br>
+
+    <p id="message" style="margin:12px 0; font-size:14px;"></p>
+
+    <button type="button" onclick="registerUser()" class="gold-btn" style="width:100%;">
+      Create Account
+    </button>
+
+  </div>
+</section>
+
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
+import { getAuth, createUserWithEmailAndPassword, updateProfile } 
+from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyBI4OeO3oLFfWNFKRIGP2KOieusg80qZzA",
+  authDomain: "brewline-auth.firebaseapp.com",
+  projectId: "brewline-auth",
+  storageBucket: "brewline-auth.firebasestorage.app",
+  messagingSenderId: "408447180405",
+  appId: "1:408447180405:web:1a3f0a04324e50e4baa23c"
+};
+
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+
+const msg = document.getElementById("message");
+
+function showError(text){
+  msg.style.color = "#ff3b3b";
+  msg.innerText = text;
+}
+
+function showSuccess(text){
+  msg.style.color = "#7CFF8A";
+  msg.innerText = text;
+}
+
+window.registerUser = function(){
+
+  const name = document.getElementById("fullname").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+
+  if(!name || !email || !password){
+    showError("Please fill all fields.");
+    return;
+  }
+
+  if(password.length < 6){
+    showError("Password must be at least 6 characters.");
+    return;
+  }
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+
+      // Save display name in Firebase
+      return updateProfile(userCredential.user, {
+        displayName: name
+      });
+
+    })
+    .then(() => {
+      showSuccess("Account created successfully!");
+      setTimeout(() => {
+        window.location.href = "login.html";
+      }, 1000);
+    })
+    .catch((error) => {
+
+      if(error.code === "auth/email-already-in-use"){
+        showError("This email is already registered.");
+      }
+      else if(error.code === "auth/invalid-email"){
+        showError("Please enter a valid email.");
+      }
+      else{
+        showError("Registration failed. Try again.");
+      }
+
+    });
+};
+
+</script>
+
+</body>
+</html>
