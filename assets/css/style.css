@@ -1018,3 +1018,23 @@ header{
 body{
   padding-top: 80px;
 }
+/* ===== FINAL HEADER ALIGNMENT FIX ===== */
+
+header{
+  width:100%;
+  overflow:hidden;
+}
+
+header .nav{
+  width:100%;
+  max-width:100%;
+  padding:12px 14px;   /* slightly smaller padding */
+}
+
+header .nav > div{
+  gap:14px;            /* reduce spacing between links */
+}
+
+header .nav-login{
+  padding:7px 14px;    /* slightly smaller button */
+}
