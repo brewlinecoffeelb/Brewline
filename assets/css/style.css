@@ -1197,3 +1197,26 @@ body{
   background:#c19b2e;
   transform:translateY(-2px);
 }
+/* ===== PERFECT HEADER SYMMETRY FIX ===== */
+
+header {
+  padding: 0 16px; /* equal left & right breathing space */
+  box-sizing: border-box;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 0; /* remove side padding (header now controls it) */
+}
+
+.nav div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Prevent button from sticking to edge */
+.nav-login {
+  margin-right: 2px;
+}
