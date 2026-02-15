@@ -1220,3 +1220,27 @@ header {
 .nav-login {
   margin-right: 2px;
 }
+/* ===== FORCE HEADER TO FIT SCREEN ===== */
+
+header {
+  overflow: hidden;
+}
+
+.nav {
+  width: 100%;
+  padding: 12px 12px; /* smaller side padding */
+  box-sizing: border-box;
+}
+
+.nav div {
+  gap: 12px; /* reduce space between links */
+}
+
+.nav a {
+  font-size: 13px; /* slightly smaller text */
+}
+
+.nav-login {
+  padding: 6px 14px; /* smaller button */
+  font-size: 13px;
+}
