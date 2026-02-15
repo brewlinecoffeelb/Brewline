@@ -920,3 +920,22 @@ border-top:1px solid rgba(255,255,255,0.05);
         0 20px 60px rgba(0,0,0,0.5),
         0 0 40px rgba(212,175,55,0.08);
 }
+.floating-contact{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#d4af37;
+  color:#081c3a;
+  padding:14px 20px;
+  border-radius:40px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+  z-index:999;
+  transition:0.3s;
+}
+
+.floating-contact:hover{
+  background:#c19b2e;
+  transform:translateY(-3px);
+}
