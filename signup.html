@@ -1,60 +1,38 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <title>Sign Up - Brewline</title>
-  <link rel="stylesheet" href="assets/css/style.css">
-</head>
-<body>
-
 <section class="delivery-section">
   <div class="container">
+
     <h2>Create Account</h2>
 
-    <input type="email" id="email" placeholder="Email" class="item-note">
+    <input type="text" id="fullname" placeholder="Full Name" class="item-note">
     <br><br>
+
+    <input type="email" id="email" placeholder="Email Address" class="item-note">
+    <br><br>
+
+    <input type="tel" id="phone" placeholder="Phone Number" class="item-note">
+    <br><br>
+
     <input type="password" id="password" placeholder="Password" class="item-note">
     <br><br>
 
-    <button onclick="signUp()" class="gold-btn">Create Account</button>
+    <input type="password" id="confirmPassword" placeholder="Confirm Password" class="item-note">
+    <br><br>
 
-    <p id="message"></p>
+    <button onclick="createAccount()" class="gold-btn login-btn">
+      Create Account
+    </button>
+
+    <p id="message" class="auth-message"></p>
+
+    <div class="divider">
+      <span>or continue with</span>
+    </div>
+
+    <div class="social-buttons">
+      <button class="social-btn google">Google</button>
+      <button class="social-btn facebook">Facebook</button>
+    </div>
+
   </div>
 </section>
 
-<script type="module">
-
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBI4OeO3oLFfWNFKRIGP2KOieusg80qZzA",
-  authDomain: "brewline-auth.firebaseapp.com",
-  projectId: "brewline-auth",
-  storageBucket: "brewline-auth.firebasestorage.app",
-  messagingSenderId: "408447180405",
-  appId: "1:408447180405:web:1a3f0a04324e50e4baa23c"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-
-window.signUp = function() {
-
-  const email = document.getElementById("email").value;
-  const password = document.getElementById("password").value;
-
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      document.getElementById("message").innerText = "Account created successfully!";
-    })
-    .catch((error) => {
-      document.getElementById("message").innerText = error.message;
-    });
-
-};
-
-</script>
-
-</body>
-</html>
