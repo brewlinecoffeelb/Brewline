@@ -1012,3 +1012,47 @@ header{
 .nav-login{
   font-size: clamp(14px, 2.5vw, 16px) !important;
 }
+/* ===============================
+   GLOBAL HEADER FIX (ALL PAGES)
+================================ */
+
+.container{
+  max-width:1200px !important;
+  padding:0 20px !important;
+}
+
+header{
+  height:70px !important;
+}
+
+.nav{
+  max-width:1200px !important;
+  height:70px !important;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+}
+
+.nav div{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.nav a{
+  font-size:15px !important;
+  white-space:nowrap;
+}
+
+/* Gold Sign In Button */
+.nav-login{
+  background:#d4af37;
+  color:#081c3a !important;
+  padding:8px 18px;
+  border-radius:30px;
+  font-weight:600;
+  font-size:15px !important;
+}
+body{
+  padding-top:70px;
+}
