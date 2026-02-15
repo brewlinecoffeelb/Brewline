@@ -10,36 +10,42 @@
 <body>
 
 <section class="delivery-section">
-  <div class="container">
+  <div class="container auth-wrapper">
 
-    <h2>Create Account</h2>
+    <h2 style="text-align:center;margin-bottom:30px;">Create Account</h2>
 
-    <input type="text" id="fullname" placeholder="Full Name" class="item-note">
+    <div class="auth-field">
+      <input type="text" id="fullName" placeholder="Full Name">
+    </div>
 
-    <input type="email" id="email" placeholder="Email Address" class="item-note">
+    <div class="auth-field">
+      <input type="email" id="email" placeholder="Email Address">
+    </div>
 
-    <input type="tel" id="phone" placeholder="Phone Number" class="item-note">
+    <div class="auth-field">
+      <input type="tel" id="phone" placeholder="Phone Number">
+    </div>
 
-    <input type="password" id="password" placeholder="Password" class="item-note">
+    <div class="auth-field">
+      <input type="password" id="password" placeholder="Password">
+      <span class="toggle-password" onclick="togglePassword('password')">Show</span>
+    </div>
 
-    <input type="password" id="confirmPassword" placeholder="Confirm Password" class="item-note">
+    <div class="auth-field">
+      <input type="password" id="confirmPassword" placeholder="Confirm Password">
+      <span class="toggle-password" onclick="togglePassword('confirmPassword')">Show</span>
+    </div>
 
-    <button onclick="createAccount()" class="gold-btn login-btn">
-      Create Account
-    </button>
+    <button onclick="createAccount()" class="auth-btn">Create Account</button>
+
+    <div class="auth-secondary" style="margin-top:25px;">
+      Already have an account? <a href="signin.html">Sign in</a>
+    </div>
 
     <p id="message" class="auth-message"></p>
 
-    <div class="divider">
-      <span>or continue with</span>
-    </div>
-
-    <div class="social-buttons">
-      <button class="social-btn google">Google</button>
-      <button class="social-btn facebook">Facebook</button>
-    </div>
-
   </div>
+</section>
 
   <script type="module">
 
@@ -95,6 +101,11 @@ window.createAccount = function() {
 
 };
 
+function togglePassword(id){
+  const input = document.getElementById(id);
+  input.type = input.type === "password" ? "text" : "password";
+}
+    
 </script>
 
   
