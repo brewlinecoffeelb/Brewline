@@ -1,30 +1,7 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
 body{background:#081c3a;color:white;}
 .container{padding:20px;max-width:480px;margin:auto;}
-header{
-position:fixed;
-top:0;left:0;width:100%;
-background:rgba(10,25,60,0.6);
-backdrop-filter:blur(15px);
-border-bottom:1px solid rgba(255,255,255,0.1);
-z-index:1000;
-}
-.nav{
-display:flex;
-align-items:center;
-justify-content:space-between;
-padding:15px 20px;
-max-width:480px;
-margin:auto;
-flex-wrap:nowrap;        /* prevent line break */
-}
 
-.nav div{
-display:flex;
-align-items:center;
-gap:16px;
-white-space:nowrap;   /* prevents wrapping */
-}
 .nav-login{
 background:#d4af37;
 color:#081c3a !important;
@@ -55,7 +32,7 @@ font-size:14px;
   background:#c19b2e;
 }
 .hero{
-padding-top:110px;
+padding-top:40px;
 text-align:center;
 padding-bottom:60px;
 background:linear-gradient(rgba(5,20,45,0.85),rgba(5,20,45,0.85)),
@@ -237,7 +214,7 @@ margin-top:40px;
     background: radial-gradient(circle at center, rgba(212,175,55,0.06), transparent 60%),
                 linear-gradient(to bottom, #0d1b2a, #0f2238);
     text-align: center;
-    margin-top: -40px; /* pulls section closer to hero */
+    
 }
 .why-brewline h2 {
   font-size: 28px;
@@ -1078,4 +1055,57 @@ header{
   border-radius:25px;
   font-weight:600;
   font-size:14px;
+}
+/* ===== FINAL CLEAN HEADER ===== */
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(10,25,60,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 1000;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.nav img{
+  height: 42px;
+}
+
+.nav div{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav a{
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.nav-login{
+  background: #d4af37;
+  color: #081c3a !important;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Prevent content under header */
+body{
+  padding-top: 80px;
 }
