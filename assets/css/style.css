@@ -1158,3 +1158,35 @@ body{
 header {
   overflow-x: hidden;
 }
+/* ===== FORCE HEADER FIX ===== */
+
+header .nav {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 12px 20px !important;
+}
+
+header .nav > div {
+  display: flex !important;
+  align-items: center !important;
+  gap: 16px !important;
+}
+
+header .nav a {
+  font-size: 15px !important;
+  white-space: nowrap !important;
+}
+
+header .nav-login {
+  background: #d4af37 !important;
+  color: #0b1d3a !important;
+  padding: 8px 16px !important;
+  border-radius: 25px !important;
+  font-weight: 600 !important;
+  margin-left: 10px !important;
+}
+
+header {
+  overflow: hidden !important;
+}
