@@ -1120,3 +1120,8 @@ body{
 .social-btn:hover{
   background:rgba(255,255,255,0.1);
 }
+.auth-message{
+  margin-top:15px;
+  font-size:14px;
+  text-align:center;
+}
