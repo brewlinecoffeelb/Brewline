@@ -16,6 +16,23 @@ justify-content:space-between;
 padding:15px 20px;
 max-width:480px;
 margin:auto;
+flex-wrap:nowrap;        /* prevent line break */
+}
+
+.nav div{
+display:flex;
+align-items:center;
+gap:16px;
+white-space:nowrap;   /* prevents wrapping */
+}
+.nav-login{
+background:#d4af37;
+color:#081c3a !important;
+padding:8px 16px;
+border-radius:20px;
+font-weight:600;
+font-size:14px;
+white-space:nowrap;
 }
 .nav img{height:50px;}
 .nav a{
