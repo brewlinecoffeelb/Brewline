@@ -26,22 +26,27 @@ font-weight:600;
 font-size:14px;
 }
 .hero{
-padding-top:100px;
+padding-top:110px;
 text-align:center;
-padding-bottom:40px;
+padding-bottom:60px;
 background:linear-gradient(rgba(5,20,45,0.85),rgba(5,20,45,0.85)),
 url('../images/hero.jpg');
 background-size:cover;
 background-position:center;
+background:
+radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 60%),
+linear-gradient(rgba(5,20,45,0.85),rgba(5,20,45,0.85)),
+url('../images/hero.jpg');
 }
 .hero h1{
-font-size:32px;
-margin-bottom:15px;
+font-size:30px;
+margin-bottom:10px;
+line-height:1,2;
 }
 .hero p{
 font-size:15px;
 opacity:0.8;
-margin-bottom:25px;
+margin-bottom:18px;
 }
 .btn{
 display:inline-block;
@@ -54,7 +59,7 @@ text-decoration:none;
 .primary{background:#d4af37;color:#081c3a;}
 .secondary{border:2px solid #d4af37;color:#d4af37;}
 .section{
-padding:120px 20px 40px;
+padding:70px 20px 40px;
 text-align:center;
 }
 .section img{
@@ -123,7 +128,7 @@ margin-top:40px;
 
 .testimonials {
     background-color: #0d1b2a;
-    padding: 100px 20px;
+    padding: 70px 20px;
     text-align: center;
 }
 
@@ -199,7 +204,7 @@ margin-top:40px;
 
 .why-brewline {
     background: linear-gradient(to bottom, #0d1b2a, #0f2238);
-    padding: 120px 20px;
+    padding: 70px 20px;
     text-align: center;
 }
 
@@ -213,7 +218,7 @@ margin-top:40px;
 .why-brewline .subtitle {
     color: #aaa;
     max-width: 600px;
-    margin: 0 auto 80px auto;
+    margin: 0 auto 40px auto;
     font-size: 17px;
 }
 
@@ -851,4 +856,10 @@ margin-top:40px;
   width:100% !important;
   height:46px !important;
   border-radius:20px !important;
+}
+/* subtle section separator */
+.why-brewline,
+.testimonials,
+.delivery-section{
+border-top:1px solid rgba(255,255,255,0.05);
 }
