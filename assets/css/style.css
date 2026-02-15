@@ -1056,3 +1056,19 @@ header{
 body{
   padding-top:70px;
 }
+.login-btn{ width:100%; margin-top:10px; }
+
+.create-text{
+  margin-top:18px;
+  font-size:14px;
+  color:rgba(255,255,255,0.5);
+  text-align:center;
+}
+
+.create-link{
+  color:#d4af37;
+  text-decoration:none;
+  font-weight:600;
+}
+
+.create-link:hover{ text-decoration:underline; }
