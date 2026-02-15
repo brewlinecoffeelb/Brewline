@@ -1125,3 +1125,36 @@ body{
   font-size:14px;
   text-align:center;
 }
+/* ===== HEADER FIX GLOBAL ===== */
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 20px;
+}
+
+.nav div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav a {
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.nav-login {
+  background: #d4af37;
+  color: #0b1d3a !important;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-weight: 600;
+  display: inline-block;
+}
+
+/* Prevent header overflow on small screens */
+header {
+  overflow-x: hidden;
+}
