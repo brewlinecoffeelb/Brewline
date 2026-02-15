@@ -990,3 +990,25 @@ font-weight:600;
 font-size:13px;
 white-space:nowrap;
 }
+/* ===== FORCE RESPONSIVE HEADER FOR ALL PHONES ===== */
+
+.container{
+  max-width:1200px !important;
+}
+
+.nav{
+  max-width:1200px !important;
+  height:70px !important;
+}
+
+header{
+  height:70px !important;
+}
+
+.nav a{
+  font-size: clamp(14px, 2.5vw, 16px) !important;
+}
+
+.nav-login{
+  font-size: clamp(14px, 2.5vw, 16px) !important;
+}
