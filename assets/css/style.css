@@ -1109,3 +1109,91 @@ header{
 body{
   padding-top: 80px;
 }
+/* ================= AUTH PROFESSIONAL UPGRADE ================= */
+
+.auth-wrapper{
+  max-width:480px;
+  margin:0 auto;
+}
+
+.auth-field{
+  position:relative;
+  margin-bottom:18px;
+}
+
+.auth-field input{
+  width:100%;
+  padding:14px 18px;
+  border-radius:30px;
+  border:1px solid rgba(212,175,55,0.2);
+  background:#112240;
+  color:white;
+  font-size:15px;
+}
+
+.auth-field input:focus{
+  outline:none;
+  border-color:#d4af37;
+}
+
+.toggle-password{
+  position:absolute;
+  right:18px;
+  top:50%;
+  transform:translateY(-50%);
+  cursor:pointer;
+  font-size:14px;
+  color:#d4af37;
+}
+
+.forgot-password{
+  text-align:right;
+  margin-top:-10px;
+  margin-bottom:20px;
+}
+
+.forgot-password a{
+  font-size:13px;
+  color:rgba(255,255,255,0.6);
+  text-decoration:none;
+}
+
+.forgot-password a:hover{
+  color:#d4af37;
+}
+
+.auth-secondary{
+  margin-bottom:20px;
+  font-size:14px;
+  color:rgba(255,255,255,0.6);
+  text-align:center;
+}
+
+.auth-secondary a{
+  color:#d4af37;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.auth-secondary a:hover{
+  text-decoration:underline;
+}
+
+/* Professional button */
+.auth-btn{
+  width:100%;
+  padding:15px;
+  border-radius:40px;
+  background:#d4af37;
+  color:#081c3a;
+  border:none;
+  font-weight:600;
+  font-size:16px;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.auth-btn:hover{
+  background:#c19b2e;
+  transform:translateY(-2px);
+}
