@@ -21,9 +21,10 @@
 
     <p id="message" style="margin:12px 0; font-size:14px;"></p>
 
-    <button type="button" onclick="signUp()" class="gold-btn" style="width:100%; margin-bottom:12px;">
-      Create Account
-    </button>
+   <button type="button" onclick="goToRegister()" class="gold-btn">
+  Create Account
+</button>
+
 
     <button type="button" onclick="signIn()" class="gold-btn" style="width:100%;">
       Login
@@ -122,6 +123,9 @@ window.signIn = function(){
 
 });
 
+};
+window.goToRegister = function() {
+  window.location.href = "register.html";
 };
 
 </script>
