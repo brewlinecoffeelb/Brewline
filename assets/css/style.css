@@ -1,28 +1,1494 @@
-/* =========================
-   GLOBAL RESET
-========================= */
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:'Segoe UI',sans-serif;
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif;}
+body{background:#081c3a;color:white;}
+.container{padding:20px;max-width:480px;margin:auto;}
+
+.nav-login{
+background:#d4af37;
+color:#081c3a !important;
+padding:8px 16px;
+border-radius:20px;
+font-weight:600;
+font-size:14px;
+white-space:nowrap;
+}
+.nav img{height:50px;}
+.nav a{
+color:#d4af37;
+text-decoration:none;
+margin-left:15px;
+font-weight:600;
+font-size:14px;
+}
+.nav-login{
+  background:#d4af37;
+  color:#081c3a !important;
+  padding:8px 16px;
+  border-radius:20px;
+  font-weight:600;
+  transition:0.3s;
 }
 
-body{
-  background:#081c3a;
+.nav-login:hover{
+  background:#c19b2e;
+}
+.hero{
+padding-top:40px;
+text-align:center;
+padding-bottom:60px;
+background:linear-gradient(rgba(5,20,45,0.85),rgba(5,20,45,0.85)),
+url('../images/hero.jpg');
+background-size:cover;
+background-position:center;
+background:
+radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 60%),
+linear-gradient(rgba(5,20,45,0.85),rgba(5,20,45,0.85)),
+url('../images/hero.jpg');
+}
+.hero h1{
+font-size:30px;
+margin-bottom:10px;
+line-height:1,2;
+}
+.hero p{
+font-size:15px;
+opacity:0.8;
+margin-bottom:18px;
+}
+.btn{
+display:inline-block;
+padding:12px 22px;
+border-radius:30px;
+font-weight:600;
+margin:5px;
+text-decoration:none;
+}
+.primary{background:#d4af37;color:#081c3a;}
+.secondary{border:2px solid #d4af37;color:#d4af37;}
+.section{
+padding:70px 20px 40px;
+text-align:center;
+}
+.section img{
+width:100%;
+border-radius:20px;
+margin-top:15px;
+}
+.footer{
+padding:30px 20px;
+background:#06152d;
+text-align:center;
+font-size:14px;
+opacity:0.7;
+margin-top:40px;
+}
+/* CONTACT PAGE */
+
+.contact-hero{
+    padding-top:120px;
+    text-align:center;
+    padding-bottom:40px;
+}
+
+.contact-hero h1{
+    font-size:28px;
+    margin-bottom:10px;
+}
+
+.contact-section{
+    padding:20px;
+}
+
+.contact-card{
+    background:rgba(255,255,255,0.05);
+    border:1px solid rgba(255,255,255,0.1);
+    backdrop-filter:blur(10px);
+    border-radius:15px;
+    padding:20px;
+    margin-bottom:15px;
+    text-align:center;
+}
+
+.contact-card h3{
+    margin-bottom:8px;
+    color:#d4af37;
+}
+
+.contact-card a{
+    color:#ffffff;
+    text-decoration:none;
+    font-weight:600;
+}
+
+.map-section iframe{
+    width:100%;
+    height:300px;
+    border:none;
+    border-radius:20px;
+    margin-top:20px;
+}
+.logo {
+    height: 50px;
+    width: auto;
+}
+/* Testimonials Section */
+
+.testimonials {
+    background-color: #0d1b2a;
+    padding: 70px 20px;
+    text-align: center;
+}
+
+.testimonials h2 {
+    color: #d4af37;
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.testimonials .subtitle {
+    color: #ccc;
+    margin-bottom: 50px;
+}
+
+.testimonial-slider {
+    position: relative;
+    max-width: 700px;
+    margin: auto;
+}
+
+.testimonial {
+    display: none;
+    background-color: #112240;
+    padding: 40px;
+    border-radius: 12px;
+    border: 1px solid rgba(212, 175, 55, 0.3);
+    transition: opacity 0.5s ease;
+}
+
+.testimonial.active {
+    display: block;
+}
+
+.stars {
+    color: #d4af37;
+    font-size: 20px;
+    letter-spacing: 3px;
+    margin-bottom: 20px;
+}
+
+.review {
+    color: #ddd;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.testimonial h4 {
+    color: #ffffff;
+    font-weight: 500;
+}
+
+/* Dots */
+
+.dots {
+    margin-top: 30px;
+}
+
+.dot {
+    height: 10px;
+    width: 10px;
+    margin: 0 6px;
+    display: inline-block;
+    border-radius: 50%;
+    background-color: #444;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.dot.active {
+    background-color: #d4af37;
+}
+/* Why Brewline Section */
+
+.why-brewline {
+    position: relative;
+    padding: 80px 20px 60px 20px;
+    background: radial-gradient(circle at center, rgba(212,175,55,0.06), transparent 60%),
+                linear-gradient(to bottom, #0d1b2a, #0f2238);
+    text-align: center;
+    
+}
+.why-brewline h2 {
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  color: #d4af37;
+  margin-bottom: 18px;
+}
+
+.why-brewline h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 2px;
+    background: #d4af37;
+    margin: 14px auto 0 auto;
+    opacity: 0.6;
+}
+
+.why-brewline .subtitle {
+  color: rgba(255,255,255,0.65);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 360px;
+  margin: 0 auto;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+
+.feature-card {
+    background: rgba(255,255,255,0.02);  /* lighter */
+    padding: 22px 20px;                 /* smaller */
+    border-radius: 14px;
+    border: 1px solid rgba(255,255,255,0.05);
+    backdrop-filter: blur(4px);
+    transition: all 0.3s ease;
+    max-width: 320px;
+    margin: auto;
+    }
+
+.feature-card:hover {
+    transform: translateY(-10px);
+    border: 1px solid #d4af37;
+    background: rgba(255, 255, 255, 0.06);
+}
+
+.feature-icon {
+    font-size: 22px;
+    margin-bottom: 20px;
+}
+
+.feature-card h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    color: #ffffff;
+}
+
+.feature-card p {
+    color: #bbb;
+    font-size: 14px;
+    opacity: 0.75;
+    line-height: 1.6;
+}
+
+.delivery-button-container {
+    text-align: center;
+    margin: 60px 0;
+}
+
+/* Delivery Page */
+
+.delivery-section {
+    background-color: #0d1b2a;
+    padding: 100px 20px;
+    color: white;
+}
+
+.delivery-section h2 {
+    color: #d4af37;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.delivery-section p {
+    text-align: center;
+    color: #ccc;
+    margin-bottom: 50px;
+}
+
+.delivery-form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.delivery-form input,
+.delivery-form textarea {
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background-color: #112240;
+    color: white;
+}
+
+.delivery-form textarea {
+    resize: none;
+    height: 80px;
+}
+
+.menu-category {
+    margin-bottom: 40px;
+}
+
+.menu-category h4 {
+    color: #d4af37;
+    margin-bottom: 20px;
+}
+
+.menu-item input {
+    width: 70px;
+}
+
+#order-summary {
+    background-color: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+#order-summary p {
+    margin: 5px 0;
+}
+/* Accordion Menu (Select Items) */
+
+.menu-accordion {
+  max-width: 700px;
+  margin: 0 auto 40px auto;
+  text-align: left;
+}
+
+.acc-btn {
+  width: 100%;
+  background: rgba(255,255,255,0.04);
+  border: 1px solid rgba(212,175,55,0.18);
+  color: #d4af37;
+  padding: 16px 18px;
+  border-radius: 12px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.acc-btn::after {
+  content: "+";
+  font-size: 20px;
+}
+
+.acc-btn.active::after {
+  content: "-";
+}
+
+.acc-panel {
+  display: none;
+  padding: 10px 8px 20px 8px;
+  margin-top: -6px;
+  margin-bottom: 14px;
+}
+
+.acc-panel.open {
+  display: block;
+}
+
+.item-name {
+  color: #fff;
+  font-weight: 500;
+}
+
+.item-controls .qty {
+  width: 80px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid #333;
+  background-color: #112240;
+  color: white;
+}
+
+.proceed-wrap {
+  text-align: center;
+  margin-top: 30px;
+}
+
+#order-summary {
+  max-width: 700px;
+  margin: 0 auto 18px auto;
+  background-color: rgba(255,255,255,0.05);
+  padding: 18px;
+  border-radius: 12px;
+}
+#order-summary p { margin: 6px 0; color: #ddd; }
+
+.acc-panel { display: none; }
+.acc-panel.open { display: block; }
+
+.acc-btn {
+  width: 100%;
+  padding: 16px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(212,175,55,0.2);
+  background: rgba(255,255,255,0.03);
+  color: #d4af37;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+}
+.acc-btn.active { border-color: #d4af37; }
+
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+/* Checkout Page Section Titles */
+
+/* Center and unify main checkout titles only */
+
+.checkout-title,
+.section-title {
+    font-size: 32px;
+    color: #d4af37;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.checkout-total {
+    margin-bottom: 60px;
+}
+
+.section-title {
+    margin-top: 60px;
+}
+
+/* ================= DELIVERY ITEM UPGRADE ================= */
+
+/* Make category titles slightly bigger (luxury look) */
+.acc-btn {
+  font-size: 18px;
+  letter-spacing: 0.5px;
+}
+
+/* Quantity input smaller & centered */
+.qty {
+  width: 60px !important;
+  height: 38px;
+  text-align: center;
+  border-radius: 10px;
+  border: 1px solid rgba(212,175,55,0.4);
+  background-color: #112240;
+  color: white;
+  font-size: 16px;
+}
+
+/* Remove arrows inside number input */
+.qty::-webkit-inner-spin-button,
+.qty::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.qty {
+  -moz-appearance: textfield;
+}
+
+/* Special instructions under each item */
+.item-note {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(212,175,55,0.2);
+  background-color: #112240;
+  color: white;
+  resize: none;
+  height: 60px;
+  font-size: 14px;
+}
+
+.item-note::placeholder {
+  color: #888;
+}
+
+/* ===== CART ERROR FINAL CLEAN STYLE ===== */
+
+.cart-error {
+  color: #ff3b3b !important;
+  text-align: center;
+  font-weight: 300 !important;
+  font-size: 14px;
+  line-height: 1.8;
+  margin: 25px auto;
+  max-width: 280px;
+  display: block;
+}
+
+/* ===== ONE BUTTON STYLE (same as View Menu) ===== */
+.gold-btn{
+  display:inline-block;
+  background:#d4af37;
+  color:#081c3a;
+  padding:14px 40px;
+  border-radius:40px;
+  font-weight:600;
+  font-size:16px;
+  text-decoration:none;
+  border:none;
+  cursor:pointer;
+  transition:all .3s ease;
+}
+.gold-btn:hover{
+  background:#c19b2e;
+  transform:translateY(-3px);
+}
+
+/* ===== PREMIUM QUANTITY DESIGN ===== */
+
+.item {
+  padding: 22px 0;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.item-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item-name {
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+}
+
+/* Quantity container */
+.qty-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* Gold round buttons */
+.qty-box button {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  border: none;
+  background: #d4af37;
+  color: #0d1b2a;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.qty-box button:hover {
+  transform: scale(1.08);
+  background: #c19b2e;
+}
+
+/* Number box */
+.qty-box .count {
+  width: 44px;
+  height: 34px;
+  border-radius: 12px;
+  border: 1px solid rgba(212,175,55,0.4);
+  background: #112240;
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Special instructions textarea */
+.item textarea {
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 14px;
+  border: 1px solid rgba(212,175,55,0.25);
+  background-color: #112240;
+  color: white;
+  resize: none;
+  height: 40px;
+  font-size: 14px;
+}
+
+.item textarea::placeholder {
+  color: #8892b0;
+}
+/* Make item horizontal */
+.item {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+
+/* Coffee image */
+.item-img {
+  width: 75px;
+  height: 75px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(212,175,55,0.4);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Make right side full width */
+.item-top,
+.item textarea {
+  width: 100%;
+}
+
+.item {
+  flex-wrap: wrap;
+}
+
+.item-img {
+  flex-shrink: 0;
+}
+/* =============================
+   COMPACT + LUXURY ITEM LAYOUT
+   (no structure changes)
+============================= */
+
+/* each item block */
+.item{
+  padding: 14px 0;              /* less vertical space */
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+/* item top row (name + qty controls) */
+.item-top{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+/* item name smaller */
+.item-name{
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* item image smaller + aligned nicely */
+.item-img{
+  width: 72px;
+  height: 72px;
+  object-fit: cover;
+  border-radius: 14px;
+  border: 1px solid rgba(212,175,55,0.25);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.25);
+  margin-bottom: 10px;          /* small gap before name row */
+}
+
+/* qty buttons smaller */
+.qty-box button{
+  width: 34px;
+  height: 34px;
+  font-size: 16px;
+}
+
+/* number box smaller */
+.qty-box .count{
+  width: 52px;
+  height: 34px;
+  border-radius: 12px;
+  font-size: 16px;
+}
+
+/* textarea: look like 1-line input */
+.item textarea{
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(212,175,55,0.18);
+  background: #112240;
+  color: #fff;
+
+  height: 42px;                 /* ✅ one-line height */
+  line-height: 20px;
+  resize: none;
+  overflow: hidden;
+  font-size: 14px;
+}
+
+/* placeholder lighter */
+.item textarea::placeholder{
+  color: rgba(255,255,255,0.35);
+}
+
+/* reduce spacing between items */
+.item + .item{
+  margin-top: 10px;
+}
+/* ==========================================
+   FINAL LUXURY HOT COFFEE LAYOUT
+   (Overrides previous duplicates safely)
+========================================== */
+
+.item{
+  display:flex;
+  gap:18px;
+  padding:20px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  align-items:flex-start;
+}
+
+.item-img{
+  width:90px;
+  height:90px;
+  object-fit:cover;
+  border-radius:18px;
+  border:1px solid rgba(212,175,55,0.25);
+  box-shadow:0 12px 25px rgba(0,0,0,0.35);
+  flex-shrink:0;
+}
+
+.item-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  width:100%;
+}
+
+.item-name{
+  font-size:18px;
+  font-weight:500;
+  letter-spacing:0.3px;
+  color:#ffffff;
+}
+
+.qty-box{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+.qty-box button{
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  border:none;
+  background:#d4af37;
+  color:#0d1b2a;
+  font-size:18px;
+  font-weight:700;
+  cursor:pointer;
+  transition:all 0.2s ease;
+}
+
+.qty-box button:hover{
+  transform:scale(1.1);
+  background:#c19b2e;
+}
+
+.qty-box .count{
+  width:60px;
+  height:38px;
+  border-radius:16px;
+  border:1px solid rgba(212,175,55,0.4);
+  background:#112240;
   color:white;
-  padding-top:80px; /* space for fixed header */
+  font-size:16px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  justify-content:center;
 }
 
-.container{
-  padding:20px;
-  max-width:1200px;
-  margin:auto;
+.item textarea{
+  margin-top:14px;
+  width:100%;
+  padding:12px 16px;
+  border-radius:20px;
+  border:1px solid rgba(212,175,55,0.2);
+  background:#112240;
+  color:white;
+  height:46px;
+  resize:none;
+  font-size:14px;
 }
 
+.item textarea::placeholder{
+  color:rgba(255,255,255,0.4);
+}
+/* ==========================================
+   FORCE PHOTO 2 LAYOUT (FINAL OVERRIDE)
+========================================== */
+
+.item{
+  display:flex !important;
+  align-items:flex-start !important;
+  gap:18px !important;
+  padding:20px 0 !important;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+
+.item-img{
+  width:90px !important;
+  height:90px !important;
+  object-fit:cover;
+  border-radius:18px;
+  border:1px solid rgba(212,175,55,0.25);
+  box-shadow:0 12px 25px rgba(0,0,0,0.35);
+  flex-shrink:0;
+}
+
+.item-top{
+  display:flex !important;
+  justify-content:space-between !important;
+  align-items:center !important;
+  width:100%;
+}
+
+.item-name{
+  font-size:18px !important;
+  letter-spacing:0.3px;
+}
+
+.qty-box{
+  display:flex !important;
+  align-items:center !important;
+  gap:16px !important;
+}
+
+.qty-box button{
+  width:38px !important;
+  height:38px !important;
+  font-size:18px !important;
+}
+
+.qty-box .count{
+  width:60px !important;
+  height:38px !important;
+  border-radius:16px !important;
+}
+
+.item textarea{
+  margin-top:14px !important;
+  width:100% !important;
+  height:46px !important;
+  border-radius:20px !important;
+}
+/* subtle section separator */
+.why-brewline,
+.testimonials,
+.delivery-section{
+border-top:1px solid rgba(255,255,255,0.05);
+}
+.why-container{
+  max-width: 480px;
+  margin: 0 auto 60px auto;
+  padding: 40px 30px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.03);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212,175,55,0.12);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.35);
+}
+.glass-box {
+    background: linear-gradient(
+        145deg,
+        rgba(255,255,255,0.06),
+        rgba(255,255,255,0.02)
+    );
+    border: 1px solid rgba(212,175,55,0.25);
+    backdrop-filter: blur(18px);
+    border-radius: 28px;
+    padding: 50px 30px;
+    max-width: 480px;
+    margin: -40px auto 60px auto;
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.5),
+        0 0 40px rgba(212,175,55,0.08);
+}
+.floating-contact{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#d4af37;
+  color:#081c3a;
+  padding:14px 20px;
+  border-radius:40px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 10px 25px rgba(0,0,0,0.4);
+  z-index:999;
+  transition:0.3s;
+}
+
+.floating-contact:hover{
+  background:#c19b2e;
+  transform:translateY(-3px);
+}
+/* ===============================
+   CLEAN GLOBAL HEADER (FINAL)
+================================ */
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(10,25,60,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 1000;
+}
+
+.nav{
+  max-width: 1200px;
+  margin: auto;
+  padding: 14px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav img{
+  height: 44px;
+}
+
+.nav div{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.nav a{
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+/* Sign In button */
+.nav-login{
+  background: #d4af37;
+  color: #081c3a !important;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+.nav-login:hover{
+  background: #c19b2e;
+}
+
+/* Prevent content going under header */
+body{
+  padding-top: 80px;
+}
+/* ===== FINAL HEADER ALIGNMENT FIX ===== */
+
+header{
+  width:100%;
+  overflow:hidden;
+}
+
+header .nav{
+  width:100%;
+  max-width:100%;
+  padding:12px 14px;   /* slightly smaller padding */
+}
+
+header .nav > div{
+  gap:14px;            /* reduce spacing between links */
+}
+
+header .nav-login{
+  padding:7px 14px;    /* slightly smaller button */
+}
+/* ===== CLEAN MOBILE HEADER ===== */
+
+header{
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  background:rgba(10,25,60,0.85);
+  backdrop-filter:blur(12px);
+  z-index:1000;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 16px;
+}
+
+.nav-left{
+  display:flex;
+  align-items:center;
+  gap:18px;
+}
+
+.nav a{
+  color:#d4af37;
+  text-decoration:none;
+  font-size:14px;
+  font-weight:600;
+  white-space:nowrap;
+}
+
+.nav-login{
+  background:#d4af37;
+  color:#0b1d3a !important;
+  padding:8px 16px;
+  border-radius:25px;
+  font-weight:600;
+  font-size:14px;
+}
+/* ===== FINAL CLEAN HEADER ===== */
+
+header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(10,25,60,0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  z-index: 1000;
+}
+
+.nav{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 16px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.nav img{
+  height: 42px;
+}
+
+.nav div{
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav a{
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  white-space: nowrap;
+}
+
+.nav-login{
+  background: #d4af37;
+  color: #081c3a !important;
+  padding: 8px 16px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Prevent content under header */
+
+body.auth-page{
+  padding-top: 0 !important;
+}
+
+/* ================= AUTH PROFESSIONAL UPGRADE ================= */
+
+.auth-wrapper{
+  max-width:480px;
+  margin:0 auto;
+}
+
+.auth-field{
+  position:relative;
+  margin-bottom:18px;
+}
+
+.auth-field input{
+  width:100%;
+  padding:14px 18px;
+  border-radius:30px;
+  border:1px solid rgba(212,175,55,0.2);
+  background:#112240;
+  color:white;
+  font-size:15px;
+}
+
+.auth-field input:focus{
+  outline:none;
+  border-color:#d4af37;
+}
+
+.toggle-password{
+  position:absolute;
+  right:18px;
+  top:50%;
+  transform:translateY(-50%);
+  cursor:pointer;
+  font-size:14px;
+  color:#d4af37;
+}
+
+.forgot-password{
+  text-align:right;
+  margin-top:-10px;
+  margin-bottom:20px;
+}
+
+.forgot-password a{
+  font-size:13px;
+  color:rgba(255,255,255,0.6);
+  text-decoration:none;
+}
+
+.forgot-password a:hover{
+  color:#d4af37;
+}
+
+.auth-secondary{
+  margin-bottom:20px;
+  font-size:14px;
+  color:rgba(255,255,255,0.6);
+  text-align:center;
+}
+
+.auth-secondary a{
+  color:#d4af37;
+  font-weight:600;
+  text-decoration:none;
+}
+
+.auth-secondary a:hover{
+  text-decoration:underline;
+}
+
+/* Professional button */
+.auth-btn{
+  width:100%;
+  padding:15px;
+  border-radius:40px;
+  background:#d4af37;
+  color:#081c3a;
+  border:none;
+  font-weight:600;
+  font-size:16px;
+  cursor:pointer;
+  transition:.3s ease;
+}
+
+.auth-btn:hover{
+  background:#c19b2e;
+  transform:translateY(-2px);
+}
+/* ===== PERFECT HEADER SYMMETRY FIX ===== */
+
+header {
+  padding: 0 16px; /* equal left & right breathing space */
+  box-sizing: border-box;
+}
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 14px 0; /* remove side padding (header now controls it) */
+}
+
+.nav div {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Prevent button from sticking to edge */
+.nav-login {
+  margin-right: 2px;
+}
+/* ===== FORCE HEADER TO FIT SCREEN ===== */
+
+header {
+  overflow: hidden;
+}
+
+.nav {
+  width: 100%;
+  padding: 12px 12px; /* smaller side padding */
+  box-sizing: border-box;
+}
+
+.nav div {
+  gap: 12px; /* reduce space between links */
+}
+
+.nav a {
+  font-size: 13px; /* slightly smaller text */
+}
+
+.nav-login {
+  padding: 6px 14px; /* smaller button */
+  font-size: 13px;
+}
+/* ==========================
+   AUTH PAGES LUX DESIGN
+========================== */
+
+/* Remove fixed header spacing only on auth pages */
+.auth-page body{
+  padding-top: 0 !important;
+}
+
+/* Center auth section */
+.auth-section{
+  min-height: 100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:40px 20px;
+  background: radial-gradient(circle at center, rgba(212,175,55,0.05), transparent 60%);
+}
+
+/* Auth Card */
+.auth-card{
+  width:100%;
+  max-width:420px;
+  padding:40px 30px;
+  border-radius:28px;
+  background: linear-gradient(
+      145deg,
+      rgba(255,255,255,0.06),
+      rgba(255,255,255,0.02)
+  );
+  backdrop-filter: blur(18px);
+  border:1px solid rgba(212,175,55,0.2);
+  box-shadow:0 25px 60px rgba(0,0,0,0.5);
+}
+
+/* Back Button */
+.auth-back{
+  position:absolute;
+  top:20px;
+  left:20px;
+  color:#d4af37;
+  font-weight:600;
+  text-decoration:none;
+  font-size:14px;
+}
+
+.auth-back:hover{
+  opacity:0.8;
+}
+
+/* Title */
+.auth-card h2{
+  text-align:center;
+  color:#d4af37;
+  margin-bottom:10px;
+}
+
+.auth-sub{
+  text-align:center;
+  font-size:14px;
+  color:rgba(255,255,255,0.6);
+  margin-bottom:30px;
+}
+
+/* Inputs */
+.auth-card input{
+  width:100%;
+  padding:14px 18px;
+  margin-bottom:18px;
+  border-radius:25px;
+  border:1px solid rgba(212,175,55,0.2);
+  background:#112240;
+  color:white;
+  font-size:14px;
+}
+
+/* Show password text */
+.show-pass{
+  position:absolute;
+  right:25px;
+  margin-top:-50px;
+  font-size:13px;
+  color:#d4af37;
+  cursor:pointer;
+}
+
+/* Forgot */
+.forgot-link{
+  text-align:right;
+  font-size:13px;
+  color:rgba(255,255,255,0.5);
+  margin-bottom:20px;
+  cursor:pointer;
+}
+
+.forgot-link:hover{
+  color:#d4af37;
+}
+
+/* Main Button */
+.auth-btn{
+  width:100%;
+  background:#d4af37;
+  color:#081c3a;
+  padding:14px;
+  border-radius:30px;
+  font-weight:600;
+  border:none;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s;
+}
+
+.auth-btn:hover{
+  background:#c19b2e;
+  transform:translateY(-2px);
+}
+/* =================================
+   FORCE AUTH FIX (FINAL OVERRIDE)
+================================= */
+
+/* Bigger Back Button */
+.auth-back{
+  position: relative !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+
+  font-size: 20px !important;
+  font-weight: 700 !important;
+
+  color: #d4af37 !important;
+  text-decoration: none !important;
+
+  margin: 30px 0 20px 20px !important;
+  padding: 10px 18px !important;
+
+  border-radius: 30px !important;
+  transition: all 0.3s ease !important;
+}
+
+.auth-back:hover{
+  background: rgba(212,175,55,0.15) !important;
+  transform: translateX(-4px) !important;
+}
+
+
+/* Proper password field positioning */
+.auth-field{
+  position: relative !important;
+}
+
+/* Perfectly center SHOW text */
+.toggle-password{
+  position: absolute !important;
+  right: 20px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+
+  font-size: 16px !important;
+  font-weight: 600 !important;
+  color: #d4af37 !important;
+  cursor: pointer !important;
+}
+/* ===== AUTH PAGE HEADER FIX ===== */
+
+.auth-page header {
+  height: 60px !important;
+}
+
+.auth-page .nav {
+  padding: 8px 16px !important;
+}
+
+.auth-page .nav img {
+  height: 36px !important;
+}
+
+.auth-page body {
+  padding-top: 60px !important;
+}
+/* ===== AUTH PASSWORD TOGGLE CLEAN FIX ===== */
+
+.auth-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth-field input {
+  width: 100%;
+  padding-right: 70px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  font-size: 14px;
+  font-weight: 500;      /* less bold */
+  color: #d4af37;
+  cursor: pointer;
+}
+/* ===== AUTH PAGE LAYOUT FIX ===== */
+
+.auth-page .delivery-section {
+  padding: 40px 20px !important;
+}
+
+.auth-page .auth-wrapper {
+  margin-top: 10px !important;
+}
+
+.auth-back {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
+/* ===== REMOVE HEADER OFFSET ON AUTH PAGES ===== */
+
+.auth-page {
+  padding-top: 0 !important;
+}
+/* ===== AUTH PAGE SPACE FIX (FINAL) ===== */
+
+.auth-page .delivery-section {
+  padding: 30px 20px 40px 20px !important;
+}
+
+body.auth-page{
+  padding-top: 0 !important;
+}
+.auth-page .delivery-section{
+  padding: 20px 20px !important;
+}
 /* =========================
    HEADER
 ========================= */
+
 header{
   position:fixed;
   top:0;
@@ -61,6 +1527,7 @@ header{
   white-space:nowrap;
 }
 
+/* Sign In Button */
 .nav-login{
   background:#d4af37;
   color:#081c3a !important;
@@ -73,658 +1540,4 @@ header{
 
 .nav-login:hover{
   background:#c19b2e;
-}
-
-/* =========================
-   HERO
-========================= */
-.hero{
-  padding-top:40px;
-  text-align:center;
-  padding-bottom:60px;
-  background:
-    radial-gradient(circle at center, rgba(212,175,55,0.08), transparent 60%),
-    linear-gradient(rgba(5,20,45,0.85),rgba(5,20,45,0.85)),
-    url('../images/hero.jpg');
-  background-size:cover;
-  background-position:center;
-}
-
-.hero h1{
-  font-size:30px;
-  margin-bottom:10px;
-}
-
-.hero p{
-  font-size:15px;
-  opacity:0.8;
-  margin-bottom:18px;
-}
-
-/* =========================
-   BUTTONS
-========================= */
-.btn{
-  display:inline-block;
-  padding:12px 22px;
-  border-radius:30px;
-  font-weight:600;
-  margin:5px;
-  text-decoration:none;
-}
-
-.primary{
-  background:#d4af37;
-  color:#081c3a;
-}
-
-.secondary{
-  border:2px solid #d4af37;
-  color:#d4af37;
-}
-
-/* =========================
-   SECTIONS
-========================= */
-.section{
-  padding:70px 20px 40px;
-  text-align:center;
-}
-
-.section img{
-  width:100%;
-  border-radius:20px;
-  margin-top:15px;
-}
-
-/* =========================
-   WHY BREWLINE
-========================= */
-.why-brewline{
-  padding:80px 20px 60px;
-  background:
-    radial-gradient(circle at center, rgba(212,175,55,0.06), transparent 60%),
-    linear-gradient(to bottom, #0d1b2a, #0f2238);
-  text-align:center;
-}
-
-.why-brewline h2{
-  font-size:28px;
-  font-weight:600;
-  letter-spacing:1.5px;
-  color:#d4af37;
-  margin-bottom:18px;
-}
-
-.why-brewline .subtitle{
-  color:rgba(255,255,255,0.65);
-  font-size:15px;
-  line-height:1.6;
-  max-width:360px;
-  margin:0 auto 40px;
-}
-
-.features-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:20px;
-}
-
-.feature-card{
-  background:rgba(255,255,255,0.02);
-  padding:22px 20px;
-  border-radius:14px;
-  border:1px solid rgba(255,255,255,0.05);
-  backdrop-filter:blur(4px);
-  transition:0.3s;
-}
-
-.feature-card:hover{
-  transform:translateY(-6px);
-  border:1px solid #d4af37;
-}
-
-.feature-card h3{
-  font-size:17px;
-  margin-bottom:10px;
-}
-
-.feature-card p{
-  font-size:14px;
-  opacity:0.75;
-}
-
-/* =========================
-   AUTH PAGES
-========================= */
-.auth-page{
-  padding-top:0 !important;
-}
-
-.auth-section{
-  min-height:100vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  padding:40px 20px;
-}
-
-.auth-card{
-  width:100%;
-  max-width:420px;
-  padding:40px 30px;
-  border-radius:28px;
-  background:linear-gradient(
-      145deg,
-      rgba(255,255,255,0.06),
-      rgba(255,255,255,0.02)
-  );
-  backdrop-filter:blur(18px);
-  border:1px solid rgba(212,175,55,0.2);
-  box-shadow:0 25px 60px rgba(0,0,0,0.5);
-}
-
-.auth-card h2{
-  text-align:center;
-  color:#d4af37;
-  margin-bottom:20px;
-}
-
-.auth-field{
-  position:relative;
-  margin-bottom:18px;
-}
-
-.auth-field input{
-  width:100%;
-  padding:14px 18px;
-  border-radius:30px;
-  border:1px solid rgba(212,175,55,0.2);
-  background:#112240;
-  color:white;
-  font-size:14px;
-}
-
-.toggle-password{
-  position:absolute;
-  right:18px;
-  top:50%;
-  transform:translateY(-50%);
-  font-size:14px;
-  font-weight:500;
-  color:#d4af37;
-  cursor:pointer;
-}
-
-.auth-btn{
-  width:100%;
-  background:#d4af37;
-  color:#081c3a;
-  padding:14px;
-  border-radius:30px;
-  font-weight:600;
-  border:none;
-  font-size:16px;
-  cursor:pointer;
-  transition:0.3s;
-}
-
-.auth-btn:hover{
-  background:#c19b2e;
-}
-
-/* =========================
-   FOOTER
-========================= */
-.footer{
-  padding:30px 20px;
-  background:#06152d;
-  text-align:center;
-  font-size:14px;
-  opacity:0.7;
-  margin-top:40px;
-}
-/* ======================================================
-   BREWLINE STRUCTURE FIX PACK
-   (Menu + Delivery + Checkout + Floating Button)
-   Paste at VERY bottom of CSS
-====================================================== */
-
-
-/* ================= HEADER SAFE SPACING ================= */
-
-body{
-  padding-top:80px;
-}
-
-.delivery-section,
-.checkout-section{
-  padding-top:120px !important;
-}
-
-
-/* ================= WE DELIVER BUTTON ================= */
-
-.we-deliver-link{
-  display:inline-block;
-  margin:60px auto;
-  text-align:center;
-
-  background:#d4af37;
-  color:#081c3a !important;
-  padding:14px 36px;
-  border-radius:40px;
-  font-weight:600;
-  font-size:16px;
-  text-decoration:none;
-  transition:0.3s ease;
-}
-
-.we-deliver-link:hover{
-  background:#c19b2e;
-  transform:translateY(-3px);
-}
-
-
-/* ================= DELIVERY PAGE FIX ================= */
-
-.delivery-section{
-  padding:120px 20px 60px 20px !important;
-}
-
-.menu-item{
-  background:#0f2238;
-  padding:20px;
-  border-radius:22px;
-  margin-bottom:25px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
-}
-
-.menu-item img{
-  width:100%;
-  border-radius:18px;
-  margin-bottom:15px;
-}
-
-.menu-item .item-row{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:10px;
-}
-
-.menu-item input,
-.menu-item textarea{
-  width:100%;
-  padding:12px;
-  border-radius:16px;
-  border:1px solid rgba(212,175,55,0.3);
-  background:#112240;
-  color:white;
-  font-size:14px;
-}
-
-.menu-item textarea{
-  height:45px;
-  resize:none;
-  margin-top:12px;
-}
-
-
-/* ================= CHECKOUT PAGE FIX ================= */
-
-.checkout-section{
-  padding:120px 20px 60px 20px !important;
-}
-
-.checkout-card{
-  background:#0f2238;
-  padding:25px;
-  border-radius:22px;
-  margin-bottom:25px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.3);
-}
-
-.checkout-total{
-  font-size:18px;
-  font-weight:600;
-  margin-top:20px;
-}
-
-.checkout-btn{
-  width:100%;
-  padding:16px;
-  border-radius:40px;
-  background:#d4af37;
-  color:#081c3a;
-  border:none;
-  font-weight:600;
-  font-size:16px;
-  cursor:pointer;
-  transition:0.3s ease;
-}
-
-.checkout-btn:hover{
-  background:#c19b2e;
-  transform:translateY(-2px);
-}
-
-
-/* ================= FLOATING CONTACT BUTTON ================= */
-
-.floating-contact{
-  position:fixed;
-  bottom:25px;
-  right:20px;
-  background:#d4af37;
-  color:#081c3a;
-  padding:14px 22px;
-  border-radius:40px;
-  font-weight:600;
-  text-decoration:none;
-  box-shadow:0 12px 30px rgba(0,0,0,0.4);
-  z-index:999;
-  transition:0.3s ease;
-}
-
-.floating-contact:hover{
-  background:#c19b2e;
-  transform:translateY(-3px);
-}
-/* =========================================
-   BREWLINE HOME PAGE FIX (INDEX.HTML MATCH)
-   Paste at very bottom of CSS
-========================================= */
-
-
-/* ===== HERO FIX ===== */
-.hero {
-  padding: 140px 20px 110px;
-  text-align: center;
-}
-
-.hero h1 {
-  font-size: 36px;
-  line-height: 1.2;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 16px;
-  opacity: 0.8;
-  margin-bottom: 30px;
-}
-
-/* ===== BUTTONS FIX ===== */
-.gold-btn {
-  display: inline-block;
-  background: #d4af37;
-  color: #081c3a !important;
-  padding: 15px 38px;
-  border-radius: 40px;
-  font-weight: 600;
-  font-size: 16px;
-  text-decoration: none;
-  margin: 6px;
-  transition: 0.3s ease;
-}
-
-.gold-btn:hover {
-  background: #c19b2e;
-  transform: translateY(-3px);
-}
-
-.btn.secondary {
-  border: 2px solid #d4af37;
-  color: #d4af37;
-  padding: 14px 36px;
-  border-radius: 40px;
-  font-weight: 600;
-  text-decoration: none;
-  transition: 0.3s ease;
-}
-
-.btn.secondary:hover {
-  background: #d4af37;
-  color: #081c3a;
-}
-
-/* ===== WHY BREWLINE SECTION ===== */
-.why-brewline {
-  padding: 110px 20px 80px;
-  text-align: center;
-}
-
-.glass-box {
-  padding: 60px 30px;
-  margin-bottom: 60px;
-  border-radius: 28px;
-  background: linear-gradient(
-    145deg,
-    rgba(255,255,255,0.06),
-    rgba(255,255,255,0.02)
-  );
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(212,175,55,0.2);
-  box-shadow:
-    0 25px 70px rgba(0,0,0,0.55),
-    0 0 50px rgba(212,175,55,0.08);
-}
-
-.glass-box h2 {
-  font-size: 30px;
-  margin-bottom: 15px;
-  color: #d4af37;
-}
-
-.subtitle {
-  color: rgba(255,255,255,0.65);
-  font-size: 15px;
-}
-
-/* ===== FEATURES GRID ===== */
-.features-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 28px;
-  margin-top: 40px;
-}
-
-.feature-card {
-  padding: 30px 22px;
-  border-radius: 18px;
-  background: rgba(255,255,255,0.03);
-  border: 1px solid rgba(255,255,255,0.06);
-  transition: 0.3s ease;
-}
-
-.feature-card:hover {
-  transform: translateY(-8px);
-  border: 1px solid #d4af37;
-  background: rgba(255,255,255,0.06);
-}
-
-.feature-card h3 {
-  margin-top: 15px;
-  margin-bottom: 10px;
-  font-size: 18px;
-}
-
-.feature-card p {
-  font-size: 14px;
-  opacity: 0.7;
-}
-
-/* ===== TESTIMONIALS FIX ===== */
-.testimonials {
-  padding: 120px 20px 90px;
-  text-align: center;
-}
-
-.testimonials h2 {
-  font-size: 30px;
-  margin-bottom: 10px;
-  color: #d4af37;
-}
-
-.testimonial {
-  padding: 50px 35px;
-  border-radius: 16px;
-  background: #112240;
-  border: 1px solid rgba(212,175,55,0.2);
-}
-
-.review {
-  margin: 25px 0;
-  font-size: 16px;
-}
-
-/* ===== DOTS FIX ===== */
-.dots {
-  margin-top: 35px;
-}
-
-.dot {
-  height: 10px;
-  width: 10px;
-  background: #444;
-  border-radius: 50%;
-  margin: 0 6px;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.dot.active {
-  background: #d4af37;
-}
-
-/* ===== FOOTER FIX ===== */
-.footer {
-  padding: 50px 20px;
-  margin-top: 100px;
-  text-align: center;
-  font-size: 14px;
-  opacity: 0.7;
-}
-
-/* ===== FLOATING CONTACT FIX ===== */
-.floating-contact {
-  position: fixed;
-  bottom: 25px;
-  right: 20px;
-  background: #d4af37;
-  color: #081c3a;
-  padding: 14px 22px;
-  border-radius: 40px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
-  z-index: 9999;
-  transition: 0.3s ease;
-}
-
-.floating-contact:hover {
-  background: #c19b2e;
-  transform: translateY(-4px);
-}
-/* =========================================
-   HOMEPAGE FINAL PERFECT ALIGNMENT FIX
-========================================= */
-
-/* HERO FIX */
-.hero {
-  padding-top: 140px;
-  padding-bottom: 80px;
-  text-align: center;
-}
-
-.hero .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.hero h1 {
-  font-size: 34px;
-  line-height: 1.2;
-  margin-bottom: 15px;
-}
-
-.hero p {
-  margin-bottom: 30px;
-  opacity: 0.8;
-}
-
-/* Make hero buttons side-by-side */
-.hero .gold-btn,
-.hero .btn.secondary {
-  display: inline-block;
-  min-width: 170px;
-  text-align: center;
-}
-
-.hero .gold-btn {
-  margin-right: 12px;
-}
-
-/* On small screens keep them aligned nicely */
-@media (max-width: 480px) {
-  .hero .gold-btn,
-  .hero .btn.secondary {
-    width: 200px;
-    margin: 8px 0;
-  }
-}
-
-/* WHY SECTION FIX */
-.why-brewline {
-  padding: 80px 20px 60px 20px;
-}
-
-.glass-box {
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.glass-box h2 {
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-.glass-box .subtitle {
-  font-size: 15px;
-  opacity: 0.8;
-}
-
-/* FEATURE GRID spacing */
-.features-grid {
-  margin-top: 20px;
-  gap: 20px;
-}
-
-/* TESTIMONIALS spacing */
-.testimonials {
-  padding: 70px 20px;
-}
-
-.testimonials h2 {
-  margin-bottom: 10px;
-}
-
-.testimonials .subtitle {
-  margin-bottom: 40px;
-}
-
-/* FLOATING CONTACT FIX */
-.floating-contact {
-  bottom: 25px;
-  right: 20px;
-  z-index: 999;
-}
-
-/* Prevent floating button from covering hero buttons */
-@media (max-width: 768px) {
-  .floating-contact {
-    bottom: 90px;
-  }
 }
