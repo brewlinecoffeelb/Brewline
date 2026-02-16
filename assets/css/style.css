@@ -1698,70 +1698,63 @@ header {
 body {
   padding-top: 80px;
 }
-/* ======================================
-   PREMIUM HEADER REFINEMENT
-   (Paste at very bottom of CSS)
-====================================== */
+/* =========================================
+   FINAL PREMIUM HEADER FIX (OVERRIDE ALL)
+========================================= */
 
 header{
-  padding: 0 18px;
+  padding: 0 20px !important;
 }
 
-/* Center structure perfectly */
+/* Main nav container */
 .nav{
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:16px 0; /* taller header */
-  max-width:1200px;
-  margin:auto;
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  padding:18px 0 !important;
+  max-width:1200px !important;
+  margin:auto !important;
 }
 
-/* Bigger logo – proportional */
+/* Bigger logo */
 .nav img{
-  height:52px;   /* was ~40-42px */
-  width:auto;
+  height:60px !important;
+  width:auto !important;
 }
 
-/* Navigation container */
+/* Navigation group */
 .nav div{
-  display:flex;
-  align-items:center;
-  gap:24px;   /* clean spacing */
+  display:flex !important;
+  align-items:center !important;
+  gap:28px !important;
 }
 
-/* Menu links */
+/* Home / Menu links */
 .nav a{
-  font-size:17px;          /* bigger */
-  font-weight:600;         /* more premium */
-  letter-spacing:0.5px;    /* luxury spacing */
-  color:#d4af37;
-  text-decoration:none;
-  transition:0.25s ease;
+  font-size:18px !important;
+  font-weight:700 !important;
+  letter-spacing:0.6px !important;
+  color:#d4af37 !important;
+  text-decoration:none !important;
+  white-space:nowrap !important;
 }
 
-/* Slight hover refinement */
-.nav a:hover{
-  opacity:0.85;
-}
-
-/* Sign In button – more premium */
+/* Sign In button */
 .nav-login{
-  background:linear-gradient(145deg,#d4af37,#c19b2e);
-  color:#081c3a !important;
-  padding:10px 26px;        /* slightly larger */
-  border-radius:40px;
-  font-weight:700;
-  font-size:16px;
-  letter-spacing:0.5px;
-  box-shadow:0 8px 20px rgba(212,175,55,0.25);
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  transition:0.3s ease;
+  background:#d4af37 !important;
+  color:#081c3a !important;   /* FORCE DARK TEXT */
+  font-size:17px !important;
+  font-weight:700 !important;
+  padding:12px 30px !important;
+  border-radius:40px !important;
+  box-shadow:0 10px 25px rgba(212,175,55,0.35) !important;
+  display:inline-flex !important;
+  align-items:center !important;
+  justify-content:center !important;
 }
 
+/* Remove weird transparency if inherited */
 .nav-login:hover{
+  opacity:1 !important;
   transform:translateY(-2px);
-  box-shadow:0 12px 28px rgba(212,175,55,0.4);
 }
