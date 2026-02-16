@@ -7,15 +7,12 @@
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="auth-page">
+<body>
 
-<section class="auth-section">
-  <div class="auth-card">
+<section class="delivery-section">
+  <div class="container auth-wrapper">
 
-    <a href="index.html" class="auth-back">← Back</a>
-
-    <h2>Welcome Back</h2>
-    <p class="auth-sub">Sign in to continue your Brewline experience.</p>
+    <h2 style="text-align:center;margin-bottom:30px;">Sign In</h2>
 
     <div class="auth-secondary">
       New to Brewline? <a href="signup.html">Create an account</a>
@@ -45,17 +42,17 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { 
   getAuth, 
-  signInWithEmailAndPassword,
-  sendPasswordResetEmail
+  createUserWithEmailAndPassword, 
+  signInWithEmailAndPassword 
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyBI4OeO3oLFfWNFKRIGP2KOieusg80qZzA",
+  authDomain: "brewline-auth.firebaseapp.com",
+  projectId: "brewline-auth",
+  storageBucket: "brewline-auth.firebasestorage.app",
+  messagingSenderId: "408447180405",
+  appId: "1:408447180405:web:1a3f0a04324e50e4baa23c"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -73,7 +70,32 @@ function showSuccess(text){
   msg.innerText = text;
 }
 
+window.signUp = function(){
+
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+
+  if(!email || !password){
+    showError("Please enter email and password.");
+    return;
+  }
+
+  if(password.length < 6){
+    showError("Password must be at least 6 characters.");
+    return;
+  }
+
+  createUserWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      showSuccess("Account created successfully. You can now login.");
+    })
+    .catch((error) => {
+      showError(error.message);
+    });
+};
+
 window.signIn = function(){
+
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
 
@@ -89,29 +111,57 @@ window.signIn = function(){
         window.location.href = "index.html";
       }, 800);
     })
-    .catch((error) => {
-      showError(error.message);
-    });
+  .catch((error) => {
+
+  if (error.code === "auth/user-not-found") {
+    showError("No account found with this email.");
+  }
+  else if (error.code === "auth/wrong-password") {
+    showError("Incorrect password. Please try again.");
+  }
+  else if (error.code === "auth/invalid-email") {
+    showError("Please enter a valid email address.");
+  }
+  else {
+    showError("Login failed. Please try again.");
+  }
+
+});
+
 };
+window.goToRegister = function() {
+  window.location.href = "register.html";
+};
+
+  function togglePassword(id){
+  const input = document.getElementById(id);
+  input.type = input.type === "password" ? "text" : "password";
+}
+
+import { sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 window.resetPassword = function(){
   const email = document.getElementById("email").value;
 
   if(!email){
-    showError("Enter your email to reset password.");
+    document.getElementById("message").innerText = "Enter your email to reset password.";
+    document.getElementById("message").style.color = "red";
     return;
   }
 
   sendPasswordResetEmail(auth, email)
-    .then(() => showSuccess("Password reset email sent."))
-    .catch((error) => showError(error.message));
+    .then(() => {
+      document.getElementById("message").innerText = "Password reset email sent.";
+      document.getElementById("message").style.color = "#d4af37";
+    })
+    .catch((error) => {
+      document.getElementById("message").innerText = error.message;
+      document.getElementById("message").style.color = "red";
+    });
 };
-
-function togglePassword(id){
-  const input = document.getElementById(id);
-  input.type = input.type === "password" ? "text" : "password";
-}
 </script>
 
+</body>
+</html>
 </body>
 </html>
