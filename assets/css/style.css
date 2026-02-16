@@ -2081,3 +2081,16 @@ body.auth-page{
 .auth-back:hover{
   opacity: 0.7;
 }
+/* ===== REMOVE ALL TOP SPACE ON AUTH PAGE ===== */
+
+body.auth-page{
+  padding-top: 0 !important;
+}
+
+.auth-fullscreen{
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px; /* remove top padding */
+}
