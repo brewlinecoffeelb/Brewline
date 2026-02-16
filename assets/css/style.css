@@ -1479,6 +1479,6 @@ header {
   padding: 30px 20px 40px 20px !important;
 }
 
-.auth-page body {
+body.auth-page{
   padding-top: 0 !important;
 }
