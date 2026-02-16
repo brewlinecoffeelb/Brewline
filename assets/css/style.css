@@ -1449,3 +1449,20 @@ header {
   color: #d4af37;
   cursor: pointer;
 }
+/* ===== AUTH PAGE LAYOUT FIX ===== */
+
+.auth-page .delivery-section {
+  padding: 40px 20px !important;
+}
+
+.auth-page .auth-wrapper {
+  margin-top: 10px !important;
+}
+
+.auth-back {
+  position: relative;
+  top: 20px;
+  left: 20px;
+  font-size: 16px;
+  font-weight: 500;
+}
