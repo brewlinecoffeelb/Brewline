@@ -1699,62 +1699,66 @@ body {
   padding-top: 80px;
 }
 /* =========================================
-   FINAL PREMIUM HEADER FIX (OVERRIDE ALL)
+   REFINED LUXURY HEADER (BALANCED VERSION)
 ========================================= */
 
 header{
-  padding: 0 20px !important;
+  padding:0 18px !important;
 }
 
-/* Main nav container */
+/* NAV CONTAINER */
 .nav{
   display:flex !important;
   align-items:center !important;
   justify-content:space-between !important;
-  padding:18px 0 !important;
-  max-width:1200px !important;
+  padding:14px 0 !important;
+  max-width:1100px !important;
   margin:auto !important;
 }
 
-/* Bigger logo */
+/* LOGO */
 .nav img{
-  height:60px !important;
+  height:52px !important;
   width:auto !important;
 }
 
-/* Navigation group */
+/* NAV LINKS GROUP */
 .nav div{
   display:flex !important;
   align-items:center !important;
-  gap:28px !important;
+  gap:24px !important;
 }
 
-/* Home / Menu links */
+/* HOME & MENU */
 .nav a{
-  font-size:18px !important;
-  font-weight:700 !important;
-  letter-spacing:0.6px !important;
+  font-size:16px !important;
+  font-weight:600 !important;
+  letter-spacing:0.5px !important;
   color:#d4af37 !important;
   text-decoration:none !important;
-  white-space:nowrap !important;
+  transition:0.25s ease !important;
 }
 
-/* Sign In button */
+.nav a:hover{
+  opacity:0.8;
+}
+
+/* NEW SIGN IN STYLE (GLASS LUXURY) */
 .nav-login{
-  background:#d4af37 !important;
-  color:#081c3a !important;   /* FORCE DARK TEXT */
-  font-size:17px !important;
-  font-weight:700 !important;
-  padding:12px 30px !important;
-  border-radius:40px !important;
-  box-shadow:0 10px 25px rgba(212,175,55,0.35) !important;
-  display:inline-flex !important;
-  align-items:center !important;
-  justify-content:center !important;
+  background:rgba(212,175,55,0.12) !important;
+  border:1px solid rgba(212,175,55,0.6) !important;
+  color:#d4af37 !important;
+  font-size:15px !important;
+  font-weight:600 !important;
+  padding:9px 22px !important;
+  border-radius:30px !important;
+  backdrop-filter:blur(8px) !important;
+  transition:all 0.3s ease !important;
 }
 
-/* Remove weird transparency if inherited */
+/* Hover effect */
 .nav-login:hover{
-  opacity:1 !important;
-  transform:translateY(-2px);
+  background:#d4af37 !important;
+  color:#081c3a !important;
+  box-shadow:0 6px 20px rgba(212,175,55,0.35);
 }
