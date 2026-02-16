@@ -284,3 +284,150 @@ header{
   opacity:0.7;
   margin-top:40px;
 }
+/* ======================================================
+   BREWLINE STRUCTURE FIX PACK
+   (Menu + Delivery + Checkout + Floating Button)
+   Paste at VERY bottom of CSS
+====================================================== */
+
+
+/* ================= HEADER SAFE SPACING ================= */
+
+body{
+  padding-top:80px;
+}
+
+.delivery-section,
+.checkout-section{
+  padding-top:120px !important;
+}
+
+
+/* ================= WE DELIVER BUTTON ================= */
+
+.we-deliver-link{
+  display:inline-block;
+  margin:60px auto;
+  text-align:center;
+
+  background:#d4af37;
+  color:#081c3a !important;
+  padding:14px 36px;
+  border-radius:40px;
+  font-weight:600;
+  font-size:16px;
+  text-decoration:none;
+  transition:0.3s ease;
+}
+
+.we-deliver-link:hover{
+  background:#c19b2e;
+  transform:translateY(-3px);
+}
+
+
+/* ================= DELIVERY PAGE FIX ================= */
+
+.delivery-section{
+  padding:120px 20px 60px 20px !important;
+}
+
+.menu-item{
+  background:#0f2238;
+  padding:20px;
+  border-radius:22px;
+  margin-bottom:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.menu-item img{
+  width:100%;
+  border-radius:18px;
+  margin-bottom:15px;
+}
+
+.menu-item .item-row{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:10px;
+}
+
+.menu-item input,
+.menu-item textarea{
+  width:100%;
+  padding:12px;
+  border-radius:16px;
+  border:1px solid rgba(212,175,55,0.3);
+  background:#112240;
+  color:white;
+  font-size:14px;
+}
+
+.menu-item textarea{
+  height:45px;
+  resize:none;
+  margin-top:12px;
+}
+
+
+/* ================= CHECKOUT PAGE FIX ================= */
+
+.checkout-section{
+  padding:120px 20px 60px 20px !important;
+}
+
+.checkout-card{
+  background:#0f2238;
+  padding:25px;
+  border-radius:22px;
+  margin-bottom:25px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.3);
+}
+
+.checkout-total{
+  font-size:18px;
+  font-weight:600;
+  margin-top:20px;
+}
+
+.checkout-btn{
+  width:100%;
+  padding:16px;
+  border-radius:40px;
+  background:#d4af37;
+  color:#081c3a;
+  border:none;
+  font-weight:600;
+  font-size:16px;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.checkout-btn:hover{
+  background:#c19b2e;
+  transform:translateY(-2px);
+}
+
+
+/* ================= FLOATING CONTACT BUTTON ================= */
+
+.floating-contact{
+  position:fixed;
+  bottom:25px;
+  right:20px;
+  background:#d4af37;
+  color:#081c3a;
+  padding:14px 22px;
+  border-radius:40px;
+  font-weight:600;
+  text-decoration:none;
+  box-shadow:0 12px 30px rgba(0,0,0,0.4);
+  z-index:999;
+  transition:0.3s ease;
+}
+
+.floating-contact:hover{
+  background:#c19b2e;
+  transform:translateY(-3px);
+}
