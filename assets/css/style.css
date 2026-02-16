@@ -627,3 +627,104 @@ body{
   background: #c19b2e;
   transform: translateY(-4px);
 }
+/* =========================================
+   HOMEPAGE FINAL PERFECT ALIGNMENT FIX
+========================================= */
+
+/* HERO FIX */
+.hero {
+  padding-top: 140px;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.hero h1 {
+  font-size: 34px;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.hero p {
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+/* Make hero buttons side-by-side */
+.hero .gold-btn,
+.hero .btn.secondary {
+  display: inline-block;
+  min-width: 170px;
+  text-align: center;
+}
+
+.hero .gold-btn {
+  margin-right: 12px;
+}
+
+/* On small screens keep them aligned nicely */
+@media (max-width: 480px) {
+  .hero .gold-btn,
+  .hero .btn.secondary {
+    width: 200px;
+    margin: 8px 0;
+  }
+}
+
+/* WHY SECTION FIX */
+.why-brewline {
+  padding: 80px 20px 60px 20px;
+}
+
+.glass-box {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.glass-box h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.glass-box .subtitle {
+  font-size: 15px;
+  opacity: 0.8;
+}
+
+/* FEATURE GRID spacing */
+.features-grid {
+  margin-top: 20px;
+  gap: 20px;
+}
+
+/* TESTIMONIALS spacing */
+.testimonials {
+  padding: 70px 20px;
+}
+
+.testimonials h2 {
+  margin-bottom: 10px;
+}
+
+.testimonials .subtitle {
+  margin-bottom: 40px;
+}
+
+/* FLOATING CONTACT FIX */
+.floating-contact {
+  bottom: 25px;
+  right: 20px;
+  z-index: 999;
+}
+
+/* Prevent floating button from covering hero buttons */
+@media (max-width: 768px) {
+  .floating-contact {
+    bottom: 90px;
+  }
+}
