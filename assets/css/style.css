@@ -1361,3 +1361,43 @@ header {
   background:#c19b2e;
   transform:translateY(-2px);
 }
+/* ===== IMPROVED BACK BUTTON ===== */
+.auth-back{
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  font-size: 18px;
+  font-weight: 600;
+
+  color: #d4af37;
+  text-decoration: none;
+
+  margin: 25px 0 0 20px;
+  padding: 8px 14px;
+
+  border-radius: 30px;
+  transition: 0.3s ease;
+}
+
+.auth-back:hover{
+  background: rgba(212,175,55,0.1);
+  transform: translateX(-3px);
+}
+/* ===== FIX SHOW PASSWORD ALIGNMENT ===== */
+.auth-field{
+  position: relative;
+}
+
+.toggle-password{
+  position: absolute;
+  right: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  font-size: 15px;
+  font-weight: 600;
+  color: #d4af37;
+  cursor: pointer;
+}
