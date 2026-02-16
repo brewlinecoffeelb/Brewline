@@ -1937,3 +1937,64 @@ header{
 body{
   padding-top:70px !important;
 }
+/* ==========================
+   FULLSCREEN AUTH MODE
+========================== */
+
+/* Remove header completely */
+.auth-page header{
+  display:none !important;
+}
+
+/* Remove body padding */
+body.auth-page{
+  padding-top:0 !important;
+  margin:0;
+}
+
+/* Full top background */
+.auth-fullscreen{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  background:linear-gradient(
+      to bottom,
+      #081c3a,
+      #0b2a4d
+  );
+}
+
+/* Glass Card */
+.auth-card{
+  width:100%;
+  max-width:420px;
+  padding:60px 30px 40px 30px;
+  border-radius:28px;
+  background:linear-gradient(
+      145deg,
+      rgba(255,255,255,0.07),
+      rgba(255,255,255,0.02)
+  );
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(212,175,55,0.25);
+  box-shadow:0 30px 80px rgba(0,0,0,0.6);
+  position:relative;
+}
+
+/* Back button inside card */
+.auth-back{
+  position:absolute;
+  top:20px;
+  left:24px;
+  font-size:15px;
+  font-weight:600;
+  color:#d4af37;
+  text-decoration:none;
+  opacity:0.9;
+}
+
+.auth-back:hover{
+  opacity:1;
+}
