@@ -1106,9 +1106,11 @@ header{
 }
 
 /* Prevent content under header */
-body{
-  padding-top: 80px;
+
+body.auth-page{
+  padding-top: 0 !important;
 }
+
 /* ================= AUTH PROFESSIONAL UPGRADE ================= */
 
 .auth-wrapper{
