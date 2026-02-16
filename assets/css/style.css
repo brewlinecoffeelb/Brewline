@@ -1466,3 +1466,8 @@ header {
   font-size: 16px;
   font-weight: 500;
 }
+/* ===== REMOVE HEADER OFFSET ON AUTH PAGES ===== */
+
+.auth-page {
+  padding-top: 0 !important;
+}
