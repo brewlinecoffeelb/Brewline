@@ -431,3 +431,121 @@ body{
   background:#c19b2e;
   transform:translateY(-3px);
 }
+/* =========================================
+   BREWLINE FINAL LAYOUT RESTORE (SAFE)
+   Paste at very bottom of CSS
+========================================= */
+
+/* ===== Restore Gold Button Links ===== */
+a.gold-link,
+.hero a,
+.menu a {
+  color: #d4af37 !important;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.hero .btn,
+.menu .btn,
+a.gold-btn {
+  display: inline-block;
+  background: #d4af37;
+  color: #081c3a !important;
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  transition: 0.3s ease;
+}
+
+.hero .btn:hover,
+.menu .btn:hover,
+a.gold-btn:hover {
+  background: #c19b2e;
+  transform: translateY(-3px);
+}
+
+/* Fix View Menu link specifically */
+.hero a:first-child {
+  color: #d4af37 !important;
+  text-decoration: underline;
+}
+
+/* ===== Restore Hero Spacing ===== */
+.hero {
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+.hero h1 {
+  font-size: 34px;
+  line-height: 1.2;
+}
+
+/* ===== Restore Why Brewline Luxury Card ===== */
+.why-brewline {
+  padding: 100px 20px 80px;
+}
+
+.why-container,
+.glass-box {
+  box-shadow:
+    0 25px 70px rgba(0,0,0,0.55),
+    0 0 50px rgba(212,175,55,0.12);
+  backdrop-filter: blur(20px);
+}
+
+/* ===== Restore Section Spacing ===== */
+.section {
+  padding: 90px 20px 60px;
+}
+
+.testimonials {
+  padding: 100px 20px;
+}
+
+.testimonial {
+  padding: 50px 35px;
+}
+
+/* ===== Footer Spacing Fix ===== */
+.footer {
+  margin-top: 80px;
+  padding: 40px 20px;
+}
+
+/* ===== Fix Menu Page Layout ===== */
+.menu-section {
+  padding: 100px 20px 60px;
+}
+
+/* ===== Fix Delivery Page Layout ===== */
+.delivery-section {
+  padding: 120px 20px 80px !important;
+}
+
+/* Center delivery form properly */
+.delivery-form {
+  margin-top: 40px;
+}
+
+/* ===== Fix Checkout Page ===== */
+.checkout-title {
+  margin-top: 40px;
+}
+
+.checkout-total {
+  margin-bottom: 80px;
+}
+
+/* ===== Floating Contact Proper Position ===== */
+.floating-contact {
+  bottom: 25px;
+  right: 20px;
+  padding: 14px 22px;
+  font-size: 15px;
+  border-radius: 40px;
+  z-index: 9999;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+}
