@@ -6,15 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
+
 <body class="auth-page">
-  <a href="index.html" class="auth-back">← Back</a>
 
-<section class="delivery-section">
-  <div class="container auth-wrapper">
-    
-    <div class="auth-card">
+<section class="auth-section">
+  <div class="auth-card">
 
-    <h2 style="text-align:center;margin-bottom:30px;">Sign In</h2>
+    <a href="index.html" class="auth-back">← Back</a>
+
+    <h2>Welcome Back</h2>
+    <p class="auth-sub">Sign in to continue your Brewline experience.</p>
 
     <div class="auth-secondary">
       New to Brewline? <a href="signup.html">Create an account</a>
@@ -36,7 +37,6 @@
     <button onclick="signIn()" class="auth-btn">Sign In</button>
 
     <p id="message" class="auth-message"></p>
-    </div>
 
   </div>
 </section>
@@ -45,17 +45,17 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { 
   getAuth, 
-  createUserWithEmailAndPassword, 
-  signInWithEmailAndPassword 
+  signInWithEmailAndPassword,
+  sendPasswordResetEmail
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBI4OeO3oLFfWNFKRIGP2KOieusg80qZzA",
-  authDomain: "brewline-auth.firebaseapp.com",
-  projectId: "brewline-auth",
-  storageBucket: "brewline-auth.firebasestorage.app",
-  messagingSenderId: "408447180405",
-  appId: "1:408447180405:web:1a3f0a04324e50e4baa23c"
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
 };
 
 const app = initializeApp(firebaseConfig);
@@ -73,32 +73,7 @@ function showSuccess(text){
   msg.innerText = text;
 }
 
-window.signUp = function(){
-
-  const email = document.getElementById("email").value.trim();
-  const password = document.getElementById("password").value;
-
-  if(!email || !password){
-    showError("Please enter email and password.");
-    return;
-  }
-
-  if(password.length < 6){
-    showError("Password must be at least 6 characters.");
-    return;
-  }
-
-  createUserWithEmailAndPassword(auth, email, password)
-    .then(() => {
-      showSuccess("Account created successfully. You can now login.");
-    })
-    .catch((error) => {
-      showError(error.message);
-    });
-};
-
 window.signIn = function(){
-
   const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
 
@@ -114,56 +89,29 @@ window.signIn = function(){
         window.location.href = "index.html";
       }, 800);
     })
-  .catch((error) => {
-
-  if (error.code === "auth/user-not-found") {
-    showError("No account found with this email.");
-  }
-  else if (error.code === "auth/wrong-password") {
-    showError("Incorrect password. Please try again.");
-  }
-  else if (error.code === "auth/invalid-email") {
-    showError("Please enter a valid email address.");
-  }
-  else {
-    showError("Login failed. Please try again.");
-  }
-
-});
-
+    .catch((error) => {
+      showError(error.message);
+    });
 };
-window.goToRegister = function() {
-  window.location.href = "register.html";
-};
-
-  function togglePassword(id){
-  const input = document.getElementById(id);
-  input.type = input.type === "password" ? "text" : "password";
-}
-
-import { sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 window.resetPassword = function(){
   const email = document.getElementById("email").value;
 
   if(!email){
-    document.getElementById("message").innerText = "Enter your email to reset password.";
-    document.getElementById("message").style.color = "red";
+    showError("Enter your email to reset password.");
     return;
   }
 
   sendPasswordResetEmail(auth, email)
-    .then(() => {
-      document.getElementById("message").innerText = "Password reset email sent.";
-      document.getElementById("message").style.color = "#d4af37";
-    })
-    .catch((error) => {
-      document.getElementById("message").innerText = error.message;
-      document.getElementById("message").style.color = "red";
-    });
+    .then(() => showSuccess("Password reset email sent."))
+    .catch((error) => showError(error.message));
 };
+
+function togglePassword(id){
+  const input = document.getElementById(id);
+  input.type = input.type === "password" ? "text" : "password";
+}
 </script>
 
 </body>
 </html>
-
