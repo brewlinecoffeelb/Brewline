@@ -1639,3 +1639,62 @@ header{
     gap: 18px;
   }
 }
+/* ===============================
+   HARD RESET HEADER (NUCLEAR OVERRIDE)
+   This disables ALL previous header styling
+================================ */
+
+header,
+header *,
+.nav,
+.nav * {
+  all: unset;
+  box-sizing: border-box;
+}
+
+/* Rebuild minimal clean header structure */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #081c3a;
+  z-index: 1000;
+  padding: 12px 16px;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav img {
+  height: 42px;
+}
+
+.nav > div {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.nav a {
+  color: #d4af37;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.nav-login {
+  background: #d4af37;
+  color: #081c3a;
+  padding: 8px 18px;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* Make sure body still has header spacing */
+body {
+  padding-top: 80px;
+}
