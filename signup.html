@@ -2,32 +2,27 @@
 <html>
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Create Account - Brewline</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="auth-page">
 
-<section class="delivery-section">
-  <div class="container auth-wrapper">
+<section class="auth-section">
+  <div class="auth-card">
 
-    <h2 style="text-align:center;margin-bottom:30px;">Create Account</h2>
+    <a href="signin.html" class="auth-back">← Back</a>
 
-    <div class="auth-field">
-      <input type="text" id="fullName" placeholder="Full Name">
-    </div>
+    <h2>Create Account</h2>
+    <p class="auth-sub">Join Brewline and elevate your coffee experience.</p>
 
     <div class="auth-field">
       <input type="email" id="email" placeholder="Email Address">
     </div>
 
     <div class="auth-field">
-      <input type="tel" id="phone" placeholder="Phone Number">
-    </div>
-
-    <div class="auth-field">
-      <input type="password" id="password" placeholder="Password">
+      <input type="password" id="password" placeholder="Password (min 6 characters)">
       <span class="toggle-password" onclick="togglePassword('password')">Show</span>
     </div>
 
@@ -36,80 +31,80 @@
       <span class="toggle-password" onclick="togglePassword('confirmPassword')">Show</span>
     </div>
 
-    <button onclick="createAccount()" class="auth-btn">Create Account</button>
-
-    <div class="auth-secondary" style="margin-top:25px;">
-      Already have an account? <a href="signin.html">Sign in</a>
-    </div>
+    <button onclick="signUp()" class="auth-btn">Create Account</button>
 
     <p id="message" class="auth-message"></p>
 
   </div>
 </section>
 
-  <script type="module">
-
+<script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getAuth, createUserWithEmailAndPassword, updateProfile } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
+import { 
+  getAuth, 
+  createUserWithEmailAndPassword 
+} from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyBI4OeO3oLFfWNFKRIGP2KOieusg80qZzA",
-  authDomain: "brewline-auth.firebaseapp.com",
-  projectId: "brewline-auth",
-  storageBucket: "brewline-auth.firebasestorage.app",
-  messagingSenderId: "408447180405",
-  appId: "1:408447180405:web:1a3f0a04324e50e4baa23c"
+  apiKey: "YOUR_API_KEY",
+  authDomain: "YOUR_AUTH_DOMAIN",
+  projectId: "YOUR_PROJECT_ID",
+  storageBucket: "YOUR_STORAGE_BUCKET",
+  messagingSenderId: "YOUR_SENDER_ID",
+  appId: "YOUR_APP_ID"
 };
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-window.createAccount = function() {
+const msg = document.getElementById("message");
 
-  const fullName = document.getElementById("fullName").value;
-  const email = document.getElementById("email").value;
+function showError(text){
+  msg.style.color = "#ff3b3b";
+  msg.innerText = text;
+}
+
+function showSuccess(text){
+  msg.style.color = "#7CFF8A";
+  msg.innerText = text;
+}
+
+window.signUp = function(){
+
+  const email = document.getElementById("email").value.trim();
   const password = document.getElementById("password").value;
-  const confirmPassword = document.getElementById("confirmPassword").value;
+  const confirm = document.getElementById("confirmPassword").value;
 
-  const message = document.getElementById("message");
+  if(!email || !password || !confirm){
+    showError("Please fill all fields.");
+    return;
+  }
 
-  // Check password match
-  if(password !== confirmPassword){
-    message.innerText = "Passwords do not match.";
-    message.style.color = "red";
+  if(password.length < 6){
+    showError("Password must be at least 6 characters.");
+    return;
+  }
+
+  if(password !== confirm){
+    showError("Passwords do not match.");
     return;
   }
 
   createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-
-      // Save full name
-      return updateProfile(userCredential.user, {
-        displayName: fullName
-      });
-
-    })
     .then(() => {
-      message.innerText = "Account created successfully!";
-      message.style.color = "#d4af37";
-      window.location.href = "signin.html";
+      showSuccess("Account created successfully!");
+      setTimeout(() => {
+        window.location.href = "signin.html";
+      }, 900);
     })
-    .catch((error) => {
-      message.innerText = error.message;
-      message.style.color = "red";
-    });
-
+    .catch((error) => showError(error.message));
 };
 
 function togglePassword(id){
   const input = document.getElementById(id);
   input.type = input.type === "password" ? "text" : "password";
 }
-    
 </script>
 
-  
-</section>
 </body>
 </html>
-
