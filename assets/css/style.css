@@ -1602,3 +1602,40 @@ header{
   transform:translateY(-2px);
   box-shadow:0 10px 25px rgba(212,175,55,0.4);
 }
+/* =========================
+   HEADER STABILITY FIX (ALL PHONES)
+========================= */
+
+.nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 12px 20px;
+}
+
+.nav div {
+  display: flex;
+  align-items: center;
+  gap: 16px; /* fixed spacing */
+}
+
+/* Prevent stretching on bigger phones */
+.nav a {
+  flex-shrink: 0;
+}
+
+/* Improve Sign In button alignment */
+.nav-login {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 38px;
+  padding: 0 20px;
+  border-radius: 30px;
+}
+
+/* Prevent layout change on Pro Max */
+@media (min-width: 400px) {
+  .nav div {
+    gap: 18px;
+  }
+}
