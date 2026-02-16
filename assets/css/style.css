@@ -1482,3 +1482,6 @@ header {
 body.auth-page{
   padding-top: 0 !important;
 }
+.auth-page .delivery-section{
+  padding: 20px 20px !important;
+}
