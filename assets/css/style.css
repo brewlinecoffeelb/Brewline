@@ -1471,3 +1471,12 @@ header {
 .auth-page {
   padding-top: 0 !important;
 }
+/* ===== AUTH PAGE SPACE FIX (FINAL) ===== */
+
+.auth-page .delivery-section {
+  padding: 30px 20px 40px 20px !important;
+}
+
+.auth-page body {
+  padding-top: 0 !important;
+}
