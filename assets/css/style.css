@@ -432,120 +432,198 @@ body{
   transform:translateY(-3px);
 }
 /* =========================================
-   BREWLINE FINAL LAYOUT RESTORE (SAFE)
+   BREWLINE HOME PAGE FIX (INDEX.HTML MATCH)
    Paste at very bottom of CSS
 ========================================= */
 
-/* ===== Restore Gold Button Links ===== */
-a.gold-link,
-.hero a,
-.menu a {
-  color: #d4af37 !important;
-  font-weight: 600;
-  text-decoration: none;
+
+/* ===== HERO FIX ===== */
+.hero {
+  padding: 140px 20px 110px;
+  text-align: center;
 }
 
-.hero .btn,
-.menu .btn,
-a.gold-btn {
+.hero h1 {
+  font-size: 36px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-size: 16px;
+  opacity: 0.8;
+  margin-bottom: 30px;
+}
+
+/* ===== BUTTONS FIX ===== */
+.gold-btn {
   display: inline-block;
   background: #d4af37;
   color: #081c3a !important;
-  padding: 14px 36px;
+  padding: 15px 38px;
   border-radius: 40px;
   font-weight: 600;
   font-size: 16px;
   text-decoration: none;
+  margin: 6px;
   transition: 0.3s ease;
 }
 
-.hero .btn:hover,
-.menu .btn:hover,
-a.gold-btn:hover {
+.gold-btn:hover {
   background: #c19b2e;
   transform: translateY(-3px);
 }
 
-/* Fix View Menu link specifically */
-.hero a:first-child {
-  color: #d4af37 !important;
-  text-decoration: underline;
+.btn.secondary {
+  border: 2px solid #d4af37;
+  color: #d4af37;
+  padding: 14px 36px;
+  border-radius: 40px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s ease;
 }
 
-/* ===== Restore Hero Spacing ===== */
-.hero {
-  padding-top: 120px;
-  padding-bottom: 100px;
+.btn.secondary:hover {
+  background: #d4af37;
+  color: #081c3a;
 }
 
-.hero h1 {
-  font-size: 34px;
-  line-height: 1.2;
-}
-
-/* ===== Restore Why Brewline Luxury Card ===== */
+/* ===== WHY BREWLINE SECTION ===== */
 .why-brewline {
-  padding: 100px 20px 80px;
+  padding: 110px 20px 80px;
+  text-align: center;
 }
 
-.why-container,
 .glass-box {
+  padding: 60px 30px;
+  margin-bottom: 60px;
+  border-radius: 28px;
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,0.06),
+    rgba(255,255,255,0.02)
+  );
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(212,175,55,0.2);
   box-shadow:
     0 25px 70px rgba(0,0,0,0.55),
-    0 0 50px rgba(212,175,55,0.12);
-  backdrop-filter: blur(20px);
+    0 0 50px rgba(212,175,55,0.08);
 }
 
-/* ===== Restore Section Spacing ===== */
-.section {
-  padding: 90px 20px 60px;
+.glass-box h2 {
+  font-size: 30px;
+  margin-bottom: 15px;
+  color: #d4af37;
 }
 
+.subtitle {
+  color: rgba(255,255,255,0.65);
+  font-size: 15px;
+}
+
+/* ===== FEATURES GRID ===== */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 28px;
+  margin-top: 40px;
+}
+
+.feature-card {
+  padding: 30px 22px;
+  border-radius: 18px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  border: 1px solid #d4af37;
+  background: rgba(255,255,255,0.06);
+}
+
+.feature-card h3 {
+  margin-top: 15px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.feature-card p {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* ===== TESTIMONIALS FIX ===== */
 .testimonials {
-  padding: 100px 20px;
+  padding: 120px 20px 90px;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 30px;
+  margin-bottom: 10px;
+  color: #d4af37;
 }
 
 .testimonial {
   padding: 50px 35px;
+  border-radius: 16px;
+  background: #112240;
+  border: 1px solid rgba(212,175,55,0.2);
 }
 
-/* ===== Footer Spacing Fix ===== */
+.review {
+  margin: 25px 0;
+  font-size: 16px;
+}
+
+/* ===== DOTS FIX ===== */
+.dots {
+  margin-top: 35px;
+}
+
+.dot {
+  height: 10px;
+  width: 10px;
+  background: #444;
+  border-radius: 50%;
+  margin: 0 6px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.dot.active {
+  background: #d4af37;
+}
+
+/* ===== FOOTER FIX ===== */
 .footer {
-  margin-top: 80px;
-  padding: 40px 20px;
+  padding: 50px 20px;
+  margin-top: 100px;
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.7;
 }
 
-/* ===== Fix Menu Page Layout ===== */
-.menu-section {
-  padding: 100px 20px 60px;
-}
-
-/* ===== Fix Delivery Page Layout ===== */
-.delivery-section {
-  padding: 120px 20px 80px !important;
-}
-
-/* Center delivery form properly */
-.delivery-form {
-  margin-top: 40px;
-}
-
-/* ===== Fix Checkout Page ===== */
-.checkout-title {
-  margin-top: 40px;
-}
-
-.checkout-total {
-  margin-bottom: 80px;
-}
-
-/* ===== Floating Contact Proper Position ===== */
+/* ===== FLOATING CONTACT FIX ===== */
 .floating-contact {
+  position: fixed;
   bottom: 25px;
   right: 20px;
+  background: #d4af37;
+  color: #081c3a;
   padding: 14px 22px;
-  font-size: 15px;
   border-radius: 40px;
-  z-index: 9999;
+  font-weight: 600;
+  text-decoration: none;
   box-shadow: 0 12px 30px rgba(0,0,0,0.5);
+  z-index: 9999;
+  transition: 0.3s ease;
+}
+
+.floating-contact:hover {
+  background: #c19b2e;
+  transform: translateY(-4px);
 }
