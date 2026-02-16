@@ -1998,3 +1998,59 @@ body.auth-page{
 .auth-back:hover{
   opacity:1;
 }
+/* ==========================
+   CLEAN SIGNIN FULLSCREEN FIX
+========================== */
+
+/* Hide header completely */
+.auth-page header{
+  display:none !important;
+}
+
+/* Remove any top padding */
+body.auth-page{
+  padding:0 !important;
+  margin:0;
+}
+
+/* Full screen section */
+.auth-fullscreen{
+  min-height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:10px 20px; /* smaller top/bottom spacing */
+  background:linear-gradient(
+      to bottom,
+      #081c3a,
+      #0b2a4d
+  );
+}
+
+/* Glass card */
+.auth-card{
+  width:100%;
+  max-width:420px;
+  padding:45px 28px 35px 28px; /* reduced top space */
+  border-radius:28px;
+  background:linear-gradient(
+      145deg,
+      rgba(255,255,255,0.06),
+      rgba(255,255,255,0.02)
+  );
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(212,175,55,0.25);
+  box-shadow:0 25px 70px rgba(0,0,0,0.6);
+  position:relative;
+}
+
+/* Back button inside card */
+.auth-card .auth-back{
+  position:absolute;
+  top:15px;
+  left:20px;
+  font-size:14px;
+  font-weight:600;
+  color:#d4af37;
+  text-decoration:none;
+}
