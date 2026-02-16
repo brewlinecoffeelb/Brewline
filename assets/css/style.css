@@ -1541,3 +1541,64 @@ header{
 .nav-login:hover{
   background:#c19b2e;
 }
+/* ========================================
+   FINAL HEADER OVERRIDE (DO NOT MOVE)
+======================================== */
+
+header{
+  position:fixed !important;
+  top:0 !important;
+  left:0 !important;
+  width:100% !important;
+  background:linear-gradient(
+      to bottom,
+      rgba(8,28,58,0.95),
+      rgba(8,28,58,0.85)
+  ) !important;
+  backdrop-filter:blur(12px) !important;
+  border-bottom:1px solid rgba(212,175,55,0.15) !important;
+  z-index:1000 !important;
+}
+
+.nav{
+  display:flex !important;
+  align-items:center !important;
+  justify-content:space-between !important;
+  padding:12px 20px !important;
+  max-width:1200px !important;
+  margin:auto !important;
+}
+
+.nav img{
+  height:40px !important;
+}
+
+.nav div{
+  display:flex !important;
+  align-items:center !important;
+  gap:22px !important;
+}
+
+.nav a{
+  color:#d4af37 !important;
+  text-decoration:none !important;
+  font-weight:500 !important;
+  font-size:15px !important;
+  transition:0.3s ease !important;
+}
+
+.nav-login{
+  background:linear-gradient(145deg,#d4af37,#c19b2e) !important;
+  color:#081c3a !important;
+  padding:9px 22px !important;
+  border-radius:40px !important;
+  font-weight:600 !important;
+  font-size:14px !important;
+  box-shadow:0 6px 20px rgba(212,175,55,0.25) !important;
+  transition:0.3s ease !important;
+}
+
+.nav-login:hover{
+  transform:translateY(-2px);
+  box-shadow:0 10px 25px rgba(212,175,55,0.4);
+}
