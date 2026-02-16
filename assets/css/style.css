@@ -2054,3 +2054,30 @@ body.auth-page{
   color:#d4af37;
   text-decoration:none;
 }
+/* ===== AUTH BACK INSIDE GLASS PERFECT POSITION ===== */
+
+.auth-card{
+  position: relative;
+  padding-top: 50px; /* small space for back */
+}
+
+/* Container for top row */
+.auth-top{
+  position: absolute;
+  top: 18px;
+  left: 22px;
+}
+
+/* Back button styling */
+.auth-back{
+  font-size: 15px;
+  font-weight: 600;
+  color: #d4af37;
+  text-decoration: none;
+  letter-spacing: 0.3px;
+  transition: 0.3s ease;
+}
+
+.auth-back:hover{
+  opacity: 0.7;
+}
