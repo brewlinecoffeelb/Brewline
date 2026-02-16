@@ -1698,3 +1698,70 @@ header {
 body {
   padding-top: 80px;
 }
+/* ======================================
+   PREMIUM HEADER REFINEMENT
+   (Paste at very bottom of CSS)
+====================================== */
+
+header{
+  padding: 0 18px;
+}
+
+/* Center structure perfectly */
+.nav{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:16px 0; /* taller header */
+  max-width:1200px;
+  margin:auto;
+}
+
+/* Bigger logo – proportional */
+.nav img{
+  height:52px;   /* was ~40-42px */
+  width:auto;
+}
+
+/* Navigation container */
+.nav div{
+  display:flex;
+  align-items:center;
+  gap:24px;   /* clean spacing */
+}
+
+/* Menu links */
+.nav a{
+  font-size:17px;          /* bigger */
+  font-weight:600;         /* more premium */
+  letter-spacing:0.5px;    /* luxury spacing */
+  color:#d4af37;
+  text-decoration:none;
+  transition:0.25s ease;
+}
+
+/* Slight hover refinement */
+.nav a:hover{
+  opacity:0.85;
+}
+
+/* Sign In button – more premium */
+.nav-login{
+  background:linear-gradient(145deg,#d4af37,#c19b2e);
+  color:#081c3a !important;
+  padding:10px 26px;        /* slightly larger */
+  border-radius:40px;
+  font-weight:700;
+  font-size:16px;
+  letter-spacing:0.5px;
+  box-shadow:0 8px 20px rgba(212,175,55,0.25);
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.3s ease;
+}
+
+.nav-login:hover{
+  transform:translateY(-2px);
+  box-shadow:0 12px 28px rgba(212,175,55,0.4);
+}
