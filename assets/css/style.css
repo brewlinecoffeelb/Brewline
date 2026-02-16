@@ -1910,3 +1910,30 @@ header{
 .auth-back:hover{
   opacity:0.7;
 }
+/* =========================
+   REMOVE EXTRA TOP SPACE (1 + 2)
+========================= */
+
+/* Remove big vertical centering gap */
+.delivery-section{
+  min-height:auto !important;
+  padding-top:20px !important;
+  padding-bottom:40px !important;
+  align-items:flex-start !important;
+}
+
+/* Remove extra wrapper spacing */
+.auth-wrapper{
+  margin-top:10px !important;
+}
+
+/* Reduce space above Back button */
+.auth-back{
+  margin-top:10px !important;
+  margin-bottom:20px !important;
+}
+
+/* Remove any inherited body padding issues */
+body{
+  padding-top:70px !important;
+}
