@@ -1408,3 +1408,44 @@ header {
   color: #d4af37 !important;
   cursor: pointer !important;
 }
+/* ===== AUTH PAGE HEADER FIX ===== */
+
+.auth-page header {
+  height: 60px !important;
+}
+
+.auth-page .nav {
+  padding: 8px 16px !important;
+}
+
+.auth-page .nav img {
+  height: 36px !important;
+}
+
+.auth-page body {
+  padding-top: 60px !important;
+}
+/* ===== AUTH PASSWORD TOGGLE CLEAN FIX ===== */
+
+.auth-field {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.auth-field input {
+  width: 100%;
+  padding-right: 70px;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  font-size: 14px;
+  font-weight: 500;      /* less bold */
+  color: #d4af37;
+  cursor: pointer;
+}
