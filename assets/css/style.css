@@ -1600,3 +1600,113 @@ body.auth-page{
   margin-top:15px;
   font-size:14px;
 }
+/* =====================================
+   PREMIUM SIGN IN UPGRADE
+   (Enhancement – does NOT overwrite)
+===================================== */
+
+
+/* 1️⃣ Luxury background glow */
+body.auth-page{
+  position:relative;
+  overflow:hidden;
+}
+
+body.auth-page::before{
+  content:"";
+  position:absolute;
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle, rgba(212,175,55,0.08), transparent 60%);
+  top:-250px;
+  left:50%;
+  transform:translateX(-50%);
+  animation:goldGlow 8s ease-in-out infinite alternate;
+  pointer-events:none;
+}
+
+@keyframes goldGlow{
+  from{ transform:translateX(-50%) scale(1); opacity:0.6; }
+  to{ transform:translateX(-50%) scale(1.1); opacity:1; }
+}
+
+
+/* 2️⃣ Glass reflection layer */
+.auth-container::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  border-radius:28px;
+  background:linear-gradient(
+    120deg,
+    rgba(255,255,255,0.15) 0%,
+    rgba(255,255,255,0.03) 40%,
+    transparent 60%
+  );
+  pointer-events:none;
+  opacity:0.35;
+}
+
+
+/* 3️⃣ Premium animated title */
+.auth-container h2{
+  background:linear-gradient(90deg,#d4af37,#f5e08a,#d4af37);
+  background-size:200% auto;
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  animation:titleShimmer 6s linear infinite;
+}
+
+@keyframes titleShimmer{
+  0%{ background-position:0% center; }
+  100%{ background-position:200% center; }
+}
+
+
+/* 4️⃣ More premium input interaction */
+.auth-field input{
+  transition:all 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+.auth-field input:focus{
+  transform:translateY(-2px);
+  box-shadow:0 10px 30px rgba(212,175,55,0.15);
+}
+
+
+/* 5️⃣ Deeper luxury button effect */
+.auth-btn{
+  transition:all 0.35s cubic-bezier(.4,0,.2,1);
+}
+
+.auth-btn:hover{
+  transform:translateY(-4px);
+  box-shadow:
+    0 22px 55px rgba(212,175,55,0.65),
+    inset 0 -2px 4px rgba(0,0,0,0.2);
+}
+
+.auth-btn:active{
+  transform:translateY(0);
+  box-shadow:
+    0 10px 25px rgba(212,175,55,0.4),
+    inset 0 3px 6px rgba(0,0,0,0.3);
+}
+
+
+/* 6️⃣ Bigger premium back button */
+.auth-back{
+  font-size:18px;
+  font-weight:700;
+  letter-spacing:0.4px;
+  top:22px;
+  left:28px;
+}
+
+.auth-back:hover{
+  transform:translateX(-4px);
+  text-shadow:0 0 10px rgba(212,175,55,0.4);
+}
