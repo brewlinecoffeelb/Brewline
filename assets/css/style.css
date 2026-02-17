@@ -1440,16 +1440,16 @@ body.auth-page{
   min-height:100vh;
   background:linear-gradient(to bottom,#081c3a,#0b2a4d);
   display:flex;
-  align-items:center;
+  align-items:flex-start;
   justify-content:center;
-  padding-top:0px
+  padding-top:70px
 }
 
 /* Main auth section */
 .auth-container{
   width:100%;
   max-width:460px;
-  padding:70px 45px;
+  padding:60px 38px;
   border-radius:28px;
 
   background:linear-gradient(
@@ -1487,12 +1487,12 @@ body.auth-page{
 /* Title */
 .auth-container h2{
   text-align:center;
-  font-size:36px;
+  font-size:32px;
   font-weight:800;
-  letter-spacing:1.5px
+  letter-spacing:1px
   color:#d4af37;
-  margin-top:35px;
-  margin-bottom:28px;
+  margin-top:10px;
+  margin-bottom:22px;
 }
 
 /* Secondary text */
@@ -1522,12 +1522,12 @@ body.auth-page{
 /* Inputs */
 .auth-field input{
   width:100%;
-  padding:18px 24px;
+  padding:15px 20px;
   border-radius:40px;
   border:1px solid rgba(212,175,55,0.18);
   background:#0f2342;
   color:white;
-  font-size:15px;
+  font-size:14px;
   transition:0.3s ease;
 }
 
