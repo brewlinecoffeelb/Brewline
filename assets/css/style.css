@@ -1477,10 +1477,14 @@ body.auth-page{
 /* Title (centered + yellow + bigger) */
 .auth-container h2{
   text-align:center;
-  font-size:34px;
-  font-weight:800;
-  color:#d4af37;
-  margin-bottom:18px;
+  font-size:34px;          /* bigger */
+  font-weight:800;         /* stronger */
+  color:#d4af37;           /* yellow */
+  margin:10px 0 20px 0;    /* better spacing */
+  letter-spacing:0.5px;
+}
+.auth-container{
+  text-align:center;
 }
 
 /* Subtitle */
