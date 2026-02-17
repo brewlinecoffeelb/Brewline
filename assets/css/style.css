@@ -1442,7 +1442,7 @@ body.auth-page{
   display:flex;
   align-items:flex-start;
   justify-content:center;
-  padding-top:40px
+  padding-top:70px
 }
 
 /* Main auth section */
@@ -1489,8 +1489,10 @@ body.auth-page{
   text-align:center;
   font-size:32px;
   font-weight:800;
+  letter-spacing:1px
   color:#d4af37;
-  margin-bottom:18px;
+  margin-top:10px;
+  margin-bottom:22px;
 }
 
 /* Secondary text */
