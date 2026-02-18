@@ -1626,3 +1626,72 @@ body.auth-page{
   min-height: 620px;         /* medium height between both */
   padding: 55px 38px;        /* balanced spacing */
 }
+/* =========================================
+   AUTH UNIFY PATCH (SIGNIN + SIGNUP)
+   Add this at the END of style.css
+========================================= */
+
+/* Reduce big gap above on both pages */
+body.auth-page{
+  padding-top: 22px !important;   /* was 60px */
+  align-items: flex-start !important;
+}
+
+/* Apply same container styling to BOTH class names (auth-container + auth-card) */
+.auth-container,
+.auth-card{
+  width: 100%;
+  max-width: 440px;              /* “between” the two */
+  padding: 52px 34px 40px 34px;  /* bigger than signin, smaller than signup */
+  border-radius: 28px;
+  position: relative;            /* IMPORTANT for absolute back positioning */
+}
+
+/* Bigger, yellow, centered titles on BOTH pages */
+.auth-container h1,
+.auth-container h2,
+.auth-card h1,
+.auth-card h2{
+  text-align: center !important;
+  color: #d4af37 !important;
+  font-size: 32px !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.5px;
+  margin: 18px 0 10px 0 !important; /* adds nicer spacing under Back */
+}
+
+/* Make subtitle consistent even if class differs */
+.auth-secondary,
+.auth-sub{
+  text-align: center !important;
+  font-size: 14px !important;
+  color: rgba(255,255,255,0.65) !important;
+  margin-bottom: 28px !important;
+}
+
+/* Match input “box proportions” across both pages */
+.auth-field{
+  margin-bottom: 22px !important;
+}
+
+.auth-field input{
+  padding: 18px 26px !important;      /* bigger inputs */
+  border-radius: 46px !important;
+  font-size: 15px !important;
+}
+
+/* Keep button size like current Sign In button (DON’T inflate it) */
+.auth-btn{
+  padding: 16px !important;           /* keep same feel */
+  font-size: 16px !important;
+  border-radius: 40px !important;
+}
+
+/* Back button bigger on both pages + a bit more gap before title */
+.auth-back{
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  padding: 10px 12px !important;      /* bigger tap area */
+  top: 14px !important;
+  left: 14px !important;
+}
