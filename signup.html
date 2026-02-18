@@ -71,17 +71,20 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
 import { 
   getAuth, 
-  createUserWithEmailAndPassword 
+  createUserWithEmailAndPassword,
+  updateProfile
 } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
 
+
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_AUTH_DOMAIN",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_STORAGE_BUCKET",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyDy1mE-1zjH6y9jS1lH6UJ9kYxOqjTQZK8",
+  authDomain: "brewlinecoffee.firebaseapp.com",
+  projectId: "brewlinecoffee",
+  storageBucket: "brewlinecoffee.appspot.com",
+  messagingSenderId: "716050655911",
+  appId: "1:716050655911:web:561b8dfed2f77d16a3c1db"
 };
+
 
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
@@ -100,7 +103,9 @@ function showSuccess(text){
 
 window.signUp = function(){
 
-  const email = document.getElementById("email").value.trim();
+  const fullName = document.getElementById("fullName")?.value?.trim() || "";
+const email = document.getElementById("email").value.trim();
+
   const password = document.getElementById("password").value;
   const confirm = document.getElementById("confirmPassword").value;
 
@@ -119,8 +124,13 @@ window.signUp = function(){
     return;
   }
 
-  createUserWithEmailAndPassword(auth, email, password)
-    .then(() => {
+ createUserWithEmailAndPassword(auth, email, password)
+  .then(async (cred) => {
+    // Save full name into Firebase Auth profile so Home can show it
+    if (fullName) {
+      await updateProfile(cred.user, { displayName: fullName });
+    }
+
       showSuccess("Account created successfully!");
       setTimeout(() => {
         window.location.href = "signin.html";
