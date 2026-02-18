@@ -1434,7 +1434,7 @@ body.auth-page{
   display:flex;
   justify-content:flex-start;
   align-items:flex-start;   /* ← move card to top */
-  padding:45px 20px 40px;   /* controls gap above card */
+  padding:45px 30px 40px;   /* controls gap above card */
 }
 
 /* Card (same width on both pages) */
