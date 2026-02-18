@@ -1440,7 +1440,7 @@ body.auth-page{
 /* Card (same width on both pages) */
 .auth-card{
   width:100%;
-  max-width:420px;
+  max-width:380px;
   margin:0 auto;
   position:relative;
   padding:72px 32px 38px;      /* top padding creates space under Back */
