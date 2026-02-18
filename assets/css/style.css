@@ -1434,7 +1434,7 @@ body.auth-page{
   display:flex;
   justify-content:flex-start;  /* important: removes huge top gap */
   align-items:center;
-  padding:70px 20px 40px;      /* controls top spacing */
+  padding:40px 20px 40px;      /* controls top spacing */
   box-sizing:border-box;
 }
 
