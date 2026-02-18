@@ -1610,9 +1610,8 @@ body.auth-page{
 }
 .social-btn:hover{
   border-color:rgba(212,175,55,0.30);
-}
-/* ================================
-   SOCIAL SIGNUP (VERTICAL STYLE)
+}/* ================================
+   SOCIAL SIGNUP (HORIZONTAL STYLE)
 ================================ */
 
 /* Divider */
@@ -1635,22 +1634,21 @@ body.auth-page{
   background:rgba(255,255,255,0.12);
 }
 
-/* Vertical layout */
+/* Horizontal layout */
 .auth-social{
   display:flex;
-  flex-direction:column;
   gap:12px;
   margin-top:8px;
 }
 
 /* Buttons */
 .social-btn{
-  width:100%;
+  flex:1;
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:10px;
-  padding:14px;
+  gap:8px;
+  padding:14px 10px;
   border-radius:40px;
   background:rgba(15,35,66,0.75);
   border:1px solid rgba(212,175,55,0.18);
@@ -1663,16 +1661,16 @@ body.auth-page{
 
 /* Icon size */
 .social-btn i{
-  font-size:16px;
+  font-size:15px;
 }
 
-/* Hover effect */
+/* Hover */
 .social-btn:hover{
   border-color:rgba(212,175,55,0.35);
   box-shadow:0 0 20px rgba(212,175,55,0.15);
 }
 
-/* Brand icon colors */
+/* Brand colors */
 .social-btn.google i{ color:#DB4437; }
 .social-btn.apple i{ color:#ffffff; }
 .social-btn.facebook i{ color:#1877F2; }
