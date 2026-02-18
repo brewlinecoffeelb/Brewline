@@ -1443,7 +1443,7 @@ body.auth-page{
   max-width:380px;
   margin:0 auto;
   position:relative;
-  padding:72px 32px 38px;      /* top padding creates space under Back */
+  padding:72px 26px 38px;      /* top padding creates space under Back */
   border-radius:28px;
 
   background:linear-gradient(145deg, rgba(255,255,255,0.07), rgba(255,255,255,0.02));
@@ -1635,39 +1635,43 @@ body.auth-page{
 }
 
 /* Horizontal layout */
+/* Social container */
 .auth-social{
   display:flex;
-  gap:12px;
-  margin-top:8px;
+  gap:10px;
+  margin-top:12px;
 }
 
-/* Buttons */
+/* Social buttons */
 .social-btn{
-  flex:1;
+  flex:1;                     /* makes all 3 equal width */
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:8px;
-  padding:14px 10px;
+  gap:6px;
+
+  padding:12px 8px;           /* equal horizontal padding */
   border-radius:40px;
-  background:rgba(15,35,66,0.75);
-  border:1px solid rgba(212,175,55,0.18);
+
+  background:rgba(15,35,66,0.65);
+  border:1px solid rgba(212,175,55,0.16);
+
   color:#ffffff;
-  font-weight:700;
-  font-size:14px;
+  font-size:13px;             /* slightly smaller text */
+  font-weight:600;
+
+  white-space:nowrap;         /* prevent weird wrapping */
   cursor:pointer;
-  transition:0.25s ease;
+  transition:0.2s ease;
 }
 
-/* Icon size */
-.social-btn i{
-  font-size:15px;
-}
-
-/* Hover */
 .social-btn:hover{
   border-color:rgba(212,175,55,0.35);
-  box-shadow:0 0 20px rgba(212,175,55,0.15);
+}
+
+.social-btn i,
+.social-btn svg{
+  font-size:15px;
 }
 
 /* Brand colors */
