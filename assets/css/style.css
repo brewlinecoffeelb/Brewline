@@ -1622,30 +1622,10 @@ body.auth-page{
 /* ===== UNIFIED AUTH CARD SIZE ===== */
 
 .auth-container{
-  width:100%;
-  max-width:440px;      /* same width for both */
-  min-height:640px;     /* force same height */
-  padding:60px 36px 50px 36px;
-  border-radius:28px;
-
-  background:linear-gradient(
-      145deg,
-      rgba(255,255,255,0.07),
-      rgba(255,255,255,0.02)
-  );
-
-  backdrop-filter:blur(20px);
-  border:1px solid rgba(212,175,55,0.25);
-
-  box-shadow:
-      0 30px 80px rgba(0,0,0,0.6),
-      0 0 40px rgba(212,175,55,0.08);
-
-  display:flex;
-  flex-direction:column;
-  justify-content:flex-start;
+  max-width: 460px;          /* slightly wider */
+  min-height: 620px;         /* medium height between both */
+  padding: 55px 38px;        /* balanced spacing */
 }
-
 /* =========================================
    AUTH UNIFY PATCH (SIGNIN + SIGNUP)
    Add this at the END of style.css
@@ -1669,15 +1649,7 @@ body.auth-page{
 
 /* Bigger, yellow, centered titles on BOTH pages */
 .auth-container h1,
-.auth-container h2{
-  text-align:center;
-  font-size:36px;
-  font-weight:800;
-  color:#d4af37;
-  margin:35px 0 12px 0; /* space from back */
-  letter-spacing:1px;
-}
-
+.auth-container h2,
 .auth-card h1,
 .auth-card h2{
   text-align: center !important;
@@ -1703,46 +1675,23 @@ body.auth-page{
 }
 
 .auth-field input{
-  width:100%;
-  padding:20px 24px;
-  border-radius:50px;
-  border:1px solid rgba(212,175,55,0.18);
-  background:#0f2342;
-  color:white;
-  font-size:16px;
-  margin-bottom:22px;
+  padding: 18px 26px !important;      /* bigger inputs */
+  border-radius: 46px !important;
+  font-size: 15px !important;
 }
-
 
 /* Keep button size like current Sign In button (DON’T inflate it) */
 .auth-btn{
-  width:100%;
-  padding:18px;
-  border-radius:50px;
-
-  background:linear-gradient(
-      145deg,
-      #e0c25a,
-      #d4af37
-  );
-
-  color:#081c3a;
-  font-size:18px;
-  font-weight:700;
-  border:none;
-  cursor:pointer;
-
-  margin-top:10px;
+  padding: 16px !important;           /* keep same feel */
+  font-size: 16px !important;
+  border-radius: 40px !important;
 }
-
 
 /* Back button bigger on both pages + a bit more gap before title */
 .auth-back{
-  display:inline-block;
-  font-size:18px;
-  font-weight:700;
-  color:#d4af37;
-  text-decoration:none;
-  margin-bottom:25px; /* spacing before title */
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  padding: 10px 12px !important;      /* bigger tap area */
+  top: 14px !important;
+  left: 14px !important;
 }
-
