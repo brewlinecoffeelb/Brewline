@@ -1792,3 +1792,133 @@ body.auth-page{
 .nav a.nav-login:active{
   transform:translateY(0px) !important;
 }
+/* =========================================================
+   HOME HEADER (SIGN IN / PROFILE)
+   - keeps Sign In premium but clearer
+   - shows Profile pill + dropdown when logged in
+========================================================= */
+
+/* Move logo a bit to the right (keep same size) */
+.nav .nav-logo{
+  margin-left:10px;
+}
+
+/* Wrap links nicely (works even if old .nav styles exist) */
+.nav .nav-links{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+/* Profile wrapper */
+.nav-profile-wrap{
+  position:relative;
+  display:inline-block;
+}
+
+/* Profile pill button */
+.nav-profile{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  padding:10px 14px;
+  border-radius:999px;
+  border:1px solid rgba(212,175,55,0.55);
+  background:linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.02));
+  color:#ffffff;
+  cursor:pointer;
+  font-weight:800;
+  letter-spacing:0.2px;
+  box-shadow:
+    0 14px 30px rgba(0,0,0,0.28),
+    inset 0 0 0 1px rgba(255,255,255,0.05);
+  transition:0.2s ease;
+}
+
+.nav-profile:hover{
+  transform:translateY(-1px);
+  border-color:rgba(212,175,55,0.80);
+}
+
+.nav-avatar{
+  width:34px;
+  height:34px;
+  border-radius:999px;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  background:linear-gradient(145deg,#e0c25a,#d4af37);
+  color:#081c3a;
+  font-size:14px;
+  font-weight:900;
+  box-shadow:
+    0 10px 24px rgba(212,175,55,0.22),
+    inset 0 -2px 4px rgba(0,0,0,0.18);
+}
+
+.nav-name{
+  max-width:120px;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
+}
+
+.nav-caret{
+  color:rgba(212,175,55,0.95);
+  font-size:14px;
+  transform:translateY(-1px);
+}
+
+/* Dropdown menu */
+.profile-menu{
+  position:absolute;
+  right:0;
+  top:calc(100% + 10px);
+  width:200px;
+  padding:10px;
+  border-radius:16px;
+  background:linear-gradient(145deg, rgba(15,35,66,0.92), rgba(10,25,50,0.86));
+  border:1px solid rgba(212,175,55,0.25);
+  backdrop-filter:blur(14px);
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.55),
+    0 0 35px rgba(212,175,55,0.10);
+
+  opacity:0;
+  transform:translateY(-6px);
+  pointer-events:none;
+  transition:0.18s ease;
+  z-index:999;
+}
+
+.profile-menu.open{
+  opacity:1;
+  transform:translateY(0);
+  pointer-events:auto;
+}
+
+.profile-item{
+  width:100%;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:10px;
+  padding:12px 12px;
+  border-radius:12px;
+  color:rgba(255,255,255,0.90);
+  text-decoration:none;
+  font-weight:700;
+  background:transparent;
+  border:none;
+  cursor:pointer;
+}
+
+.profile-item:hover{
+  background:rgba(212,175,55,0.10);
+  color:#ffffff;
+}
+
+.profile-item.danger:hover{
+  background:rgba(255,70,70,0.12);
+}
+
