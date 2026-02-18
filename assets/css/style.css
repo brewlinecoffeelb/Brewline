@@ -1432,10 +1432,9 @@ body.auth-page{
 .auth-fullscreen{
   min-height:100vh;
   display:flex;
-  justify-content:flex-start;  /* important: removes huge top gap */
-  align-items:center;
-  padding:0px 20px 40px;      /* controls top spacing */
-  box-sizing:border-box;
+  justify-content:flex-start;
+  align-items:flex-start;   /* ← move card to top */
+  padding:30px 20px 40px;   /* controls gap above card */
 }
 
 /* Card (same width on both pages) */
