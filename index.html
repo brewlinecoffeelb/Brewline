@@ -18,22 +18,22 @@
 <a href="menu.html">Menu</a>
 
 <!-- Signed-out state -->
-<a href="signin.html" class="nav-login" id="navSignIn">Sign In</a>
+<a href="signin.html" id="navSignIn" class="nav-login">Sign In</a>
 
-<!-- Signed-in state (shown by JS when user is logged in) -->
-<div class="nav-profile-wrap" id="navProfileWrap" hidden>
-  <button class="nav-profile" id="navProfileBtn" type="button" aria-haspopup="menu" aria-expanded="false">
-    <span class="nav-avatar" id="navAvatar">B</span>
-    <span class="nav-name" id="navName">My Profile</span>
-    <span class="nav-caret" aria-hidden="true">▾</span>
+<div id="navProfile" class="nav-profile" style="display:none;">
+  <button type="button" class="profile-pill" onclick="toggleProfileMenu()">
+    <span class="profile-dot"></span>
+    <span class="profile-text">My Profile</span>
+    <span class="profile-caret">▾</span>
   </button>
 
-  <div class="profile-menu" id="profileMenu" role="menu" aria-label="Profile menu">
-    <a href="#" class="profile-item" role="menuitem">My account</a>
-    <a href="#" class="profile-item" role="menuitem">My points</a>
-    <button class="profile-item danger" id="btnSignOut" type="button" role="menuitem">Sign out</button>
+  <div id="profileMenu" class="profile-menu">
+    <a href="#" onclick="return false;">My Account</a>
+    <a href="#" onclick="return false;">My Points</a>
+    <a href="#" onclick="logout(); return false;">Sign Out</a>
   </div>
 </div>
+
 
 </div>
 </div>
