@@ -116,20 +116,39 @@ window.signIn = function(){
       alert(error.message);
   });
 
-  if (error.code === "auth/user-not-found") {
-    showError("No account found with this email.");
-  }
-  else if (error.code === "auth/wrong-password") {
-    showError("Incorrect password. Please try again.");
-  }
-  else if (error.code === "auth/invalid-email") {
-    showError("Please enter a valid email address.");
-  }
-  else {
-    showError("Login failed. Please try again.");
+window.signIn = function(){
+
+  const email = document.getElementById("email").value.trim();
+  const password = document.getElementById("password").value;
+
+  if(!email || !password){
+    showError("Please enter email and password.");
+    return;
   }
 
-});
+  signInWithEmailAndPassword(auth, email, password)
+    .then(() => {
+      window.location.href = "index.html";
+    })
+    .catch((error) => {
+
+      if (error.code === "auth/user-not-found") {
+        showError("No account found with this email.");
+      }
+      else if (error.code === "auth/wrong-password") {
+        showError("Incorrect password.");
+      }
+      else if (error.code === "auth/invalid-email") {
+        showError("Invalid email format.");
+      }
+      else {
+        showError("Login failed.");
+      }
+
+    });
+
+};
+
 
 };
 window.goToRegister = function() {
