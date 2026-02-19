@@ -205,6 +205,10 @@ const auth = getAuth(app);
 // ===== Auth UI (Sign In -> Profile) =====
 const navSignIn = document.getElementById('navSignIn');
 const navProfileWrap = document.getElementById('navProfileWrap');
+  // Default state (before Firebase checks login)
+navSignIn.style.display = "inline-block";
+navProfileWrap.style.display = "none";
+
 const navProfileBtn = document.getElementById('navProfileBtn');
 const profileMenu = document.getElementById('profileMenu');
 const navName = document.getElementById('navName');
@@ -226,8 +230,9 @@ const openMenu = () => {
 // Toggle Sign In vs Profile based on Firebase session
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    navSignIn.hidden = true;
-    navProfileWrap.hidden = false;
+    navSignIn.style.display = "none";
+navProfileWrap.style.display = "inline-block";
+
 
     const displayName =
       user.displayName ||
@@ -235,11 +240,11 @@ onAuthStateChanged(auth, (user) => {
 
     navName.textContent = displayName;
     navAvatar.textContent = (displayName[0] || 'B').toUpperCase();
-  } else {
-    navSignIn.hidden = false;
-    navProfileWrap.hidden = true;
-    closeMenu();
-  }
+} else {
+  navSignIn.style.display = "inline-block";
+  navProfileWrap.style.display = "none";
+}
+
 });
 
 // Open/close dropdown
