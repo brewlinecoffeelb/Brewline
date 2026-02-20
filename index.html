@@ -212,13 +212,6 @@ window.toggleProfileMenu = function() {
 const closeMenu = () => {
   if (!profileMenu) return;
   profileMenu.classList.remove('open');
-  navProfileBtn?.setAttribute('aria-expanded', 'false');
-};
-
-const openMenu = () => {
-  if (!profileMenu) return;
-  profileMenu.classList.add('open');
-  navProfileBtn?.setAttribute('aria-expanded', 'true');
 };
 
 // Toggle Sign In vs Profile based on Firebase session
