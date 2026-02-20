@@ -19,7 +19,7 @@
 <!-- Signed-out state -->
 <a href="signin.html" id="navSignIn" class="nav-login">Sign In</a>
 
-<div id="navProfile" class="nav-profile" style="display:none;">
+<div id="navProfile" class="nav-profile auth-hidden">
   <button type="button" class="profile-pill" onclick="toggleProfileMenu()">
     <span class="profile-dot"></span>
     <span class="profile-text">My Profile</span>
@@ -236,11 +236,11 @@ onAuthStateChanged(auth, (user) => {
   const navProfile = document.getElementById("navProfile");
 
   if (user) {
-    navProfile.style.display = "inline-flex";
-    navSignIn.style.display = "none";
+    navSignIn.classList.add("auth-hidden");
+    navProfile.classList.remove("auth-hidden");
   } else {
-    navSignIn.style.display = "inline-flex";
-    navProfile.style.display = "none";
+    navProfile.classList.add("auth-hidden");
+    navSignIn.classList.remove("auth-hidden");
   }
 
 });
