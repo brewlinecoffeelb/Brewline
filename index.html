@@ -29,7 +29,7 @@
   <div id="profileMenu" class="profile-menu">
     <a href="#" onclick="return false;">My Account</a>
     <a href="#" onclick="return false;">My Points</a>
-    <a href="#" onclick="logout(); return false;">Sign Out</a>
+    <a href="#" id="btnSignOut">Sign Out</a>
   </div>
 </div>
 
@@ -203,12 +203,11 @@ const auth = getAuth(app);
 
 // ===== Auth UI (Sign In -> Profile) =====
 const navSignIn = document.getElementById('navSignIn');
-const navProfileWrap = document.getElementById('navProfileWrap');
-const navProfileBtn = document.getElementById('navProfileBtn');
+const navProfile = document.getElementById('navProfile');
 const profileMenu = document.getElementById('profileMenu');
-const navName = document.getElementById('navName');
-const navAvatar = document.getElementById('navAvatar');
-const btnSignOut = document.getElementById('btnSignOut');
+window.toggleProfileMenu = function() {
+  profileMenu.classList.toggle("open");
+};
 
 const closeMenu = () => {
   if (!profileMenu) return;
@@ -225,27 +224,16 @@ const openMenu = () => {
 // Toggle Sign In vs Profile based on Firebase session
 onAuthStateChanged(auth, (user) => {
   if (user) {
-    navSignIn.hidden = true;
-    navProfileWrap.hidden = false;
-
-    const displayName =
-      user.displayName ||
-      (user.email ? user.email.split('@')[0] : 'My Profile');
-
-    navName.textContent = displayName;
-    navAvatar.textContent = (displayName[0] || 'B').toUpperCase();
+    navSignIn.style.display = "none";
+    navProfile.style.display = "block";
   } else {
-    navSignIn.hidden = false;
-    navProfileWrap.hidden = true;
+    navSignIn.style.display = "inline-block";
+    navProfile.style.display = "none";
     closeMenu();
   }
 });
 
 // Open/close dropdown
-navProfileBtn?.addEventListener('click', (e) => {
-  e.stopPropagation();
-  profileMenu.classList.contains('open') ? closeMenu() : openMenu();
-});
 
 document.addEventListener('click', () => closeMenu());
 document.addEventListener('keydown', (e) => {
@@ -253,13 +241,13 @@ document.addEventListener('keydown', (e) => {
 });
 
 // Sign out
-btnSignOut?.addEventListener('click', async () => {
+document.getElementById("btnSignOut")?.addEventListener("click", async (e) => {
+  e.preventDefault();
   try {
     await signOut(auth);
-    closeMenu();
-    window.location.href = 'index.html';
+    window.location.href = "index.html";
   } catch (err) {
-    alert('Sign out failed. Please try again.');
+    alert("Sign out failed. Please try again.");
     console.error(err);
   }
 });
