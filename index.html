@@ -210,12 +210,12 @@ const navSignIn = document.getElementById('navSignIn');
 const navProfile = document.getElementById('navProfile');
 const profileMenu = document.getElementById('profileMenu');
 window.toggleProfileMenu = function() {
-  profileMenu.classList.toggle("open");
+  profileMenu.classList.toggle("show");
 };
 
 const closeMenu = () => {
   if (!profileMenu) return;
-  profileMenu.classList.remove('open');
+  profileMenu.classList.remove('show');
 };
 
 // Toggle Sign In vs Profile based on Firebase session
