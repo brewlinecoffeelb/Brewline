@@ -1744,7 +1744,6 @@ body.auth-page{
    HOME HEADER — PREMIUM SIGN IN BUTTON (Overrides all old nav styles)
 ========================================================= */
 .nav a.nav-login{
-  display:inline-flex !important;
   align-items:center !important;
   justify-content:center !important;
   gap:8px !important;
@@ -1783,4 +1782,7 @@ body.auth-page{
 
 .nav a.nav-login:active{
   transform:translateY(0px) !important;
+}
+.hidden{
+  display:none !important;
 }
