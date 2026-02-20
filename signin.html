@@ -148,19 +148,16 @@ window.resetPassword = function(){
   const email = document.getElementById("email").value;
 
   if(!email){
-    document.getElementById("message").innerText = "Enter your email to reset password.";
-    document.getElementById("message").style.color = "red";
+    showError("Enter your email first.");
     return;
   }
 
   sendPasswordResetEmail(auth, email)
     .then(() => {
-      document.getElementById("message").innerText = "Password reset email sent.";
-      document.getElementById("message").style.color = "#d4af37";
+      showSuccess("Password reset email sent.");
     })
-    .catch((error) => {
-      document.getElementById("message").innerText = error.message;
-      document.getElementById("message").style.color = "red";
+    .catch(() => {
+      showError("Failed to send reset email.");
     });
 };
 </script>
