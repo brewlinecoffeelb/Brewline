@@ -23,14 +23,14 @@ const auth = getAuth(app);
   const btnLogout = document.getElementById("btnLogout");
 
   onAuthStateChanged(auth, (user) => {
-    if (user) {
-      if (navSignIn) navSignIn.style.display = "none";
-      if (navProfile) navProfile.style.display = "inline-block";
-    } else {
-      if (navSignIn) navSignIn.style.display = "inline-block";
-      if (navProfile) navProfile.style.display = "none";
-    }
-  });
+  if (user) {
+    if (navSignIn) navSignIn.classList.add("hidden");
+    if (navProfile) navProfile.classList.remove("hidden");
+  } else {
+    if (navSignIn) navSignIn.classList.remove("hidden");
+    if (navProfile) navProfile.classList.add("hidden");
+  }
+});
 
   if (btnLogout) {
     btnLogout.addEventListener("click", () => {
