@@ -16,29 +16,11 @@
 <a href="index.html">Home</a>
 <a href="menu.html">Menu</a>
 
-<!-- Signed-out state -->
-<a href="signin.html" id="navSignIn" class="nav-login">Sign In</a>
-
-<div id="navProfile" class="nav-profile auth-hidden">
-  <button type="button" class="profile-pill" onclick="toggleProfileMenu()">
-    <span class="profile-dot"></span>
-    <span class="profile-text">My Profile</span>
-    <span class="profile-caret">▾</span>
-  </button>
-
-  <div id="profileMenu" class="profile-menu">
-    <a href="#" onclick="return false;">My Account</a>
-    <a href="#" onclick="return false;">My Points</a>
-    <a href="#" id="btnSignOut">Sign Out</a>
-  </div>
-</div>
-
+<a href="signin.html" class="nav-login">Sign In</a>
 
 </div>
 </div>
 </header>
-
-
 
 <section class="hero">
 <div class="container">
@@ -181,78 +163,3 @@ setInterval(nextSlide, 6000);
   </span>
   <span class="fc-text">Contact</span>
 </a>
-
-
-  <!-- Firebase SDK -->
-<script type="module">
-import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js";
-import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-
-const firebaseConfig = {
-  apiKey: "AIzaSyBI4OeO3oLFfWNFKRIGP2KOieusg80qZzA",
-  authDomain: "brewline-auth.firebaseapp.com",
-  projectId: "brewline-auth",
-  storageBucket: "brewline-auth.firebasestorage.app",
-  messagingSenderId: "408447180405",
-  appId: "1:408447180405:web:1a3f0a04324e50e4baa23c"
-};
-
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-  onAuthStateChanged(auth, (user) => {
-  console.log("AUTH STATE CHANGED:", user);
-});
-  
-  document.getElementById("navSignIn").style.display = "none";
-document.getElementById("navProfile").style.display = "none";
-  import { setPersistence, browserLocalPersistence } 
-from "https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js";
-
-await setPersistence(auth, browserLocalPersistence);
-
-document.addEventListener("DOMContentLoaded", () => {
-
-  const navSignIn = document.getElementById('navSignIn');
-  const navProfile = document.getElementById('navProfile');
-  const profileMenu = document.getElementById('profileMenu');
-  const btnSignOut = document.getElementById("btnSignOut");
-
-  // Toggle dropdown
-  window.toggleProfileMenu = function() {
-    profileMenu.classList.toggle("show");
-  };
-
-  const closeMenu = () => {
-    profileMenu.classList.remove("show");
-  };
-
-  document.addEventListener("click", (e) => {
-    if (!navProfile.contains(e.target)) {
-      closeMenu();
-    }
-  });
-
-  // Firebase auth state
-onAuthStateChanged(auth, (user) => {
-
-  const navSignIn = document.getElementById("navSignIn");
-  const navProfile = document.getElementById("navProfile");
-
-  if (user) {
-    navSignIn.classList.add("auth-hidden");
-    navProfile.classList.remove("auth-hidden");
-  } else {
-    navProfile.classList.add("auth-hidden");
-    navSignIn.classList.remove("auth-hidden");
-  }
-
-});
-
-  // Sign out
-  btnSignOut?.addEventListener("click", async (e) => {
-    e.preventDefault();
-    await signOut(auth);
-    window.location.href = "index.html";
-  });
-
-});
