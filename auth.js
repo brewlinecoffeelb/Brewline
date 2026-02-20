@@ -18,8 +18,6 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-document.addEventListener("DOMContentLoaded", () => {
-
   const navSignIn = document.getElementById("navSignIn");
   const navProfile = document.getElementById("navProfile");
   const btnLogout = document.getElementById("btnLogout");
@@ -41,5 +39,3 @@ document.addEventListener("DOMContentLoaded", () => {
       });
     });
   }
-
-});
