@@ -7,12 +7,12 @@ import {
 
 // 🔥 PASTE YOUR REAL FIREBASE CONFIG FROM signin.html HERE
 const firebaseConfig = {
-  apiKey: "PASTE_HERE",
-  authDomain: "PASTE_HERE",
-  projectId: "PASTE_HERE",
-  storageBucket: "PASTE_HERE",
-  messagingSenderId: "PASTE_HERE",
-  appId: "PASTE_HERE"
+  apiKey: "AIzaSyBI4OeO3oLFfWNFKRIGP2KOieusg80qZzA",
+  authDomain: "brewline-auth.firebaseapp.com",
+  projectId: "brewline-auth",
+  storageBucket: "brewline-auth.firebasestorage.app",
+  messagingSenderId: "408447180405",
+  appId: "1:408447180405:web:1a3f0a04324e50e4baa23c"
 };
 
 const app = initializeApp(firebaseConfig);
