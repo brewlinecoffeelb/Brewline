@@ -200,6 +200,9 @@ setInterval(nextSlide, 6000);
 
  const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
+  onAuthStateChanged(auth, (user) => {
+  console.log("AUTH STATE CHANGED:", user);
+});
   
   document.getElementById("navSignIn").style.display = "none";
 document.getElementById("navProfile").style.display = "none";
