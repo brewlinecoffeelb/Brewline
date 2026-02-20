@@ -1986,3 +1986,8 @@ body.auth-page{
 .profile-menu.show{ display:block; }
 
 #navProfile { display: none; }
+
+/* AUTH VISIBILITY CONTROL */
+.auth-hidden {
+  display: none !important;
+}
