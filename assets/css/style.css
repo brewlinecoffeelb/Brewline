@@ -1381,14 +1381,6 @@ header{
    This disables ALL previous header styling
 ================================ */
 
-header,
-header *,
-.nav,
-.nav * {
-  all: unset;
-  box-sizing: border-box;
-}
-
 /* Rebuild minimal clean header structure */
 header {
   position: fixed;
@@ -1993,3 +1985,4 @@ body.auth-page{
 
 .profile-menu.show{ display:block; }
 
+#navProfile { display: none; }
